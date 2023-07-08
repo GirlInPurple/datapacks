@@ -1,0 +1,116 @@
+body {
+    background-color: rgb(0, 50, 20);/* For browsers that do not support gradients */
+    background-image: linear-gradient(70deg, rgb(0, 50, 120), rgb(0, 150, 20));/* I just think they're neat */
+    margin: 0;
+}
+
+header {
+    background-image: linear-gradient(70deg, rgb(0, 150, 120), rgb(0, 50, 20));
+}
+
+nav {
+    background-color: rgb(0, 70, 30);
+}
+
+footer {
+    background-color: rgb(0, 70, 30);
+    color: white;
+    border-top: 5px solid rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(255, 255, 255);
+}
+
+h1 {
+    color: white;
+    font-family: "Segoe UI Variable Display", "San Francisco", "Fira Sans Semibold";
+    font-size: 40px;
+    text-align: center;
+}
+
+p {
+    color: white;
+    font-family: "Segoe UI Variable Display", "San Francisco", "Fira Sans Semibold";
+    font-size: 12px;
+    height: 3px;
+}
+
+header {
+    border-bottom: 5px solid white;
+}
+
+.footer_l {
+    position: relative;
+}
+
+.footer_r {
+    position: relative;
+    top: -50px;
+    left: 50%;
+    width: 35%;
+}
+
+.footer_r_p {
+    color: white;
+    font-family: "Segoe UI Variable Display", "San Francisco", "Fira Sans Semibold";
+    font-size: 24px;
+    height: 5px;
+}
+
+div.center {
+    border-left: 5px solid white;
+    border-right: 5px solid white;
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    background-color: rgb(0, 50, 20);
+}
+
+a:link {
+    color: rgb(155, 255, 155);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(175, 255, 175);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(105, 205, 105);
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+nav.tab {
+    overflow: hidden;
+    text-align:center;
+    margin: auto;
+    width: 85%;
+    border-left: 5px solid white;
+    border-right: 5px solid white;
+    border-bottom: 5px solid white;
+    background-color: rgb(0, 70, 30);
+}
+
+    /* Style the buttons inside the tab */
+.tab button {
+    background-color: rgb(155, 255, 155);;
+    float: left;
+    outline: none;
+    cursor: pointer;
+    padding: 7px 8px;
+    transition: 0.3s;
+    font-size: 17px;
+    text-align:center;
+}
+
+    /* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: rgb(105, 205, 105);
+}
+
+    /* Create an active/current tablink class */
+.tab button.active {
+    background-color: rgb(175, 255, 175);
+}
