@@ -9,5 +9,5 @@ And if you don't play on the server, some links are below.
 <a href="https://girlinpurple.github.io/finalrepublic"><img src="https://img.shields.io/badge/our-website-green" alt="website"></a>
 ### Other links
 <a href="https://discord.gg/MX5fWws7wE"><img src="https://img.shields.io/discord/969376256640569474?label=discord&color=%235865F2" alt="discord"></a>
-<a href="https://exaroton.com"><img src="https://img.shields.io/badge/hosting_provider-exaroton-lime.png" alt="hosting provider"></a>
+<a href="https://exaroton.com"><img src="https://img.shields.io/badge/hosting_provider-exaroton-lime" alt="hosting provider"></a>
 <a href=""><img src="https://img.shields.io/badge/holy_shit-dj_is_trans-590481" alt="bruh moment"></a>
