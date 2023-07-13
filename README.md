@@ -3,7 +3,7 @@
 </h2>
 
 This is the main GitHub repository for the Final Republic Minecraft server. here the server files are stored for later access and easier management, everything from the datapacks we use to the config files.
-Most of our projects are open-source, feel free to use them for your own server, submit issues or PRs, or really anything else you like. Everything is [MIT-licensed](LICENSE).
+Most of our projects are [open-source](/os_projects), feel free to use them for your own server, submit issues or PRs, or really anything else you like. Everything is [MIT-licensed](LICENSE).
 And if you don't play on the server, some links are below.
 
 ## Links
