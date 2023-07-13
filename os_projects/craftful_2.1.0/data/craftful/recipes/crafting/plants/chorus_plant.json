@@ -1,0 +1,17 @@
+{
+    "group": "end",
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "##",
+        "##"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:chorus_fruit"
+        }
+    },
+    "result": {
+        "item": "minecraft:chorus_plant",
+        "count": 1
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:nether_sprouts",
+        "minecraft:warped_roots",
+        "minecraft:warped_fungus",
+        "minecraft:twisting_vines"
+    ]
+}

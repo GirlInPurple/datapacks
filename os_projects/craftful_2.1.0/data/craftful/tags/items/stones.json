@@ -1,0 +1,23 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:stone",
+        "minecraft:cobblestone",
+        "minecraft:smooth_stone",
+        "minecraft:stone_bricks",
+        "minecraft:mossy_stone_bricks",
+        "minecraft:cracked_stone_bricks",
+        "minecraft:chiseled_stone_bricks",
+        "minecraft:blackstone",
+        "minecraft:polished_blackstone",
+        "minecraft:chiseled_polished_blackstone",
+        "minecraft:polished_blackstone_bricks",
+        "minecraft:cracked_polished_blackstone_bricks",
+        "minecraft:granite",
+        "minecraft:polished_granite",
+        "minecraft:andesite",
+        "minecraft:polished_andesite",
+        "minecraft:diorite",
+        "minecraft:polished_diorite"
+    ]
+}

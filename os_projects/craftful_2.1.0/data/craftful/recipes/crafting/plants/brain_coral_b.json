@@ -1,0 +1,21 @@
+{
+    "group": "coral",
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#W#",
+        "WWW",
+        "#W#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:pink_dye"
+        },
+        "W": {
+            "item": "minecraft:wet_sponge"
+        }
+    },
+    "result": {
+        "item": "minecraft:brain_coral_block",
+        "count": 4
+    }
+}

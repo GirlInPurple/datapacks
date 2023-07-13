@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "craftful:crimson_plants"
+        },
+        {
+            "item": "minecraft:netherrack"
+        }
+    ],
+    "result": {
+        "item": "minecraft:crimson_nylium",
+        "count": 1
+    }
+}

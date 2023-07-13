@@ -1,0 +1,21 @@
+{
+    "group": "raw ores",
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#B#",
+        "B#B",
+        "#B#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:gold_nugget"
+        },
+        "B": {
+            "item": "minecraft:blackstone"
+        }
+    },
+    "result": {
+        "item": "minecraft:gilded_blackstone",
+        "count": 1
+    }
+}

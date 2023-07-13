@@ -1,0 +1,13 @@
+{
+    "group": "craftless",
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# #",
+        " # ",
+        "# #"
+    ],
+    "result": {
+        "item": "minecraft:cobweb",
+        "count": 1
+    }
+}

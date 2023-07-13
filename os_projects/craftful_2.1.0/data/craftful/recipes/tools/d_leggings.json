@@ -1,0 +1,10 @@
+{
+    "group": "smelt",
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "minecraft:diamond_leggings"
+    },
+    "result": "minecraft:diamond",
+    "experience": 3,
+    "cookingtime": 400
+}

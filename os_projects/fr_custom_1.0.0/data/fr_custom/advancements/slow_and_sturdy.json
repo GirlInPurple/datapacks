@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:lime_shulker_box"
+    },
+    "title": "Slow and Sturdy Storage",
+    "description": "Obtain a Shulker box via the Turtle method",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "fr_custom:scute_over",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:lime_shulker_box"
+            ],
+            "count": 1
+          }
+        ]
+      }
+    }
+  }
+}

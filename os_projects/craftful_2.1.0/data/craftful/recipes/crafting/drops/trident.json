@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#%#",
+        " H ",
+        " i "
+    ],
+    "key": {
+        "%": {
+            "item": "minecraft:quartz"
+        },
+        "#": {
+            "item": "minecraft:prismarine_shard"
+        },
+        "H": {
+            "item": "minecraft:heart_of_the_sea"
+        },
+        "i": {
+            "item": "minecraft:iron_ingot"
+        }
+    },
+    "result": {
+        "item": "minecraft:trident",
+        "count": 1
+    }
+}

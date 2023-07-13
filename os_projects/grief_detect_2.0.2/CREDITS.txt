@@ -1,0 +1,21 @@
+### Grief_Detect Datapack v2.0.1 ###
+A rudimentary anti-cheat for the FR Minecraft Server, built all in a datapack.
+
+### Programs Used: ###
+WinRar
+VSCode
+
+### Main Contributors: ###
+ColorBlurple		    (Founder, Implementor)
+anhnguyenlost13		    (Testing, Ideas, Main Dev)
+
+### Changelog ###
+
+V2.0.2 Hotfix
+Removed the nether check from tnt_detection due to it bugging out constantly
+Improved lavacast check
+
+V2.0.0 Release
+Rebranded to grief_detect_2.0.0
+Attempted to add an anti-lavacast check
+Attempted to fix Netherite mining pinging the chat too much by disabling pings in the nether dim

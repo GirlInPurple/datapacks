@@ -1,0 +1,24 @@
+{
+    "group": "craftless",
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "#F#",
+        "FIF"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:bone_meal"
+        },
+        "F": {
+            "item": "minecraft:flowering_azalea_leaves"
+        },
+        "I": {
+            "item": "minecraft:flowering_azalea"
+        }
+    },
+    "result": {
+        "item": "minecraft:spore_blossom",
+        "count": 1
+    }
+}

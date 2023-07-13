@@ -1,0 +1,21 @@
+{
+    "group": "craftless",
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "###",
+        "SSS"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:sculk_vein"
+        },
+        "S": {
+            "item": "minecraft:sculk"
+        }
+    },
+    "result": {
+        "item": "minecraft:sculk_sensor",
+        "count": 1
+    }
+}

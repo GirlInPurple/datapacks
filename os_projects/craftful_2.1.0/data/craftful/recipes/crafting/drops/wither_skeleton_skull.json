@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "group": "nc_wither_skeleton_skull",
+  "pattern": [
+    " a ",
+    "aba",
+	  " a "
+  ],
+  "key": {
+    "a": {
+      "tag": "craftful:coal"
+    },
+	"b": {
+      "tag": "craftful:heads"
+    }
+  },
+  "result": {
+    "item": "minecraft:wither_skeleton_skull",
+	"count": 1
+  }
+}

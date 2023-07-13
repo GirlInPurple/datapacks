@@ -1,0 +1,9 @@
+{
+    "group": "cutting",
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "minecraft:sculk"
+    },
+    "result": "minecraft:sculk_vein",
+    "count": 1
+}

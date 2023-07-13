@@ -1,0 +1,27 @@
+{
+    "group": "end",
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "_Z_",
+        "PZP",
+        "B B"
+    ],
+    "key": {
+        "_": {
+            "item": "minecraft:purpur_slab"
+        },
+        "P": {
+            "item": "minecraft:purpur_block"
+        },
+        "Z": {
+            "item": "minecraft:phantom_membrane"
+        },
+        "B": {
+            "item": "minecraft:purpur_stairs"
+        }
+    },
+    "result": {
+        "item": "minecraft:shulker_shell",
+        "count": 1
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "group": "craftless",
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#BQ",
+        "BQB",
+        "QB#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:feather"
+        },
+        "B": {
+            "item": "minecraft:bone_meal"
+        },
+        "Q": {
+            "item": "minecraft:bone"
+        }
+    },
+    "result": {
+        "item": "minecraft:phantom_membrane",
+        "count": 1
+    }
+}

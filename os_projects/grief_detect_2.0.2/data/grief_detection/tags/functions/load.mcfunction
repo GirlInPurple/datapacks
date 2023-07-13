@@ -1,0 +1,1 @@
+tellraw @p [{"color": "green","text":"Succesfully Loaded Grief Detect v2.0.2!"}]

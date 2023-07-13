@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:crafting_table"
+        },
+        "title": "Illmango's Cousin-in-Law",
+        "description": "Craft 64 Dragons Breath, most likely by an autocrafter",
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "fr_custom:kill_a_dragon",
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "minecraft:dragon_breath"
+                        ],
+                        "count": 64
+                    }
+                ]
+            }
+        }
+    }
+}

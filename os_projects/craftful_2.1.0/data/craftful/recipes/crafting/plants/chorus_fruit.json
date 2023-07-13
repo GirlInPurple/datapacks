@@ -1,0 +1,27 @@
+{
+    "group": "end",
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#M ",
+        "MXM",
+        " ME"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:quartz"
+        },
+        "M": {
+            "item": "minecraft:melon_slice"
+        },
+        "X": {
+            "item": "minecraft:magma_cream"
+        },
+        "E": {
+            "item": "minecraft:ender_pearl"
+        }
+    },
+    "result": {
+        "item": "minecraft:chorus_fruit",
+        "count": 1
+    }
+}

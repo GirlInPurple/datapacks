@@ -1,0 +1,21 @@
+{
+    "group": "raw ores",
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#S#",
+        "S#S",
+        "#S#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:raw_copper"
+        },
+        "S": {
+            "item": "minecraft:stone"
+        }
+    },
+    "result": {
+        "item": "minecraft:copper_ore",
+        "count": 1
+    }
+}

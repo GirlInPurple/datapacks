@@ -1,0 +1,27 @@
+{
+    "group": "craftless",
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#g#",
+        "GNG",
+        " G "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:emerald_block"
+        },
+        "g": {
+            "item": "minecraft:gold_ingot"
+        },
+        "G": {
+            "item": "minecraft:gold_block"
+        },
+        "N": {
+            "item": "minecraft:nether_star"
+        }
+    },
+    "result": {
+        "item": "minecraft:totem_of_undying",
+        "count": 1
+    }
+}

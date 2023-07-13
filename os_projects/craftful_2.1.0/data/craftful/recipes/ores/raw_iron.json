@@ -1,0 +1,13 @@
+{
+    "group": "raw",
+    "type": "minecraft:smithing",
+    "base": {
+        "item": "minecraft:iron_ingot"
+    },
+    "addition": {
+        "item": "minecraft:piston"
+    },
+    "result": {
+        "item": "minecraft:raw_iron"
+    }
+}

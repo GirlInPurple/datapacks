@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:experience_bottle"
+        },
+        "title": "Bottling Machine",
+        "description": "Bottle XP, Trade for, or otherwise obtain a Bottle of XP",
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "fr_custom:kill_a_dragon",
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "minecraft:experience_bottle"
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

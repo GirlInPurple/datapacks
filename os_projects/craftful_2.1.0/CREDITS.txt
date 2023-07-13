@@ -1,0 +1,31 @@
+### Craftful Datapack v2.1.0 ###
+A fork of ToxicTrapper's Craftless DP, modified for the Final Republic server
+
+### Programs Used: ###
+WinRar
+VSCode
+https://crafting.thedestruc7i0n.ca
+https://minecraft-ids.grahamedgecombe.com/
+
+### Main Contributors: ###
+ToxicTrapper 		    (Added the main recipes and founder of the pack)
+ColorBlurple		    (Put together the rest of the pack)
+anhnguyenlost13		    (Testing and Ideas)
+Xisumavoid + VT Team	(Some of the lesser known but importaint recipes)
+
+### Other Contributors: ###
+Jefferson Dantas 	    (https://www.planetminecraft.com/data-pack/jd-best-crafts/)
+The_Killuer_999 	    (https://www.planetminecraft.com/data-pack/crafting-5686375/)
+TheDiamondPlayables	    (https://www.planetminecraft.com/data-pack/nether-crafting-craft-nether-items/)
+the3lucas		        (https://modrinth.com/mod/vanilla-crafting-plus)
+The Destruc7i0n		    (The website https://crafting.thedestruc7i0n.ca that was used to make most of the pack)
+vazkii			        (Crafting ideas)
+
+### Changelog ###
+
+V2.0.1 Hotfix
+Fixed recipe for Dragon's Breath
+Removed Netherite Ingot and Elytra recipes
+
+V2.0.0 Release
+Project is released onto a server for a short time to test all features.

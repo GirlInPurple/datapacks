@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "carpet",
+    "pattern": [
+      "#$"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:diorite"
+      },
+      "$": {
+        "item": "minecraft:bone_block"
+      }
+    },
+    "result": {
+      "item": "minecraft:calcite",
+      "count": 2
+    }
+  }

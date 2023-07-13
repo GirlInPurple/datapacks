@@ -1,0 +1,27 @@
+{
+    "group": "horse armor",
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " #G",
+        "ggg",
+        "s s"
+    ],
+    "key": {
+        "#": {
+            "tag": "craftful:carpets"
+        },
+        "G": {
+            "item": "minecraft:gold_block"
+        },
+        "g": {
+            "item": "minecraft:gold_ingot"
+        },
+        "s": {
+            "item": "minecraft:tripwire_hook"
+        }
+    },
+    "result": {
+        "item": "minecraft:golden_horse_armor",
+        "count": 1
+    }
+}

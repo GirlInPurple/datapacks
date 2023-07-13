@@ -1,0 +1,21 @@
+{
+    "group": "coral",
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#W#",
+        "WWW",
+        "#W#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:light_blue_dye"
+        },
+        "W": {
+            "item": "minecraft:wet_sponge"
+        }
+    },
+    "result": {
+        "item": "minecraft:tube_coral_block",
+        "count": 4
+    }
+}

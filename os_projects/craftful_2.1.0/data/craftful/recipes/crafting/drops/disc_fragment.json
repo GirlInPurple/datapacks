@@ -1,0 +1,24 @@
+{
+    "group": "craftless",
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " #C",
+        "#CE",
+        "CEE"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:deepslate"
+        },
+        "C": {
+            "item": "minecraft:cobbled_deepslate"
+        },
+        "E": {
+            "item": "minecraft:echo_shard"
+        }
+    },
+    "result": {
+        "item": "minecraft:disc_fragment_5",
+        "count": 1
+    }
+}

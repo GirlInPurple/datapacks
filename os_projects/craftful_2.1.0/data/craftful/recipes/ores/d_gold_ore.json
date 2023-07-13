@@ -1,0 +1,21 @@
+{
+    "group": "raw ores",
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#D#",
+        "D#D",
+        "#D#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:raw_gold"
+        },
+        "D": {
+            "item": "minecraft:deepslate"
+        }
+    },
+    "result": {
+        "item": "minecraft:deepslate_gold_ore",
+        "count": 1
+    }
+}
