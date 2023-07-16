@@ -7,6 +7,12 @@ Most of our projects are open-source, feel free to use them for your own server,
 And if you don't play on the server, some links are below.
 
 ## Links
+
+### This Repo
+[How To Contribute](/Credits_&_Contributing.md#Contributing),
+[Credits](/Credits_&_Contributing.md#Credits),
+[Our TODO]()
+
 ### Resources
 <a href="https://discord.com/channels/969376256640569474/1104113680083337237"><img src="https://img.shields.io/badge/our-wiki_(discord)-blue" alt="wiki"></a>
 <a href="https://girlinpurple.github.io/finalrepublic"><img src="https://img.shields.io/badge/our-website_(awful)-green" alt="website"></a>

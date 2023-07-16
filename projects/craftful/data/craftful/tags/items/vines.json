@@ -1,7 +1,7 @@
 {
     "replace": false,
     "values": [
-        "minecraft:vines",
+        "minecraft:vine",
         "minecraft:weeping_vines",
         "minecraft:twisting_vines"
     ]

@@ -1,0 +1,7 @@
+{
+    "values": [
+        "grief_detection:tnt_tick/tick",
+        "grief_detection:lavacast_tick/tick"
+
+    ]
+}
