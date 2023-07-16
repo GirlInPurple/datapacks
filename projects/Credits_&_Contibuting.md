@@ -1,7 +1,0 @@
-# Credits
-
-TODO
-
-# Contributing
-
-TODO
