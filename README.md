@@ -8,10 +8,10 @@ And if you don't play on the server, some links are below.
 
 ## Links
 
-### This Repo
-[How To Contribute](/projects/Compiling_%26_Contibuting.md#contributing),
-[Credits](README.md#credits),
-[Our TODO](/projects/Compiling_%26_Contibuting.md#our_todo)
+### This Repository
+<a href="/projects/Compiling_%26_Contibuting.md#contributing"><img src="https://img.shields.io/badge/how_to-contribute-green" alt="how to contribute"></a>
+<a href="#credits"><img src="https://img.shields.io/badge/credits-it's_right_below-blue" alt="credits (it's right below)"></a>
+<a href="/projects/Compiling_%26_Contibuting.md#our_todo"><img src="https://img.shields.io/badge/our-TODO-red" alt="our TODO"></a>
 
 ### Resources
 <a href="https://discord.com/channels/969376256640569474/1104113680083337237"><img src="https://img.shields.io/badge/our-wiki_(discord)-blue" alt="wiki"></a>
@@ -24,5 +24,9 @@ And if you don't play on the server, some links are below.
 <a href=""><img src="https://img.shields.io/badge/holy_shit-dj_is_trans-590481" alt="bruh moment"></a>
 
 ## Credits
-
-TODO
+### Contributors
+- [AnhNguyenlost13](https://github.com/AnhNguyenlost13): \<Placeholder\>
+- [GirlInPurple](https://github.com/GirlInPurple): \<Placeholder\>
+### Other People
+- [ghost](https://github.com/ghost): \<placeholder\>
+- thank you to \<placeholder\> for \<placeholder\>
