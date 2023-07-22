@@ -21,14 +21,13 @@ TODO
 
 ### Offical Launcher
 
-- Find your way to `~\Appdata\Roaming`
-- Make sure you have the `Hidden Items` option checked in your file explorer
-- Go into your `.minecraft`, and find the `saves` folder
-- From there, drop the uncompressed world file into that folder, and launch Minecraft
+- Make sure you have the `Hidden Items` option checked in your File Explorer, if you prefer navigating yourself or have different game folder.
+- Find your way to `%userprofile%\AppData\Roaming\.minecraft\saves` folder (You can paste this into the run dialog/explorer address bar)
+- From there, drop the uncompressed world file into that folder, and launch Minecraft.
 
 # Our TODO
 
-- [ ] Github
+- [ ] GitHub Repository
   - [ ] Finish the TODO ([ironic](https://youtu.be/dKqLhzHSARI))
   - [ ] Add/Finish the following pages:
     - [ ] Credits
@@ -36,6 +35,6 @@ TODO
     - [x] Compiling
 - [ ] Datapacks
   - [ ] Add the ability to save file space on the Datapack by removing:
-    - [ ] Credits.md
+    - [ ] CREDITS.md
     - [ ] Icon.png
     - [ ] Individual Functions
