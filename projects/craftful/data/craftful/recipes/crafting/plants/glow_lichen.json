@@ -10,7 +10,7 @@
             "item": "minecraft:glow_ink_sac"
         },
         "V": {
-            "item": "craftful:vines"
+            "tag": "craftful:vines"
         }
     },
     "result": {

@@ -7,7 +7,7 @@
     ],
     "key": {
         "#": {
-            "item": "craftful:flowers_without_wr"
+            "tag": "craftful:flowers_without_wr"
         },
         "W": {
             "item": "minecraft:wither_skeleton_skull"

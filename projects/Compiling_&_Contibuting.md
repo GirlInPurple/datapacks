@@ -8,6 +8,7 @@
   - Most items in the game, everything from dirt to diamonds
 - Uncommon Rarity
   - Things like prismarine crystals or dragons breath, items that cen be autocrafted or
+- Epic Rarity
 
 ### Item Uses
 
@@ -19,7 +20,7 @@
 To help keep consistency across files, use 4 tab spaces and uppercase keys, as shown in the example below:
 
 - The `group` option is completely optional, and is currently not used in Craftful
-- Do not add `nc_` to the beginning either, that is from an older version of the pack
+  - Do not add `nc_` or `craftless` to it either, they are from older versions of the pack
 
 ```json
 {

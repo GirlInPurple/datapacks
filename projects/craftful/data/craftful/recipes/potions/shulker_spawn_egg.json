@@ -1,6 +1,6 @@
 {
   "type": "crafting_shaped",
-  "group": "nc_shulker_spawn_egg",
+  "group": "spawn_egg",
   "pattern": [
     "_Z_",
     "PSP",
@@ -14,7 +14,7 @@
       "item": "minecraft:phantom_membrane"
     },
     "P": {
-      "item": "minecraft:pupur_block"
+      "item": "minecraft:purpur_block"
     },
     "S": {
       "item": "minecraft:soul_sand"

@@ -2,7 +2,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "item": "craftful:warped_plants"
+            "tag": "craftful:warped_plants"
         },
         {
             "item": "minecraft:netherrack"

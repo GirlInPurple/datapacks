@@ -17,6 +17,9 @@
         },
         "d": {
             "item": "minecraft:diamond"
+        },
+        "D": {
+            "item": "minecraft:dragons_breath"
         }
     },
     "result": {
