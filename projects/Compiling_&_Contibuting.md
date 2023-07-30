@@ -2,24 +2,24 @@
 
 TODO
 # Formatting Guidelines
-Use 4 tab spaces, as shown in this example:
+Use 4 tab spaces and uppercase keys, as shown in this example:
 ```json
 {
     "type": "crafting_shaped",
     "group": "nc_milk_bucket",
     "pattern": [
-        "bmg",
-        "mmb",
-        "ggg"
+        "BMG",
+        "MMB",
+        "GGG"
     ],
     "key": {
-        "b": {
+        "B": {
             "item": "minecraft:blaze_powder"
         },
-        "m": {
+        "M": {
             "item": "minecraft:mangrove_roots"
         },
-        "g": {
+        "G": {
             "item": "minecraft:golden_carrot"
         }
     },
