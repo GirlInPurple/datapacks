@@ -2,7 +2,7 @@
 
 TODO
 # Formatting Guidelines
-Use 4 tab spaces and uppercase keys, as shown in this example:
+To help keep consistency across files, use 4 tab spaces and uppercase keys, as shown in the example below:
 ```json
 {
     "type": "crafting_shaped",
