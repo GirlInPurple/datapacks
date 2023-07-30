@@ -3,7 +3,7 @@
     "pattern": [
         "#%#",
         " H ",
-        " i "
+        " d "
     ],
     "key": {
         "%": {
@@ -15,8 +15,8 @@
         "H": {
             "item": "minecraft:heart_of_the_sea"
         },
-        "i": {
-            "item": "minecraft:iron_ingot"
+        "d": {
+            "item": "minecraft:diamond"
         }
     },
     "result": {

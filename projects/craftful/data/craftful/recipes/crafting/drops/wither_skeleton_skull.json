@@ -1,21 +1,23 @@
 {
   "type": "crafting_shaped",
-  "group": "nc_wither_skeleton_skull",
   "pattern": [
-    " a ",
+    "aaa",
     "aba",
-	  " a "
+    "aca"
   ],
   "key": {
     "a": {
-      "tag": "craftful:coal"
+      "item": "minecraft:coal_block"
     },
-	"b": {
+    "b": {
       "tag": "craftful:heads"
+    },
+    "c": {
+      "item": "minecraft:totem_of_undying"
     }
   },
   "result": {
     "item": "minecraft:wither_skeleton_skull",
-	"count": 1
+    "count": 1
   }
 }

@@ -11,12 +11,13 @@ https://minecraft-ids.grahamedgecombe.com/
 ToxicTrapper 		    (Added the main recipes and founder of the pack)
 ColorBlurple		    (Put together the rest of the pack)
 anhnguyenlost13		    (Testing and Ideas)
-Xisumavoid + VT Team	(Some of the lesser known but importaint recipes)
+Xisumavoid + VT Team	(Some of the lesser known but important recipes)
 
 ### Other Contributors: ###
 Jefferson Dantas 	    (https://www.planetminecraft.com/data-pack/jd-best-crafts/)
 The_Killuer_999 	    (https://www.planetminecraft.com/data-pack/crafting-5686375/)
 TheDiamondPlayables	    (https://www.planetminecraft.com/data-pack/nether-crafting-craft-nether-items/)
+Boghety                 (https://www.planetminecraft.com/data-pack/wood-in-stonecutter/)
 the3lucas		        (https://modrinth.com/mod/vanilla-crafting-plus)
 The Destruc7i0n		    (The website https://crafting.thedestruc7i0n.ca that was used to make most of the pack)
 vazkii			        (Crafting ideas)

@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#d#",
+        "cMc",
+        "#d#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:prismarine_bricks"
+        },
+        "c": {
+            "item": "minecraft:sea_lantern"
+        },
+        "M": {
+            "item": "minecraft:magma_cream"
+        },
+        "d": {
+            "item": "minecraft:diamond"
+        }
+    },
+    "result": {
+        "item": "minecraft:heart_of_the_sea",
+        "count": 1
+    }
+}
