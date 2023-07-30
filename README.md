@@ -27,6 +27,7 @@ And if you don't play on the server, some links are below.
 ### Contributors
 - [AnhNguyenlost13](https://github.com/AnhNguyenlost13): \<Placeholder\>
 - [GirlInPurple](https://github.com/GirlInPurple): \<Placeholder\>
+- [DuyTip3011a](https://github.com/DuyTip3011a): New recipe and formatting fixes
 ### Other People
 - [ghost](https://github.com/ghost): \<placeholder\>
-- thank you to \<placeholder\> for \<placeholder\>
+- thank you to ToxicTrapper for the original Craftful datapack
