@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "group": "nc_soul_sand",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "tag": "craftful:sands"
+    },
+    "b": {
+      "item": "minecraft:echo_shard"
+    }
+  },
+  "result": {
+    "item": "minecraft:soul_sand",
+    "count": 9
+  }
+}
