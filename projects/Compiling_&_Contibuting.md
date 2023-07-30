@@ -1,6 +1,34 @@
 # Contributing
 
 TODO
+# Formatting Guidelines
+Use 4 tab spaces, as shown in this example:
+```json
+{
+    "type": "crafting_shaped",
+    "group": "nc_milk_bucket",
+    "pattern": [
+        "bmg",
+        "mmb",
+        "ggg"
+    ],
+    "key": {
+        "b": {
+            "item": "minecraft:blaze_powder"
+        },
+        "m": {
+            "item": "minecraft:mangrove_roots"
+        },
+        "g": {
+            "item": "minecraft:golden_carrot"
+        }
+    },
+    "result": {
+        "item": "minecraft:milk_bucket",
+        "count": 1
+    }
+}
+```
 
 # Compiling and Running
 
