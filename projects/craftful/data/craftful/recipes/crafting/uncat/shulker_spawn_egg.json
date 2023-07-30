@@ -1,0 +1,30 @@
+{
+  "type": "crafting_shaped",
+  "group": "nc_shulker_spawn_egg",
+  "pattern": [
+    "_Z_",
+    "PSP",
+    "BZB"
+  ],
+  "key": {
+    "_": {
+      "item": "minecraft:purpur_slab"
+    },
+    "Z": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "P": {
+      "item": "minecraft:pupur_block"
+    },
+    "S": {
+      "item": "minecraft:soul_sand"
+    },
+    "B": {
+      "item": "minecraft:purpur_stairs"
+    }
+  },
+  "result": {
+    "item": "minecraft:shulker_spawn_egg",
+    "count": 1
+  }
+}

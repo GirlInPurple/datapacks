@@ -4,18 +4,18 @@
   "pattern": [
     "aaa",
     "aba",
-	  "aaa"
+    "aaa"
   ],
   "key": {
     "a": {
       "tag": "craftful:sands"
     },
-	  "b": {
+    "b": {
       "item": "minecraft:echo_shard"
     }
   },
   "result": {
     "item": "minecraft:soul_sand",
-	"count": 9
+    "count": 9
   }
 }
