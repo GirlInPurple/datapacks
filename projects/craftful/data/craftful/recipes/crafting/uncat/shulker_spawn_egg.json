@@ -3,12 +3,12 @@
   "group": "nc_shulker_spawn_egg",
   "pattern": [
     "_Z_",
-    "PsP",
+    "PSP",
     "BZB"
   ],
   "key": {
     "_": {
-      "item": "minecraft:pupur_slab"
+      "item": "minecraft:purpur_slab"
     },
     "Z": {
       "item": "minecraft:phantom_membrane"
@@ -16,15 +16,15 @@
     "P": {
       "item": "minecraft:pupur_block"
     },
-    "s": {
+    "S": {
       "item": "minecraft:soul_sand"
     },
     "B": {
-      "item": "minecraft:purpur_stair"
+      "item": "minecraft:purpur_stairs"
     }
   },
   "result": {
-    "item": "minecraft :shulker_spawn_egg",
+    "item": "minecraft:shulker_spawn_egg",
     "count": 1
   }
 }
