@@ -17,10 +17,11 @@
 
 ### Formatting Guidelines
 
-To help keep consistency across files, use 4 tab spaces and uppercase keys, as shown in the example below:
+To help keep consistency across files, use 4 tab spaces, as shown in the example below:
 
 - The `group` option is completely optional, and is currently not used in Craftful
   - Do not add `nc_` or `craftless` to it either, they are from older versions of the pack
+- Keys are case-sensitive, meaning you can use g for gold ingot and G for gold block.
 
 ```json
 {
