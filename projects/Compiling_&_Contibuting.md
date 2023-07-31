@@ -55,9 +55,9 @@ To help keep consistency across files, use 4 tab spaces and uppercase keys, as s
 
 - Clone or download the repo,
 - Run [zip_files.py](/projects/zip_files.py),
-  - Note: requires Python 3.8 or higher to run.
-  - You can do this manually using either [WinRAR](https://www.win-rar.com/download.html?&L=0) or by default on Windows 11 or above.
-  - Linux users know how to do this already
+  - Note: The file above requires Python 3.8 or higher to run.
+  - You can do this manually using either [WinRAR](https://www.win-rar.com/download.html?&L=0) or [7-zip](https://www.7-zip.org/download.html). On Windows 10 or above, select all the files inside the folder, right click, hover "Send to" and click "Compressed (zipped) folder". **Do not** zip the root folder, it will result in a folder in a zip, and the datapack won't work.
+  - Linux users: Again, you can either use [7-zip](https://www.7-zip.org/download.html) or the "Compress" context menu if your operating system has that.
 - there are a few options in the python file for you if you want certain things or not,
 - The datapacks should then be made in the same folder as the .py file is.
 
