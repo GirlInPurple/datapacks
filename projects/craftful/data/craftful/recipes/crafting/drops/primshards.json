@@ -1,5 +1,6 @@
 {
     "type": "minecraft:crafting_shapeless",
+    "group": "mob drops",
     "ingredients": [
         {
             "item": "minecraft:glowstone_dust"

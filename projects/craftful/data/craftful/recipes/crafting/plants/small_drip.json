@@ -1,5 +1,4 @@
 {
-    "group": "smith",
     "type": "minecraft:smithing",
     "base": {
         "item": "minecraft:big_dripleaf"

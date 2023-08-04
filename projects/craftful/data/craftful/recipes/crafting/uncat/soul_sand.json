@@ -1,6 +1,6 @@
 {
   "type": "crafting_shaped",
-  "group": "nc_soul_sand",
+  "group": "sand",
   "pattern": [
     "aaa",
     "aba",

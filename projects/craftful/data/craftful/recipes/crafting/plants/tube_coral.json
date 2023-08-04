@@ -1,6 +1,6 @@
 {
-    "group": "coral",
     "type": "minecraft:crafting_shapeless",
+    "group": "coral",
     "ingredients": [
         {
             "item": "minecraft:tube_coral_block"

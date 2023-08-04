@@ -1,5 +1,5 @@
 <h2 align="center">
-  <img src="https://i.imgur.com/0fwIhaa.png" alt="logo">
+  <img src="https://media.discordapp.net/attachments/1114142242970542090/1133825188069384284/Banner.png?width=1440&height=720" alt="logo">
 </h2>
 
 This is the main GitHub repository for the Final Republic Minecraft server. here the server files are stored for later access and easier management, everything from the datapacks we use to the config files.
@@ -32,9 +32,5 @@ And if you don't play on the server, some links are below.
 
 - [AnhNguyenlost13](https://github.com/AnhNguyenlost13): \<Placeholder\>
 - [GirlInPurple](https://github.com/GirlInPurple): \<Placeholder\>
-- [DuyTip3011a](https://github.com/DuyTip3011a): New recipe and formatting fixes
-
-### Other People
-
-- [ghost](https://github.com/ghost): \<placeholder\>
-- thank you to ToxicTrapper for the original Craftful datapack
+- [DuyTip3011a](https://github.com/DuyTip3011a): New recipes and formatting fixes
+- ToxicTrapper: thank you for the original Craftful datapack

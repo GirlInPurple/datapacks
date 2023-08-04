@@ -1,5 +1,4 @@
 {
-    "group": "cutting",
     "type": "minecraft:stonecutting",
     "ingredient": {
         "item": "minecraft:sculk"

@@ -1,5 +1,6 @@
 {
     "type": "minecraft:smelting",
+    "group": "dust",
     "ingredient": {
         "item": "minecraft:glowstone_dust"
     },

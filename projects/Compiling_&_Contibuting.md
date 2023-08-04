@@ -19,14 +19,14 @@
 
 To help keep consistency across files, use 4 tab spaces, as shown in the example below:
 
-- The `group` option is completely optional, and is currently not used in Craftful
-  - Do not add `nc_` or `craftless` to it either, they are from older versions of the pack
+- The `group` option is now required as of commit `placeholder`
+  - Do not add `nc_` or `craftless` to the group, they are from older versions of the pack
 - Keys are case-sensitive, meaning you can use g for gold ingot and G for gold block.
 
 ```json
 {
     "type": "crafting_shaped",
-    "group": "milk_bucket",
+    "group": "mob drops",
     "pattern": [
         "BMG",
         "MMB",
@@ -37,10 +37,10 @@ To help keep consistency across files, use 4 tab spaces, as shown in the example
             "item": "minecraft:blaze_powder"
         },
         "M": {
-            "item": "minecraft:mangrove_roots"
+            "tag": "craftful:mushrooms" # this is a common error, 'tag' != 'item'
         },
         "G": {
-            "item": "minecraft:golden_carrot"
+            "item": "minecraft:barrier" # use 'minecraft:barrier' as a placeholder when necessary
         }
     },
     "result": {
@@ -49,6 +49,46 @@ To help keep consistency across files, use 4 tab spaces, as shown in the example
     }
 }
 ```
+
+Here is a list of existing groups and tags:
+
+- Groups
+  - Note: Non-exhaustive list
+  - `block ores`
+  - `craftful` (deprecated)
+  - `craftless` (deprecated)
+  - `cutting` (stonecutter crafts only)
+  - `discs`
+  - `dust`
+  - `d block ores`
+  - `end` (deprecated/unused)
+  - `mob drops`
+  - `op item`
+  - `spawn_egg` (unused)
+  - `stones`
+  - `raw`
+- Tags
+  - Note: There are duplicates tags with vanilla equivalents, submit a issue if you want to remove/edit one as editing something could cause recipes to scramble.
+  - (carpets)[]
+  - (coal)[]
+  - (crimson_plants)[]
+  - (dirt)[]
+  - (flowers_without_wr)[]
+    - meaning "Flowers Without Wither Rose"
+  - (grasses)[]
+  - (heads)[]
+  - (leaves)[]
+  - (mushrooms)[]
+  - (netherite_tools)[]
+  - (purpur_blocks)[]
+  - (quartz_blocks)[]
+  - (sands_like)[]
+  - (sands_only)[]
+  - (sands_without_sand)[]
+    - these three have *no* reason to exist, but yet they do. 90% sure they're not even used. Someone please make an issue about this
+  - (stones)[]
+  - (vines)[]
+  - (warped_plants)[]
 
 # Compiling and Running
 

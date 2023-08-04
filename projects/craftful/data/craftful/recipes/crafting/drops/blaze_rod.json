@@ -1,6 +1,6 @@
 {
   "type": "crafting_shaped",
-  "group": "nc_blaze_rod",
+  "group": "mob drops",
   "pattern": [
     " a",
     "a "

@@ -1,6 +1,6 @@
 {
   "type": "crafting_shapeless",
-  "group": "nc_magma_cream",
+  "group": "mob drops",
   "ingredients": [
     {
       "item": "minecraft:magma_block"

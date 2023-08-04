@@ -1,6 +1,6 @@
 {
-    "group": "craftless",
     "type": "minecraft:crafting_shapeless",
+    "group": "mob drops",
     "ingredients": [
         {
             "item": "minecraft:rotten_flesh"

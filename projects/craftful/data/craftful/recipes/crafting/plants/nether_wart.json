@@ -1,6 +1,6 @@
 {
   "type": "crafting_shapeless",
-  "group": "nc_nether_wart",
+  "group": "plants",
   "ingredients": [
     {
       "item": "minecraft:nether_wart_block"

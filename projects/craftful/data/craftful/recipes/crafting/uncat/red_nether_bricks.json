@@ -1,6 +1,6 @@
 {
   "type": "crafting_shaped",
-  "group": "nc_red_nether_bricks",
+  "group": "bricks",
   "pattern": [
     " a ",
     "aba",
