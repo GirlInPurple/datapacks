@@ -1,49 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <title>The Final Republic</title>
-        <link rel="icon" href="https://cdn.discordapp.com/attachments/1061516148325220455/1074527045561884722/f7bd4c45-d74b-405c-b57c-852917af9cc7.png">
-    </head>
-    <body>
-        <header>
-            
-        </header>
-        <nav class="tab">
-            <button onclick="openPage(event, 'Home')">Home</button>
-            <button onclick="openPage(event, 'Maps')">World Map</button>
-            <button onclick="openPage(event, 'Wiki')">FR+SC Wiki</button>
-            <button onclick="openPage(event, 'Abou')">About</button>
-            <script>
-                function openPage(evt, cityName) {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Home | The Final Republic</title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1061516148325220455/1074527045561884722/f7bd4c45-d74b-405c-b57c-852917af9cc7.png">
+</head>
+<body>
+    <header>
 
-                }
-            </script>
-        </nav>
+
+    </header>
+    <nav class="tab">
+        <button onclick="openPage(event, 'index')">Home</button>
+        <button onclick="openPage(event, 'wiki')">Wiki</button>
+        <button onclick="openPage(event, 'about')">About</button>
+        <script>
+           
+        </script>
+    </nav>
+
+    
+    <main>
         <div class="center">
-            <h1>The Final Republic (Beta Site)</h1>
-            <p>This website is under HEAVY beta, was litterally trown together in an afternoon while we setup the rest of the server. This place wil be updated as often as possible.</p>
+            <h1><center>The Final Republic</center></h1>
+            <p>This website is under HEAVY beta, was literally thrown together in an afternoon while we set up the rest of the server. This place will be updated as often as possible.</p>
         </div>
-        <footer>
-            <div class="footer_l">
-                <p id="Copyright"></p>
-                <p id="Minecraft"></p>
-                <p>Some site code taken from <a href="https://anhnguyenlost13.github.io/chuyendoidonvi/">AnhNguyenlost13's Project</a></p>
-                <p>No guarantees this site will even work lmao.</p>
-            </div>
-            <div class="footer_r">
-                <p class="footer_r_p"><i><a href="">Contact</a>, <a href="">Home</a>, <a href="">About</a></i></p>
-            </div>
-            <script>
-                let width = screen.width;
-                if (width >= 800) {
-                document.getElementById("Copyright").innerHTML = "©2023-2023 TheFinalRepublic, Final Republic, FinalRepublic | By ColorBlurple and AnhNguyenlost13";
-                document.getElementById("Minecraft").innerHTML = "Minecraft™ is is Copyright of Mojang AB; Fabric, Bluemap, and Imdeity are all owned by their respective copyright holders."
-                } else {
-                document.getElementById("Copyright").innerHTML = "©2023-2023 TheFinalRepublic By ColorBlurple and AnhNguyenlost13";
-                document.getElementById("Minecraft").innerHTML = "Minecraft™ is is Copyright of Mojang AB"
-                }
-            </script>
-        </footer>
-    </body>
+    </main>
+    <footer>
+        <div class="footer_l">
+            <p>&copy; 2023-2023 TheFinalRepublic, Final Republic, FinalRepublic | OusmBlueNinja</p>
+            <p>Minecraft™ is Copyright of Mojang AB; Fabric, Bluemap, and Imdeity are all owned by their respective copyright holders.</p>
+            <p>Some site code taken from <a href="https://anhnguyenlost13.github.io/GirlInPurple/">ColorBlurple on Github</a></p>
+        </div>
+        <div class="footer_r">
+            <p><i><a href="/contact.html">Contact</a></i></p>
+        </div>
+    </footer>
+</body>
 </html>
