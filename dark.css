@@ -251,3 +251,17 @@ button {
     width: 100%; /* Set the width of each image to 100% of its parent's width */
     height: auto; /* This will maintain the aspect ratio of the images */
   }
+
+  
+  
+  .tag {
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  space {
+    padding-right: 10px;
+  }

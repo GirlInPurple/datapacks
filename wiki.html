@@ -7,111 +7,8 @@
     <script src="script.js"></script>
     <title>Wiki | The Final Republic</title>
     <link rel="icon" href="https://cdn.discordapp.com/attachments/1061516148325220455/1074527045561884722/f7bd4c45-d74b-405c-b57c-852917af9cc7.png">
-    <!-- 
-        this style is specifcally for the dropdown on the search part of the wiki
-        please do not touch or port this elsewhere
-    -->
-    <style>
-        .dropdown {
-        display: inline-block;
-        position: relative;
-        }
-
-        button{
-        border:none;
-        border-radius:5px;
-        padding:15px 30px;
-        font-size:18px;
-        cursor:pointer;
-        }
-
-        button:hover{
-        background-color:#ddd;
-        }
-
-        .dropdown-year {
-        display: none;
-        position: absolute;
-        overflow: auto;
-        background-color:#fff;
-        border-radius:5px;
-        box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
-        }
-
-        .dropdown:hover .dropdown-year {
-        display: block;
-        }
-
-        .dropdown-year a {
-        display: block;
-        color: #000000;
-        padding: 5px;
-        text-decoration: none;
-        padding:20px 40px;
-        }
-
-        .dropdown-year a:hover {
-        color: #0a0a23;
-        background-color: #ddd;
-        border-radius:5px;
-        }
-
-        .dropdown-topic {
-        display: none;
-        position: absolute;
-        overflow: auto;
-        background-color:#fff;
-        border-radius:5px;
-        box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
-        }
-
-        .dropdown:hover .dropdown-topic {
-        display: block;
-        }
-
-        .dropdown-topic a {
-        display: block;
-        color: #000000;
-        padding: 5px;
-        text-decoration: none;
-        padding:20px 40px;
-        }
-
-        .dropdown-topic a:hover {
-        color: #0a0a23;
-        background-color: #ddd;
-        border-radius:5px;
-        }
-
-        .dropdown-tag {
-        display: none;
-        position: absolute;
-        overflow: auto;
-        background-color:#fff;
-        border-radius:5px;
-        box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
-        }
-
-        .dropdown:hover .dropdown-tag {
-        display: block;
-        }
-
-        .dropdown-tag a {
-        display: block;
-        color: #000000;
-        padding: 5px;
-        text-decoration: none;
-        padding:20px 40px;
-        }
-
-        .dropdown-tag a:hover {
-        color: #0a0a23;
-        background-color: #ddd;
-        border-radius:5px;
-        }
-    </style>
+    
 </head>
-<body onload="hide(document.getElementById('dropdown'));">
     <header>
 
     </header>
@@ -126,43 +23,15 @@
         <div class="center">
             <h1>The Final Republic Wiki</h1>
             <input type="text" id="searchInput" placeholder="Search...">
-            <input type="checkbox" id="advancedSearch" name="Advanced Search" onclick="checkAddress(this)"/>
-            <label for="advancedSearch">Advanced Search</label>
-            <div class="dropdown">
-                <button>Year</button>
-                <div class="dropdown-year">
-                    <a href="#">Pre-2020</a>
-                    <a href="#">2020</a>
-                    <a href="#">2021</a>
-                    <a href="#">2022</a>
-                    <a href="#">2023</a>
-                    <a href="#">2024</a>
-                </div>
-                <button>Topic</button>
-                <div class="dropdown-topic">
-                    <a href="#">Conflict/War</a>
-                    <a href="#">Town/Base/City</a>
-                    <a href="#">Group/Team/Faction</a>
-                    <a href="#">Players/NPC/Characters</a>
-                </div>
-                <button>Tag</button>
-                <div class="dropdown-tag">
-                    <a href="#">Main Page</a>
-                    <a href="#">Redirect</a>
-                    <a href="#">Tutorial/Guide</a>
-                    <a href="#">AI-Enhanced</a>
-                    <a href="#">Abandoned (Wiki)</a>
-                    <a href="#">Abandoned (Game)</a>
-                    <a href="#">Obscure Lore</a>
-                    <a href="#">Translated</a>
-                </div>
-            </div>
+            
             <div id="wikiContent">
                 <h1></h1> <!-- Padding -->
             
             <!-- Baystone Wiki Article -->
             <article id="Baystone">
-                <span class="tag">Gaming</span>
+                
+              
+                <span class="tag" style="background-color: rgba(255, 23, 23, 0.507);">2015</span><space></space><span class="tag" style="background-color: rgba(255, 23, 236, 0.507);">Gaming</span>
                 <h2>Baystone</h2>
                 <p>Baystone is a player-made location in our server, serving as a record-keeping area. The name "Baystone" is a combination of "Beta" and "Stone," reflecting the beta-style and pixel art-based builds popular during the 2010-2015 era.</p>
 
@@ -177,6 +46,7 @@
 
                 <h3>Trivia</h3>
                 <p>The name "Baystone" is pronounced "Be-Stone," reflecting its unique blend of beta-style and stone-based builds.</p>
+                
             </article>
 
             <!-- We Bare Bears Wiki Article -->
