@@ -107,22 +107,37 @@
     <script>
         // JavaScript for the search functionality
         document.getElementById("searchInput").addEventListener("input", function() {
-            var searchQuery = this.value.toLowerCase();
+            var searchQuery = this.value.toLowerCase().trim();
             var articles = document.getElementsByTagName("article");
 
             for (var i = 0; i < articles.length; i++) {
                 var article = articles[i];
                 var title = article.getElementsByTagName("h2")[0].innerText.toLowerCase();
+                var content = article.innerText.toLowerCase();
 
-                if (title.indexOf(searchQuery) === -1) {
-                    // Hide the article if the search query is not found in the title
-                    article.style.display = "none";
-                } else {
-                    // Show the article if the search query is found in the title
+                // Check if the search query is present in either the title or the article content
+                var titleMatches = title.includes(searchQuery);
+                var contentMatches = content.includes(searchQuery);
+
+                // Check for residents' names
+                var residents = article.querySelectorAll('ul li a');
+                var residentsMatch = false;
+                for (var j = 0; j < residents.length; j++) {
+                    if (residents[j].innerText.toLowerCase().includes(searchQuery)) {
+                        residentsMatch = true;
+                        break;
+                    }
+                }
+
+                // Show or hide the article based on matches
+                if (titleMatches || contentMatches || residentsMatch) {
                     article.style.display = "block";
+                } else {
+                    article.style.display = "none";
                 }
             }
         });
+
     </script>
 </body>
 </html>
