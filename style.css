@@ -12,7 +12,7 @@ header {
 
 nav.tab {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     background-color: #333;
     padding: 10px;
 }
