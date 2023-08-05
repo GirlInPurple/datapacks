@@ -285,5 +285,46 @@ button {
   input[type="text"]:focus {
     border-color: #007BFF;
   }
+
+  /* CSS for the tags */
+
+  
+  /* Colors for the tags */
+  .tag-red {
+    background-color: rgba(255, 23, 23, 0.5);
+  }
+  
+  .tag-blue {
+    background-color: rgba(23, 209, 255, 0.5);
+  }
+  
+  .tag-green {
+    background-color: rgba(23, 46, 255, 0.5);
+  }
+  
+  .tag-pink {
+    background-color: rgba(255, 23, 236, 0.5);
+  }
+  
+  .tag-purple {
+    background-color: rgba(17, 0, 255, 0.5);
+  }
+  
+  .tag-orange {
+    background-color: rgba(255, 165, 0, 0.5);
+  }
+  
+  .tag-yellow {
+    background-color: rgba(255, 255, 23, 0.5);
+  }
+  
+  .tag-cyan {
+    background-color: rgba(0, 247, 255, 0.5);
+  }
+  
+  .tag-teal {
+    background-color: rgba(0, 128, 128, 0.5);
+  }
+  
   
   
