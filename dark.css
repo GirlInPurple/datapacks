@@ -51,10 +51,12 @@ footer {
     width: 99vw;
     justify-content: space-between;
     background-color: #333;
-    color: #e0e0e0; /* Light text color */
-    padding: 10px;
+    color: #fff;
+    padding: 5px;
     font-size: 10px;
-}
+    height: 50px; /* Set the height to half the original height */
+  }
+  
 
 footer .footer_l {
     max-width: 800px;
@@ -251,3 +253,80 @@ button {
     width: 100%; /* Set the width of each image to 100% of its parent's width */
     height: auto; /* This will maintain the aspect ratio of the images */
   }
+
+  
+  
+  .tag {
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  space {
+    padding-right: 10px;
+  }
+
+  /* CSS for the search input */
+    /* CSS for the search input */
+  .coolp {
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    max-width: 400px; /* Set a maximum width for the input */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #007BFF;
+  }
+
+  /* CSS for the tags */
+
+  
+  /* Colors for the tags */
+  .tag-red {
+    background-color: rgba(255, 23, 23, 0.5);
+  }
+  
+  .tag-blue {
+    background-color: rgba(23, 209, 255, 0.5);
+  }
+  
+  .tag-green {
+    background-color: rgba(23, 46, 255, 0.5);
+  }
+  
+  .tag-pink {
+    background-color: rgba(255, 23, 236, 0.5);
+  }
+  
+  .tag-purple {
+    background-color: rgba(17, 0, 255, 0.5);
+  }
+  
+  .tag-orange {
+    background-color: rgba(255, 165, 0, 0.5);
+  }
+  
+  .tag-yellow {
+    background-color: rgba(255, 255, 23, 0.5);
+  }
+  
+  .tag-cyan {
+    background-color: rgba(0, 247, 255, 0.5);
+  }
+  
+  .tag-teal {
+    background-color: rgba(0, 128, 128, 0.5);
+  }
+  
+  
+  
