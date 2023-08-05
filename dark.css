@@ -263,7 +263,16 @@ button {
     font-weight: bold;
     font-size: 12px;
     white-space: nowrap;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
   }
+  
+  .tag:hover {
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  
   space {
     padding-right: 10px;
   }
