@@ -28,7 +28,7 @@ And if you don't play on the server, some links are below.
 
 ## Credits
 
-### Contributors
+### [Contributors](/../../graphs/contributors)
 
 - [AnhNguyenlost13](https://github.com/AnhNguyenlost13): \<Placeholder\>
 - [GirlInPurple](https://github.com/GirlInPurple): \<Placeholder\>
