@@ -29,3 +29,9 @@ function toggleTheme() {
         themeStylesheet.setAttribute('href', darkTheme);
     }
 }
+
+function insertTag(tag) {
+    var searchInput = document.getElementById("searchInput");
+    searchInput.value = tag;
+  }
+  

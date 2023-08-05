@@ -29,7 +29,7 @@
 <span class="tag tag-green">Location</span><space></space>
 <span class="tag tag-pink">Characters</span><space></space>
 <span class="tag tag-purple">Guide</span><space></space>
-<span class="tag tag-orange">Main Page</span><space></space>
+<span class="tag tag-orange">Main-Page</span><space></space>
 <span class="tag tag-yellow">Redirect</span><space></space>
 <span class="tag tag-cyan">Obscure</span><space></space>
 
@@ -45,14 +45,17 @@
             <input type="text" id="searchInput" placeholder="Search for articles and tags...">
             <!-- Testing Tags Here -->
             <p class="coolp">All Tags</p>
-            <span class="tag tag-red">Confict</span><space></space>
-            <span class="tag tag-blue">Group</span><space></space>
-            <span class="tag tag-green">Location</span><space></space>
-            <span class="tag tag-pink">Characters</span><space></space>
-            <span class="tag tag-purple">Guide</span><space></space>
-            <span class="tag tag-orange">Main Page</span><space></space>
-            <span class="tag tag-yellow">Redirect</span><space></space>
-            <span class="tag tag-cyan">Obscure</span><space></space>
+            <p>put a # in front of search to search for tags or click a tag.</p>
+            <br>
+            <span class="tag tag-red" onclick="insertTag('#Confict')">Confict</span>
+            <span class="tag tag-blue" onclick="insertTag('#Group')">Group</span>
+            <span class="tag tag-green" onclick="insertTag('#Location')">Location</span>
+            <span class="tag tag-pink" onclick="insertTag('#Characters')">Characters</span>
+            <span class="tag tag-purple" onclick="insertTag('#Guide')">Guide</span>
+            <span class="tag tag-orange" onclick="insertTag('#Main-Page')">Main-Page</span>
+            <span class="tag tag-yellow" onclick="insertTag('#Redirect')">Redirect</span>
+            <span class="tag tag-cyan" onclick="insertTag('#Obscure')">Obscure</span>
+
             
             <div id="wikiContent">
                 <h1></h1> <!-- Padding -->
