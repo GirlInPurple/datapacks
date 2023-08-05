@@ -29,6 +29,8 @@
     <span class="tag" style="background-color: rgba(42, 255, 23, 0.507);">Map</span><space></space>
 
     <span class="tag" style="background-color: rgba(0, 247, 255, 0.507);">Group</span><space></space>
+
+    <span class="tag" style="background-color: rgba(255, 230, 0, 0.507);">Info</span><space></space>
     
     -->
     
@@ -43,7 +45,8 @@
 
         <div class="center">
             <h1>The Final Republic Wiki</h1>
-            <input type="text" id="searchInput" placeholder="Search...">
+            <p class="coolp">put a # in front of search to search for tags</p>
+            <input type="text" id="searchInput" placeholder="Search for articles and tags...">
             
             <div id="wikiContent">
                 <h1></h1> <!-- Padding -->
@@ -119,27 +122,38 @@
                 <p>No maps are available for Squeezalton at the moment, as it is a private base.</p>
             </article>
             <article id="cublak-view">
+                <span class="tag" style="background-color: rgba(255, 23, 236, 0.507);">Location</span><space></space>
+                
+                <span class="tag" style="background-color: rgba(42, 255, 23, 0.507);">Map</span><space></space>
                 <h2>Cublak View</h2>
-                <p><em>For the English version, look here; / Pour la version de anglaise, regarder ici;</em></p>
-                <p>Avec des connexions à The Borderlands du route de sud à Middle Spawn et Spawn City du le Jungle et Oak lignes, il être considéré l'un des 3 faubourgs de Spawn City Metropolitian Area; les deux autres étant World Origin Road et The Borderlands. la ville contient une montagne avec un cube de lumineux à haut, un petit village à l'est, et un double rail traversant la ville avec une thème de violette cristaux de lumineux. FRTA Road 4 Passe à travers la ville, en direction de Yuri's town et The Borderlands.</p>
-
-                <h3>Residents / Résidentes</h3>
+                <h3>Summary</h3>
+                <p>With connections to The Borderlands from the road to the south and Middle Spawn and Spawn City [3] from the Jungle and Oak lines respectively, it could be considered one of the 3 suburbs of the main city; the other two being World Origin Road [2] and The Borderlands [1]. It contains a mountain with a glowing cube on top, a small plains village to the east, and a dual railway passing straight through the city; all with the theme of glowing purple crystals.
+                FRTA Road 4 passes through the town, heading to Yuri's town.
+                As of Late July 2023, construction of Cublak is paused.</p>
+            
+                <h3>Residents</h3>
                 <ul>
-                    <li><a href="#">@Alakazam6898</a> (Propriétaire / Constructeur Principal)</li>
-                    <li><a href="#djzombiehunter">@DJzombiehunter</a> (Aide / Résident temporaire)</li>
+                    <li><a href="#alakazam6898">@Alakazam6898</a> (Owner / Main Builder)</li>
+                    <li><a href="#djzombiehunter">@DJzombiehunter</a> (Helper / Temporary Resident)</li>
                 </ul>
-
-                <h3>Maps, Images, and References / Cartes, Images, et Références</h3>
+            
+                <h3>Maps, Images, and References</h3>
                 <ul>
-                    <li><a href="#">The Borderlands</a></li>
-                    <li><a href="#">World Origin Road</a></li>
-                    <li><a href="#">Spawn City</a></li>
-                    <li><a href="#">Yuri's Unanamed Town</a></li>
+                    <li><a href="#the-borderlands">The Borderlands</a></li>
+                    <li><a href="#world-origin-road">World Origin Road</a></li>
+                    <li><a href="#spawn-city">Spawn City</a></li>
                 </ul>
-
-                <h3>Trivia / Anecdotes</h3>
-                <p>Le nom Cublak View est une blague anglaise: Cube &gt; Cub, Lakshyapowerman &gt; Lak, Mountain View &gt; View. L'idée stupide du nom séjourné.<br>C'est l'une des 4 villes d'origine sur le serveur: Spawn City, Cublak View, Windswept Fang, et Nether Bay.</p>
+                <h3>Trivia</h3>
+                <p>The name Cublak View is made of 3 parts; Cube > Cub, Lakshyapowerman > Lak, Mountain View > View. It was a name idea that everyone just stuck with.
+                This is one of the 4 original towns on the server; being Spawn City, Cublak View, Windswept Fang, and Nether Bay.</p>
+            
+                <button onclick="toggleImageVisibility(1)">Click to show image 1</button>
+                <img id="image1" src="https://media.discordapp.net/attachments/1061516148325220455/1118033620024709120/image.png" alt="Image 1" style="display:none;">
+                <button onclick="toggleImageVisibility(2)">Click to show image 2</button>
+                <img id="image2" src="https://media.discordapp.net/attachments/1061516148325220455/1128252356279144539/image.png" alt="Image 2" style="display:none;">
             </article>
+            
+            
 
             <!-- Article 2 - Southcraft Season 1 -->
             <article id="southcraft-season-1">
@@ -156,6 +170,7 @@
 
             <!-- Article 3 - finalrepublic -->
             <article id="finalrepublic">
+                <span class="tag" style="background-color: rgba(255, 230, 0, 0.507);">Info</span><space></space>
                 <h2>finalrepublic</h2>
                 <p>For finalrepublic's seasons; look here:<br>FR Season 1<br>FR Season 2</p>
 
@@ -168,6 +183,9 @@
                 <p>The original spelling of the name is "finalrepublic" but spelling it "final republic" is perfectly fine as people will get what you're saying.<br>The game series Final Fantasy was made as Square Enix's final attempt at a popular game, and managed to make it work. Final Republic's name is for a similar reason, this was intended to be my last fully public server before closing it all down, and then the server exploded in popularity, casuing the whole of FR S2 to set into motion.<br>The following is the oldest surviving screenshot of this server's world: <a href="https://cdn.discordapp.com/attachments/1061516148325220455/1133123214017564824/2023-01-14_14.png">Screenshot Link</a></p>
             </article>
             <article id="greater-spawn-city-metro">
+                <span class="tag" style="background-color: rgba(255, 230, 0, 0.507);">Info</span><space></space>
+                <span class="tag" style="background-color: rgba(255, 23, 236, 0.507);">Location</span><space></space>
+                <span class="tag" style="background-color: rgba(42, 255, 23, 0.507);">Map</span><space></space>
                 <h2>Greater Spawn City Metropolitan Area</h2>
                 <p>Towns</p>
                 <p>The Greater Spawn City Metropolitan Area (called SCM for Spawn City Metro from now on on this page) contains the towns of;</p>
@@ -486,65 +504,65 @@
     <script>
         // JavaScript for the search functionality
         document.getElementById("searchInput").addEventListener("input", function() {
-        var searchQuery = this.value.toLowerCase().trim();
-        var articles = document.getElementsByTagName("article");
-
-        for (var i = 0; i < articles.length; i++) {
-            var article = articles[i];
-            var titleElement = article.getElementsByTagName("h2")[0];
-            var contentElements = article.getElementsByTagName("p");
-
-            var title = titleElement.innerText.toLowerCase();
-            var content = article.innerText.toLowerCase();
-
-            // Check if the search query is present in either the title or the article content
-            var titleMatches = title.includes(searchQuery);
-            var contentMatches = content.includes(searchQuery);
-
-            // Check for residents' names
-            var residents = article.querySelectorAll('ul li a');
-            var residentsMatch = false;
-            for (var j = 0; j < residents.length; j++) {
-                if (residents[j].innerText.toLowerCase().includes(searchQuery)) {
-                    residentsMatch = true;
-                    break;
-                }
+            var searchQuery = this.value.toLowerCase().trim();
+            var articles = document.getElementsByTagName("article");
+    
+            var isTagSearch = false;
+            if (searchQuery.startsWith("#")) {
+                isTagSearch = true;
+                searchQuery = searchQuery.substring(1);
             }
-
-            // Show or hide the article based on matches
-            if (titleMatches || contentMatches || residentsMatch) {
-                article.style.display = "block";
-
-                // Highlight the search query in the title
-                titleElement.innerHTML = title.replace(
-                    new RegExp(searchQuery, 'gi'),
-                    (match) => `<span style="background-color: yellow">${match}</span>`
-                );
-
-                // Highlight the search query in the content
-                for (var k = 0; k < contentElements.length; k++) {
-                    var contentElement = contentElements[k];
-                    contentElement.innerHTML = contentElement.innerText.replace(
+    
+            for (var i = 0; i < articles.length; i++) {
+                var article = articles[i];
+                var titleElement = article.getElementsByTagName("h2")[0];
+                var contentElements = article.getElementsByTagName("p");
+                var tags = article.querySelectorAll(".tag");
+    
+                var title = titleElement.innerText.toLowerCase();
+                var content = article.innerText.toLowerCase();
+                var tagTexts = Array.from(tags).map(tag => tag.innerText.toLowerCase());
+    
+                // Check if the search query is present in either the title, content, or tags
+                var titleMatches = title.includes(searchQuery);
+                var contentMatches = content.includes(searchQuery);
+                var tagsMatch = tagTexts.some(tag => tag.includes(searchQuery));
+    
+                // Check for residents' names
+                var residents = article.querySelectorAll('ul li a');
+                var residentsMatch = false;
+                for (var j = 0; j < residents.length; j++) {
+                    if (residents[j].innerText.toLowerCase().includes(searchQuery)) {
+                        residentsMatch = true;
+                        break;
+                    }
+                }
+    
+                // Show or hide the article based on matches
+                if ((isTagSearch && tagsMatch) || (!isTagSearch && (titleMatches || contentMatches || residentsMatch))) {
+                    article.style.display = "block";
+    
+                    // Highlight the search query in the title
+                    titleElement.innerHTML = title.replace(
                         new RegExp(searchQuery, 'gi'),
                         (match) => `<span style="background-color: yellow">${match}</span>`
                     );
+    
+                    // Highlight the search query in the content
+                    for (var k = 0; k < contentElements.length; k++) {
+                        var contentElement = contentElements[k];
+                        contentElement.innerHTML = contentElement.innerText.replace(
+                            new RegExp(searchQuery, 'gi'),
+                            (match) => `<span style="background-color: yellow">${match}</span>`
+                        );
+                    }
+                } else {
+                    article.style.display = "none";
                 }
-            } else {
-                article.style.display = "none";
             }
-        }
-    });
+        });
 
     </script>
-    <script>
-        // Advanced Search Checkbox
-        function checkAddress(checkbox) {
-            if (checkbox.checked)
-            {
-                alert("a");
-                hide(document.getElementById('dropdown'));
-            }
-        }
-    </script>
+    
 </body>
 </html>

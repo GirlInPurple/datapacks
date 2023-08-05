@@ -265,3 +265,25 @@ button {
   space {
     padding-right: 10px;
   }
+
+  /* CSS for the search input */
+    /* CSS for the search input */
+  .coolp {
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    max-width: 400px; /* Set a maximum width for the input */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #007BFF;
+  }
+  
+  
