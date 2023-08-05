@@ -11,20 +11,85 @@
 <body>
     <header>
 
-
     </header>
     <nav class="tab">
         <button onclick="openPage(event, 'index')">Home</button>
         <button onclick="openPage(event, 'wiki')">Wiki</button>
         <button onclick="openPage(event, 'about')">About</button>
-        <script>
-           
-        </script>
     </nav>
     <main>
         <div class="center">
             <h1>The Final Republic Wiki</h1>
-            <p>i aint writing this stuff</p>
+            <input type="text" id="searchInput" placeholder="Search...">
+            <div id="wikiContent">
+                <h1></h1> <!-- Padding -->
+            
+            <!-- Baystone Wiki Article -->
+            <article>
+                <h2>Baystone</h2>
+                <p>Baystone is a player-made location in our server, serving as a record-keeping area. The name "Baystone" is a combination of "Beta" and "Stone," reflecting the beta-style and pixel art-based builds popular during the 2010-2015 era.</p>
+
+                <h3>Residents</h3>
+                <ul>
+                    <li><a href="#">@DJzombiehunter</a> (Resident)</li>
+                    <li>Founder: <a href="#">@Baystone</a></li>
+                </ul>
+
+                <h3>Images, Maps, and References</h3>
+                <p>No maps are available at the moment, as the location is private.</p>
+
+                <h3>Trivia</h3>
+                <p>The name "Baystone" is pronounced "Be-Stone," reflecting its unique blend of beta-style and stone-based builds.</p>
+            </article>
+
+            <!-- We Bare Bears Wiki Article -->
+            <article>
+                <h2>We Bare Bears</h2>
+                <p>We Bare Bears is a player group established for record-keeping purposes. Additionally, they have set up a town within the server, making them a noteworthy group in our community.</p>
+
+                <h3>Residents / Members</h3>
+                <ul>
+                    <li><a href="#">@TipDuy3010</a> (Co-Founder)</li>
+                    <li><a href="#">@DuyTip3011a</a> (Founder)</li>
+                    <li><a href="#">@Alakazam6898</a> (Founder)</li>
+                </ul>
+
+                <h3>Images, Maps, and References</h3>
+                <p>No maps are available currently, and the location of their private base and other places is uncertain and not well-documented.</p>
+
+                <h3>Trivia</h3>
+                <p>We Bare Bears is the first group in the server to establish both a town and be recognized for their record-keeping efforts.</p>
+            </article>
+
+            <!-- HumanBeingA1's Unnamed Town Wiki Article -->
+            <article>
+                <h2>HumanBeingA1's Unnamed Town</h2>
+                <p>HumanBeingA1's Unnamed Town is an enigmatic location, the status of which is unclear. It is uncertain whether it is an independent town or part of World Origin Road or Spawn City.</p>
+
+                <h3>Residents</h3>
+                <ul>
+                    <li>HumanBeingA1 (Founder / Position Unknown)</li>
+                    <li><a href="#">@TipDuy3010</a> (Co-Founder / Position Unknown)</li>
+                </ul>
+
+                <h3>Images, Maps, and References</h3>
+                <p>No maps are currently available for this location, as it is a private base.</p>
+            </article>
+
+            <!-- Squeezalton Wiki Article -->
+            <article>
+                <h2>Squeezalton</h2>
+                <p>Squeezalton is a location on the server designated for record-keeping purposes.</p>
+
+                <h3>Residents</h3>
+                <ul>
+                    <li><a href="#">@squeezal</a> (Founder / Position Unknown)</li>
+                </ul>
+
+                <h3>Images, Maps, and References</h3>
+                <p>No maps are available for Squeezalton at the moment, as it is a private base.</p>
+            </article>
+            </div>
         </div>
     </main>
     <footer>
@@ -37,5 +102,26 @@
             <p><i><a href="/contact.html">Contact</a></i></p>
         </div>
     </footer>
+
+    <script>
+        // JavaScript for the search functionality
+        document.getElementById("searchInput").addEventListener("input", function() {
+            var searchQuery = this.value.toLowerCase();
+            var articles = document.getElementsByTagName("article");
+
+            for (var i = 0; i < articles.length; i++) {
+                var article = articles[i];
+                var title = article.getElementsByTagName("h2")[0].innerText.toLowerCase();
+
+                if (title.indexOf(searchQuery) === -1) {
+                    // Hide the article if the search query is not found in the title
+                    article.style.display = "none";
+                } else {
+                    // Show the article if the search query is found in the title
+                    article.style.display = "block";
+                }
+            }
+        });
+    </script>
 </body>
 </html>
