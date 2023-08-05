@@ -15,3 +15,17 @@ function toggleImageVisibility(imageNumber) {
         image.style.display = 'none';
     }
 }
+
+function toggleTheme() {
+    const themeStylesheet = document.getElementById('themeStylesheet');
+    const currentTheme = themeStylesheet.getAttribute('href');
+    const darkTheme = 'dark.css';
+    const lightTheme = 'light.css';
+
+    // Check the current theme and toggle to the opposite
+    if (currentTheme === darkTheme) {
+        themeStylesheet.setAttribute('href', lightTheme);
+    } else {
+        themeStylesheet.setAttribute('href', darkTheme);
+    }
+}

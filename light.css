@@ -3,11 +3,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
+    padding-right: 8px; /* Add padding to the right to create space for the scrollbar */
 }
 
 header {
     /* Add styles for the header if needed */
-    
 }
 
 nav.tab {
@@ -26,15 +26,6 @@ nav.tab button {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-nav.tab a {
-    background-color: #555;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
 
 nav.tab button:hover {
     background-color: #444;
@@ -45,7 +36,7 @@ div.center {
     margin: 50px auto;
     padding: 20px;
     background-color: #ffffff;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -77,17 +68,17 @@ a {
     color: white;
     text-underline-position: unset;
 }
+
 a.black {
     color: black;
     text-underline-position: unset;
 }
 
-img.center
-{
-    position:absolute;
-    left:0px;
-    top:0px;
-    z-index:-1;
+img.center {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
 }
 
 article {
@@ -132,63 +123,81 @@ article h3 {
     margin-bottom: 10px;
 }
 
-body {
-    padding-right: 8px; /* Add padding to the right to create space for the scrollbar */
-  }
-  
-  /* Style for the scrollbar track */
-  ::-webkit-scrollbar {
+/* Style for the scrollbar track */
+::-webkit-scrollbar {
     width: 8px;
     opacity: 0;
     transition: opacity 0.3s ease;
-  }
-  
-  /* Show the scrollbar track when scrolling */
-  ::-webkit-scrollbar-thumb:hover::-webkit-scrollbar {
+}
+
+/* Show the scrollbar track when scrolling */
+::-webkit-scrollbar-thumb:hover::-webkit-scrollbar {
     opacity: 1;
-  }
-  
-  /* Style for the scrollbar thumb */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Style for the scrollbar thumb */
+::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 4px;
-  }
-  
-  /* Style for the scrollbar track when hovering over it */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Style for the scrollbar track when hovering over it */
+::-webkit-scrollbar-thumb:hover {
     background-color: #555;
-  }
-  
-  /* Style for the scrollbar thumb when it is being dragged */
-  ::-webkit-scrollbar-thumb:active {
+}
+
+/* Style for the scrollbar thumb when it is being dragged */
+::-webkit-scrollbar-thumb:active {
     background-color: #333;
-  }
-  
-  /* Style for the scrollbar track in Firefox */
-  /* Note: Firefox uses a different pseudo-element (-moz-scrollbar) for styling */
-  /* You may need to adjust the colors to match your desired design */
-  * {
+}
+
+/* Style for the scrollbar track in Firefox */
+/* Note: Firefox uses a different pseudo-element (-moz-scrollbar) for styling */
+/* You may need to adjust the colors to match your desired design */
+* {
     scrollbar-width: thin;
     scrollbar-color: #888 #f0f0f0;
-  }
-  
-  /* Style for the scrollbar thumb in Firefox */
-  /* You may need to adjust the colors to match your desired design */
-  *::-moz-scrollbar-thumb {
+}
+
+/* Style for the scrollbar thumb in Firefox */
+/* You may need to adjust the colors to match your desired design */
+*::-moz-scrollbar-thumb {
     background-color: #888;
     border-radius: 4px;
-  }
-  
-  /* Style for the scrollbar thumb when hovering over it in Firefox */
-  /* You may need to adjust the colors to match your desired design */
-  *::-moz-scrollbar-thumb:hover {
+}
+
+/* Style for the scrollbar thumb when hovering over it in Firefox */
+/* You may need to adjust the colors to match your desired design */
+*::-moz-scrollbar-thumb:hover {
     background-color: #555;
-  }
-  
-  /* Style for the scrollbar thumb when it is being dragged in Firefox */
-  /* You may need to adjust the colors to match your desired design */
-  *::-moz-scrollbar-thumb:active {
+}
+
+/* Style for the scrollbar thumb when it is being dragged in Firefox */
+/* You may need to adjust the colors to match your desired design */
+*::-moz-scrollbar-thumb:active {
     background-color: #333;
+}
+
+/* Style for all default buttons */
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
   }
   
+  /* Hover effect for buttons */
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Active (clicked) state for buttons */
+  button:active {
+    background-color: #003973;
+  }
   
