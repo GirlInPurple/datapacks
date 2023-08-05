@@ -2,7 +2,7 @@
   <img src="https://media.discordapp.net/attachments/1114142242970542090/1133825188069384284/Banner.png?width=1440&height=720" alt="logo">
 </h2>
 
-This is the main GitHub repository for the Final Republic Minecraft server. This branch is used for the website. If you're looking for the server files, they're [here](../../tree/server_files). If you want to visit the website, [click here](https://girlinpurple.github.io/finalrepublic/) instead.
+This is the main GitHub repository for the Final Republic Minecraft server. This branch is used for the website. If you're looking for the server files, they're [here](../../tree/server_files). If you want to visit the website, the link is below.
 Most of our projects are [open-source](/projects), feel free to use them for your own server, submit issues or PRs, or really anything else you like. Everything is [MIT-licensed](LICENSE).
 And if you don't play on the server, some links are below.
 
