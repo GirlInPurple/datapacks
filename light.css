@@ -201,3 +201,12 @@ button {
     background-color: #003973;
   }
   
+
+  .tag {
+    display: inline-block;
+    background-color: limegreen;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+  }
