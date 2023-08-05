@@ -6,3 +6,12 @@ function openPage(evt, name) {
         location.href = newLocation;
     }
 }
+
+function toggleImageVisibility(imageNumber) {
+    var image = document.getElementById('image' + imageNumber);
+    if (image.style.display === 'none') {
+        image.style.display = 'block';
+    } else {
+        image.style.display = 'none';
+    }
+}
