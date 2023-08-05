@@ -30,8 +30,16 @@ function toggleTheme() {
     }
 }
 
-function insertTag(tag) {
-    var searchInput = document.getElementById("searchInput");
-    searchInput.value = tag;
-  }
+
   
+function insertTag(tag) {
+    document.getElementById("searchInput").value = tag;
+    uinsertTag(tag)
+}
+
+function uinsertTag(tag) {
+    const searchInput = document.getElementById("searchInput");
+    searchInput.value = tag;
+    searchInput.dispatchEvent(new Event('input'));
+}
+
