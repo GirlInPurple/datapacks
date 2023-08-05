@@ -77,8 +77,6 @@ a.black {
 
 img.center {
     position: absolute;
-    width:auto;
-    max-width: fit-content;
     left: 0;
     top: 0;
     z-index: -1;
@@ -249,4 +247,7 @@ button {
   }
   
   
-  
+  img {
+    margin: 0 auto;
+    align-items: center;
+  }
