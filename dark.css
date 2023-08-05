@@ -248,6 +248,6 @@ button {
   
   
   img {
-    margin: 0 auto;
-    align-items: center;
+    width: 100%; /* Set the width of each image to 100% of its parent's width */
+    height: auto; /* This will maintain the aspect ratio of the images */
   }
