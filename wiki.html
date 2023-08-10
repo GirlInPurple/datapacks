@@ -568,21 +568,26 @@
                 // Show or hide the article based on matches
                 if ((isTagSearch && tagsMatch) || (!isTagSearch && (titleMatches || contentMatches || residentsMatch))) {
                     article.style.display = "block";
-    
-                    // Highlight the search query in the title
-                    titleElement.innerHTML = title.replace(
-                        new RegExp(searchQuery, 'gi'),
-                        (match) => `<span style="background-color: yellow">${match}</span>`
-                    );
-    
-                    // Highlight the search query in the content
-                    for (var k = 0; k < contentElements.length; k++) {
-                        var contentElement = contentElements[k];
-                        contentElement.innerHTML = contentElement.innerText.replace(
+
+                    if ( !isTagSearch ){
+                        // Highlight the search query in the title
+                        titleElement.innerHTML = title.replace(
                             new RegExp(searchQuery, 'gi'),
                             (match) => `<span style="background-color: yellow">${match}</span>`
                         );
+
+                        // Highlight the search query in the content
+                        for (var k = 0; k < contentElements.length; k++) {
+                            var contentElement = contentElements[k];
+                            contentElement.innerHTML = contentElement.innerText.replace(
+                                new RegExp(searchQuery, 'gi'),
+                                (match) => `<span style="background-color: yellow">${match}</span>`
+                            );
+                        }
                     }
+                    
+    
+                    
                 } else {
                     article.style.display = "none";
                 }
