@@ -1,26 +1,28 @@
 ### Craftful Datapack v2.1.0 ###
 A fork of ToxicTrapper's Craftless DP, modified for the Final Republic server
 
-### Programs Used: ###
-WinRar
+### Programs/Websites Used: ###
+WinRAR
 VSCode
 https://crafting.thedestruc7i0n.ca
 https://minecraft-ids.grahamedgecombe.com/
 
 ### Main Contributors: ###
-ToxicTrapper 		    (Added the main recipes and founder of the pack)
-ColorBlurple		    (Put together the rest of the pack)
+ToxicTrapper 		      (Added the main recipes and founder of the pack)
+ColorBlurple		      (Put together the rest of the pack)
 anhnguyenlost13		    (Testing and Ideas)
+DuyTip3011a           (Extra recipe)
+Alakazam6898          (Extra recipe)
 Xisumavoid + VT Team	(Some of the lesser known but important recipes)
 
 ### Other Contributors: ###
 Jefferson Dantas 	    (https://www.planetminecraft.com/data-pack/jd-best-crafts/)
 The_Killuer_999 	    (https://www.planetminecraft.com/data-pack/crafting-5686375/)
-TheDiamondPlayables	    (https://www.planetminecraft.com/data-pack/nether-crafting-craft-nether-items/)
-Boghety                 (https://www.planetminecraft.com/data-pack/wood-in-stonecutter/)
-the3lucas		        (https://modrinth.com/mod/vanilla-crafting-plus)
+TheDiamondPlayables	  (https://www.planetminecraft.com/data-pack/nether-crafting-craft-nether-items/)
+Boghety               (https://www.planetminecraft.com/data-pack/wood-in-stonecutter/)
+the3lucas		          (https://modrinth.com/mod/vanilla-crafting-plus)
 The Destruc7i0n		    (The website https://crafting.thedestruc7i0n.ca that was used to make most of the pack)
-vazkii			        (Crafting ideas)
+vazkii			          (Crafting ideas)
 
 ### Changelog ###
 
