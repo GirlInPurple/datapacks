@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#D#",
+        "LDL",
+        "PLK"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:end_stone"
+        },
+        "D": {
+            "item": "minecraft:deepslate_tiles"
+        },
+        "L": {
+            "item": "minecraft:lodestone"
+        },
+        "P": {
+            "item": "minecraft:polished_deepslate_wall"
+        },
+        "K": {
+            "item": "minecraft:deepslate_tile_wall"
+        }
+    },
+    "result": {
+        "item": "minecraft:reinforced_deepslate",
+        "count": 1
+    }
+}
