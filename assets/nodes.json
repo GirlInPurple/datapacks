@@ -1,0 +1,402 @@
+{
+    "locations": {
+        "North-Western World Border": {
+            "roads": {},
+            "trains": {
+                "Spruce Line": [
+                    "Baystone"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "Baystone": {
+            "roads": {
+                "Road 5": [
+                    "Convergence Station"
+                ]
+            },
+            "trains": {
+                "Spruce Line": [
+                    "North-Western World Border",
+                    "Convergenece Station"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "Convergence Station": {
+            "roads": {
+                "Road 5": [
+                    "Baystone",
+                    "XsElites's Town"
+                ]
+            },
+            "trains": {
+                "Spruce Line": [
+                    "Baystone",
+                    "XsElites's Town"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "XsElite's Town": {
+            "roads": {
+                "Road 5": [
+                    "Convergence Station"
+                ]
+            },
+            "trains": {
+                "Spruce Line": [
+                    "Convergence Station",
+                    "Mangrove-Spruce Transfer"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "Mangrove-Spruce Transfer": {
+            "roads": {},
+            "trains": {
+                "Spruce Line": [
+                    "XsElites's Town"
+                ],
+                "Mangrove Line": [
+                    "Northern World Border",
+                    "Jungle Depot | West"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "Kwazii Peninsula": {
+            "roads": {
+                "Road 1": [
+                    "Kirei's Unnamed Town"
+                ]
+            },
+            "trains": {},
+            "lrt": {},
+            "waterways": {}
+        },
+        "Kirei's Unnamed Town": {
+            "roads": {
+                "Road 1": [
+                    "Below the Bedrock",
+                    "Kwazii Peninsula"
+                ]
+            },
+            "trains": {
+                "Oak Line": [
+                    "Below the Bedrock"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "Below the Bedrock": {
+            "roads": {
+                "Road 1": [
+                    "Kirei's Unnamed Town",
+                    "Borderlands"
+                ]
+            },
+            "trains": {
+                "Oak Line": [
+                    "Kirei's Unnamed Town",
+                    "Jungle Depot | East"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "Jungle Depot | West": {
+            "roads": {
+                "Road 4": [
+                    "Borderlands",
+                    "Yuri's Unnamed Town"
+                ]
+            },
+            "trains": {
+                "Mangrove Line": [
+                    "Central Station",
+                    "Mangrove-Spruce Transfer"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "Jungle Depot | East": {
+            "roads": {},
+            "trains": {
+                "Oak Line": [
+                    "Spawn City North",
+                    "Below the Bedrock"
+                ]
+            },
+            "lrt": {
+                "Spawn City LRT": [
+                    "Borderlands"
+                ]
+            },
+            "waterways": {}
+        },
+        "Borderlands": {
+            "roads": {
+                "Road 1": [
+                    "Spawn City North",
+                    "Below the Bedrock"
+                ],
+                "Road 4": [
+                    "Jungle Depot | West"
+                ]
+            },
+            "trains": {},
+            "lrt": {
+                "Spawn City LRT": [
+                    "Jungle Depot | East",
+                    "PainChat's Museum"
+                ]
+            },
+            "waterways": {}
+        },
+        "Gare de l'Origine": {
+            "roads": {
+                "Road 1": [
+                    "Sine Bridge",
+                    "Spawn City North"
+                ]
+            },
+            "trains": {
+                "Jungle Line": [
+                    "Jungle Depot | East",
+                    "World Origin Road"
+                ],
+                "Oak Line": [
+                    "Central Station",
+                    "Spawn City North"
+                ]
+            },
+            "lrt": {
+                "Spawn City LRT": [
+                    "SCFD | SC-LRT",
+                    "World Origin Road"
+                ]
+            },
+            "waterways": {}
+        },
+        "Spawn City Farming District": {
+            "roads": {
+                "Road 1": [
+                    "Central Station",
+                    "Castiela Memorial Bridge"
+                ]
+            },
+            "trains": {
+                "Oak Line": [
+                    "Central Station",
+                    "Castiela Memorial Bridge"
+                ]
+            },
+            "lrt": {
+                "Spawn City LRT": [
+                    "PainChat's Museum",
+                    "Gare de l'Origine"
+                ],
+                "Rain's Line": [
+                    "Rain's Town"
+                ]
+            },
+            "waterways": {}
+        },
+        "Central Station": {
+            "roads": {
+                "Road 1": [
+                    "Sine Bridge",
+                    "Spawn City Farming District"
+                ]
+            },
+            "trains": {
+                "Mangrove Line": [
+                    "Gare de Fleur",
+                    "Jungle Depot | West"
+                ],
+                "Oak Line": [
+                    "Gare de l'Origine",
+                    "Spawn City Farming District"
+                ],
+                "Jungle Line": [
+                    "Gare de l'Origine"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "Cavetown Thuhai": {
+            "roads": {
+                "Road 6": [
+                    "Vrynn Harbor"
+                ]
+            },
+            "trains": {
+                "Oak Line": [
+                    "Vrynn Harbor"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "Vyrnn Harbor": {
+            "roads": {
+                "Road 1": [
+                    "Rain's Unnamed Town",
+                    "Spawn City Farming District"
+                ]
+            },
+            "trains": {
+                "Oak Line": [
+                    "Cavetown Thuhai",
+                    "Spawn City Farming District"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "Castiela Memorial Bridge": {
+            "roads": {
+                "Road 1": [
+                    "Vrynn Harbor",
+                    "Spawn City Farming District"
+                ]
+            },
+            "trains": {
+                "Oak Line": [
+                    "Vrynn Harbor",
+                    "Spawn City Farming District"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "HumanBeingA1's Unnamed Town": {
+            "roads": {},
+            "trains": {
+                "Mangrove Line": [
+                    "Central Station",
+                    "Gare de Fleur"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "Rain's Unnamed Town": {
+            "roads": {
+                "Road 1": [
+                    "Vrynn Harbor"
+                ]
+            },
+            "trains": {},
+            "lrt": {
+                "Rain's Line": [
+                    "Spawn City Farming District"
+                ]
+            },
+            "waterways": {}
+        },
+        "Gare de Fleur": {
+            "roads": {},
+            "trains": {
+                "Mangrove Line": [
+                    "HumanBeingA1's Unnamed Town",
+                    "Acacia State"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "DuyTip Industrial Zone": {
+            "roads": {},
+            "trains": {
+                "Crimson Line": [
+                    "Crimson Interchange",
+                    "South-Western World Border"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "Crimson Interchange": {
+            "roads": {},
+            "trains": {
+                "Mushroom Line": [
+                    "Nether Bay",
+                    "Vrynn Harbor"
+                ],
+                "Crimson Line": [
+                    "Acacia State",
+                    "DuyTip Industrial Zone"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "Acacia State": {
+            "roads": {},
+            "trains": {
+                "Mangrove Line": [
+                    "Gare de Fleur",
+                    "Southern World Border"
+                ],
+                "Crimson Line": [
+                    "Crimson Interchange",
+                    "Windswept Fang"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "Windswept Fang": {
+            "roads": {},
+            "trains": {
+                "Crimson Line": [
+                    "Acacia State",
+                    "Squeezalton"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "Squeezalton": {
+            "roads": {},
+            "trains": {
+                "Crimson Line": [
+                    "Windswept Fang",
+                    "Eastern World Border"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "Eastern World Border": {
+            "roads": {},
+            "trains": {
+                "Crimson Line": [
+                    "Squeezalton"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        },
+        "Southern World Border": {
+            "roads": {},
+            "trains": {
+                "Mangrove Line": [
+                    "Acacia State"
+                ]
+            },
+            "lrt": {},
+            "waterways": {}
+        }
+    }
+}

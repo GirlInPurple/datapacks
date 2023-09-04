@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dark.css">
+    <script src="script.js"></script>
+    <title>Tools | The Final Republic</title>
+    <link rel="icon"
+        href="https://cdn.discordapp.com/attachments/1061516148325220455/1074527045561884722/f7bd4c45-d74b-405c-b57c-852917af9cc7.png">
+    <!-- Style Overrides -->
+    <style>
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        button {
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        .Location {
+            display: none;
+            position: absolute;
+            overflow: auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+        }
+
+        .dropdown:hover .Location {
+            display: block;
+        }
+
+        .Location a {
+            display: block;
+            color: #000000;
+            padding: 5px;
+            text-decoration: none;
+            padding: 20px 40px;
+        }
+
+        .Location a:hover {
+            color: #0a0a23;
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<header>
+
+</header>
+<nav class="tab">
+    <img src="assets/globoit.png" alt="emoji logo" style="max-width:4%; max-height:4%;">
+    <button onclick="openPage(event, 'index')">Home</button>
+    <button onclick="openPage(event, 'wiki')">Wiki</button>
+    <button onclick="openPage(event, 'about')">About</button>
+    <button onclick="openPage(event, 'map')">Map</button>
+    <button onclick="openPage(event, 'tools')">Tools</button>
+    <img onclick="toggleTheme()" src="https://cdn2.iconfinder.com/data/icons/weather-154/100/weather_cloud_clouds_nature-46-512.png" alt="Dark / Light Mode Toggle" style="max-width:4%; max-height:4%;">
+</nav>
+<main>
+    <div class="center">
+        <h1>Public Tools</h1>
+        <p class="coolp">put a # in front of search to search for tags</p>
+        <input type="text" id="searchInput" placeholder="Search for tools and tags...">
+        <!-- Testing Tags Here -->
+        <p class="coolp">All Tags</p>
+        <p>put a # in front of search to search for tags or click a tag.</p>
+        <br>
+        <span class="tag tag-red" onclick="insertTag('#travel')">Travel</span>
+        <span class="tag tag-blue" onclick="insertTag('#items')">Items</span>
+        <span class="tag tag-green" onclick="insertTag('#blank')">blank</span>
+        <div id="toolsContent">
+            <h1></h1> <!-- Padding -->
+
+            <article id="Route Creator">
+                <span class="tag tag-red">Travel</span>
+                <space></space>
+                <h2>Route Planner</h2>
+                <p>
+                    A simple route creator for getting around our server. Based off of <a href="https://flashteens.azurewebsites.net/mcsubwaymap/">FlashTeen's</a> route planner and is forked off from <a href="https://github.com/Venkateeshh/Metro-Shortest-Path">this project</a>.
+                    A list of trains and description of the Final Republic Transit Authority can be found <a>here</a>.
+                </p>
+                <div class="center">
+                    <input type="checkbox" id="allowRoads" name="Allow Roads" checked="true" onclick="toggleTransit('roads')" />
+                    <label for="allowRoads">Allow Roadways</label>
+                    <space></space>
+                    <input type="checkbox" id="allowTrains" name="Allow Trains" checked="true" onclick="toggleTransit('trains')" />
+                    <label for="allowTrains">Allow Trains</label>
+                    <space></space>
+                    <input type="checkbox" id="allowLRT" name="Allow LRT" checked="true" onclick="toggleTransit('lrt')" />
+                    <label for="allowLRT">Allow <a href="https://en.wikipedia.org/wiki/Light_rail">LRT</a></label>
+                    <space></space>
+                    <input type="checkbox" id="allowWaterWay" name="Allow Waterway" onclick="toggleTransit('waterways')" />
+                    <label for="allowWaterWay">Allow Waterway (tends to bug out)</label>
+                    <space></space>
+                    <br>
+                    <div class="dropdown">
+                        <button>Origin</button>
+                        <div id="onloadOrigin" class="Location">
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button>Destination</button>
+                        <div id="onloadDest" class="Location">
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button>Router Type</button>
+                        <div class="Location">
+                            <a onclick="routeHandler('the fastest route')">Fastest Route</a>
+                            <a onclick="routeHandler('least amount of interchanges')">Least Interchanges</a>
+                            <a onclick="routeHandler('the scenic route')">Scenic Route</a>
+                        </div>
+                    </div>
+                    <button onclick="chooseRoute()">Click Here to Calculate</button>
+                </div>
+                <h3>Route from <a id="originText">[ Please Select Origin ]</a> to <a id="destText">[ Please Select
+                        Destination ]</a> with your prefrence being <a id="prefText">[ Please Select Prefrence ]</a> :
+                </h3>
+                <p id="instruct">Press the "Calculate" button to show route to selected destination.</p>
+                <h3>Metro Map below. Updated June 6th 2023</h3>
+                <img class="trainMap"
+                    src="https://cdn.discordapp.com/attachments/1075250387122135182/1115622893028659210/metromapmaker_3.png"
+                    alt="Metro System Map">
+                
+                <!-- mildly complex js from here down, beware, here be dragons! -->
+                <script>
+                    // Json Handler
+                    console.log('Please ignore any debug messages that appear in the console. \n - Final Republic Development Team')
+
+                    var data;
+                    fetch('./assets/nodes.json')
+                        .then(response => response.json())
+                        .then(loadedData => {
+                            data = loadedData;
+                            console.log(data);
+                            var dropdown = document.getElementById('onloadDest');
+                            Object.keys(data.locations).forEach(location => {
+                                let option = document.createElement('a');
+                                option.text = location;
+                                option.value = location;
+                                option.setAttribute('onclick', 'chooseDest("' + location + '")');
+                                dropdown.appendChild(option);
+                            });
+                            var dropdown = document.getElementById('onloadOrigin');
+                            Object.keys(data.locations).forEach(location => {
+                                let option = document.createElement('a');
+                                option.text = location;
+                                option.value = location;
+                                option.setAttribute('onclick', 'chooseOrigin("' + location + '")');
+                                dropdown.appendChild(option);
+                            });
+                            console.log("Route Calculation Setup Complete.")
+                        })
+                        .catch(error => console.error('Error:', error));
+
+                    // Pre-Calc handlers
+                    var selectedDest;
+                    var selectedCurr;
+                    var routeType
+                    var enabledTransit = {"roads":true,"trains":true,"lrt":true,"waterways":false};
+                    var transitModeList = [];
+                    
+                    function toggleTransit(toggling) {
+                        console.log(enabledTransit[toggling])
+                        if (enabledTransit[toggling] === false) {
+                            enabledTransit[toggling] = true;
+                        } else {
+                            enabledTransit[toggling] = false;
+                        }
+                        console.log(enabledTransit[toggling])
+                    }
+
+                    function chooseDest(dest) {
+                        selectedDest = dest;
+                        document.getElementById("destText").innerHTML = selectedDest;
+                        console.log(selectedDest);
+                    }
+
+                    function chooseOrigin(curr) {
+                        selectedCurr = curr;
+                        document.getElementById("originText").innerHTML = selectedCurr;
+                        console.log(selectedCurr);
+                    }
+
+                    function routeHandler(route) {
+                        routeType = route;
+                        document.getElementById("prefText").innerHTML = routeType;
+                        console.log(routeType);
+                    }
+
+                    function chooseRoute() { 
+                        console.log(routeType, selectedDest, selectedCurr)
+                        if (routeType == "the fastest route") {
+                            fastest()
+                        } else if (routeType == "least amount of interchanges") {
+                            leastInter()
+                        } else if (routeType == "the scenic route") {
+                            scenic()
+                        } else {
+                            console.error("couldnt choose a router.")
+                        }
+                    }
+
+                    // The routers
+                    function fastest() {
+                        transitModeList = [];
+                        for (let key in enabledTransit) {
+                            if (enabledTransit[key] == true) {
+                                transitModeList.push(key);
+                                console.log(transitModeList)
+                            }
+                        }
+                        for (let key of transitModeList) {
+                            console.log(data.locations[selectedDest][key]);
+                        }
+                    }
+
+                </script>
+            </article>
+        </div>
+    </div>
+    <div style="padding: 100px;"></div>
+</main>
+<footer id="footer">
+    <div class="footer_l">
+        <h3>Made By OusmBlueNinja / DJzombiehunter / AnhNguyenlost13</h1>
+        <p>&copy; 2023-2023 The Final Republic, FinalRepublic | OusmBlueNinja |
+        Not an offical Minecraft product. Not approved by or associated with Mojang.</p>
+    </div>
+    <div class="footer_r">
+        <p><i><a href="/finalrepublic/contact.html">Contact and Legal</a></i></p>
+        <p><u><i><a onclick="document.getElementById('footer').style.display = 'none';">Click to hide</a></i></u></p>
+    </div>
+</footer>
+
+<script>
+    // JavaScript for the search functionality
+    document.getElementById("searchInput").addEventListener("input", function () {
+        var searchQuery = this.value.toLowerCase().trim();
+        var articles = document.getElementsByTagName("article");
+
+        var isTagSearch = false;
+        if (searchQuery.startsWith("#")) {
+            isTagSearch = true;
+            searchQuery = searchQuery.substring(1);
+        }
+
+        for (var i = 0; i < articles.length; i++) {
+            var article = articles[i];
+            var titleElement = article.getElementsByTagName("h2")[0];
+            var contentElements = article.getElementsByTagName("p");
+            var tags = article.querySelectorAll(".tag");
+
+            var title = titleElement.innerText.toLowerCase();
+            var content = article.innerText.toLowerCase();
+            var tagTexts = Array.from(tags).map(tag => tag.innerText.toLowerCase());
+
+            // Check if the search query is present in either the title, content, or tags
+            var titleMatches = title.includes(searchQuery);
+            var contentMatches = content.includes(searchQuery);
+            var tagsMatch = tagTexts.some(tag => tag.includes(searchQuery));
+
+            // Check for residents' names
+            var residents = article.querySelectorAll('ul li a');
+            var residentsMatch = false;
+            for (var j = 0; j < residents.length; j++) {
+                if (residents[j].innerText.toLowerCase().includes(searchQuery)) {
+                    residentsMatch = true;
+                    break;
+                }
+            }
+
+            // Show or hide the article based on matches
+            if ((isTagSearch && tagsMatch) || (!isTagSearch && (titleMatches || contentMatches || residentsMatch))) {
+                article.style.display = "block";
+
+                // Highlight the search query in the title
+                titleElement.innerHTML = title.replace(
+                    new RegExp(searchQuery, 'gi'),
+                    (match) => `<span style="background-color: yellow">${match}</span>`
+                );
+
+                // Highlight the search query in the content
+                for (var k = 0; k < contentElements.length; k++) {
+                    var contentElement = contentElements[k];
+                    contentElement.innerHTML = contentElement.innerText.replace(
+                        new RegExp(searchQuery, 'gi'),
+                        (match) => `<span style="background-color: yellow">${match}</span>`
+                    );
+                }
+            } else {
+                article.style.display = "none";
+            }
+        }
+    });
+
+</script>
+
+</body>
+
+</html>

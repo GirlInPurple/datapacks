@@ -7,8 +7,8 @@ function openPage(evt, name) {
     }
 }
 
-function toggleImageVisibility(imageNumber) {
-    var image = document.getElementById('image' + imageNumber);
+function toggleElementVisibility(imageIdent) {
+    var image = document.getElementById(imageIdent);
     if (image.style.display === 'none') {
         image.style.display = 'block';
     } else {
@@ -30,16 +30,9 @@ function toggleTheme() {
     }
 }
 
-
-  
+// what was the point of uinserttag()? was it a bug fix for something i dont understand? either way this seems to work just as well, if not better
 function insertTag(tag) {
-    document.getElementById("searchInput").value = tag;
-    uinsertTag(tag)
-}
-
-function uinsertTag(tag) {
     const searchInput = document.getElementById("searchInput");
-    searchInput.value = tag;
+    searchInput.value = searchInput.value + tag;
     searchInput.dispatchEvent(new Event('input'));
 }
-

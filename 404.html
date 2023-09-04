@@ -10,12 +10,17 @@
 </head>
 <body>
     <header>
+
         
     </header>
     <nav class="tab">
+        <img src="assets/globoit.png" alt="emoji logo" style="max-width:4%; max-height:4%;">
         <button onclick="openPage(event, 'index')">Home</button>
         <button onclick="openPage(event, 'wiki')">Wiki</button>
         <button onclick="openPage(event, 'about')">About</button>
+        <button onclick="openPage(event, 'map')">Map</button>
+        <button onclick="openPage(event, 'tools')">Tools</button>
+        <img onclick="toggleTheme()" src="https://cdn2.iconfinder.com/data/icons/weather-154/100/weather_cloud_clouds_nature-46-512.png" alt="Dark / Light Mode Toggle" style="max-width:4%; max-height:4%;">
     </nav>
     <main>
         <div class="center">
@@ -24,14 +29,15 @@
             <p>You can go back to the <a href="/">homepage</a> or try searching for what you need on the <a href="/finalrepublic/wiki.html">Wiki</a>.</p>
         </div>
     </main>
-    <footer>
+    <footer id="footer">
         <div class="footer_l">
-            <p>&copy; 2023-2023 TheFinalRepublic, Final Republic, FinalRepublic | OusmBlueNinja</p>
-            <p>Minecraft™ is Copyright of Mojang AB; Fabric, Bluemap, and Imdeity are all owned by their respective copyright holders.</p>
-            <p>Some site code taken from <a href="https://anhnguyenlost13.github.io/GirlInPurple/">ColorBlurple on Github</a></p>
+            <h3>Made By OusmBlueNinja / DJzombiehunter / AnhNguyenlost13</h1>
+            <p>&copy; 2023-2023 The Final Republic, FinalRepublic | OusmBlueNinja |
+            Not an offical Minecraft product. Not approved by or associated with Mojang.</p>
         </div>
         <div class="footer_r">
-            <p><i><a href="/finalrepublic/contact.html">Contact</a></i></p>
+            <p><i><a href="/finalrepublic/contact.html">Contact and Legal</a></i></p>
+            <p><u><i><a onclick="document.getElementById('footer').style.display = 'none';">Click to hide</a></i></u></p>
         </div>
     </footer>
 </body>

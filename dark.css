@@ -1,340 +1,374 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1f1f1f; /* Dark background color */
-    color: #e0e0e0; /* Light text color */
-    padding-right: 8px; /* Add padding to the right to create space for the scrollbar */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1f1f1f;
+  /* Dark background color */
+  color: #e0e0e0;
+  /* Light text color */
+  padding-right: 8px;
+  /* Add padding to the right to create space for the scrollbar */
+  overflow: scroll;
+  /* Show scrollbars */
 }
 
 header {
-    /* Add styles for the header if needed */
+  /* Add styles for the header if needed */
 }
 
 nav.tab {
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-    padding: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px;
 }
 
 nav.tab button {
-    background-color: #555;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 nav.tab button:hover {
-    background-color: #444;
+  background-color: #444;
 }
 
 div.center {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #353535; /* Darker background for the center div */
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); /* Darker box shadow */
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #353535;
+  /* Darker background for the center div */
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  /* Darker box shadow */
 }
 
 h1 {
-    color: #e0e0e0; /* Light text color */
+  color: #e0e0e0;
+  /* Light text color */
 }
 
 footer {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    width: 99vw;
-    justify-content: space-between;
-    background-color: #333;
-    color: #fff;
-    padding: 5px;
-    font-size: 10px;
-    height: 50px; /* Set the height to half the original height */
-  }
-  
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 99vw;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  font-size: 10px;
+  height: 50px;
+  /* Set the height to half the original height */
+}
+
 
 footer .footer_l {
-    max-width: 800px;
+  max-width: 800px;
 }
 
 footer .footer_r {
-    /* Add styles for the right side of the footer if needed */
-    padding-right: 10px;
+  /* Add styles for the right side of the footer if needed */
+  padding-right: 10px;
 }
 
 a {
-    color: #e0e0e0; /* Light link color */
-    text-underline-position: unset;
+  color: #e0e0e0;
+  /* Light link color */
+  text-underline-position: unset;
 }
 
 a.black {
-    color: #e0e0e0; /* Light link color */
-    text-underline-position: unset;
+  color: #e0e0e0;
+  /* Light link color */
+  text-underline-position: unset;
 }
 
 img.center {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
 }
 
 article {
-    border: 1px solid #555;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #252525; /* Darker background for articles */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Darker box shadow */
+  border: 1px solid #555;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #252525;
+  /* Darker background for articles */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  /* Darker box shadow */
 }
 
 article h2 {
-    color: #e0e0e0; /* Light text color */
-    margin-bottom: 10px;
+  color: #e0e0e0;
+  /* Light text color */
+  margin-bottom: 10px;
 }
 
 article p {
-    color: #b0b0b0; /* Slightly lighter text color */
+  color: #b0b0b0;
+  /* Slightly lighter text color */
 }
 
 article ul {
-    list-style-type: disc;
-    margin-left: 20px;
+  list-style-type: disc;
+  margin-left: 20px;
 }
 
 article li {
-    color: #b0b0b0; /* Slightly lighter text color */
+  color: #b0b0b0;
+  /* Slightly lighter text color */
 }
 
 article a {
-    color: #64b5f6; /* Light link color */
-    text-decoration: none;
+  color: #64b5f6;
+  /* Light link color */
+  text-decoration: none;
 }
 
 article a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 article h3 {
-    color: #64b5f6; /* Light link color */
-    margin-top: 20px;
-    margin-bottom: 10px;
+  color: #64b5f6;
+  /* Light link color */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+u.spelling {
+  text-decoration: red wavy underline;
 }
 
 /* Styles for the scrollbar in dark mode */
 ::-webkit-scrollbar {
-    width: 8px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  width: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover::-webkit-scrollbar {
-    opacity: 1;
+  opacity: 1;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 4px;
+  background-color: #888;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background-color: #333;
+  background-color: #333;
 }
 
 /* Styles for the scrollbar in Firefox */
 * {
-    scrollbar-width: thin;
-    scrollbar-color: #888 #353535; /* Darker scrollbar colors */
+  scrollbar-width: thin;
+  scrollbar-color: #888 #353535;
+  /* Darker scrollbar colors */
 }
 
 *::-moz-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 4px;
+  background-color: #888;
+  border-radius: 4px;
 }
 
 *::-moz-scrollbar-thumb:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
 *::-moz-scrollbar-thumb:active {
-    background-color: #333;
+  background-color: #333;
 }
 
 /* Style for all default buttons */
 button {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  /* Hover effect for buttons */
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Active (clicked) state for buttons */
-  button:active {
-    background-color: #003973;
-  }
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Active (clicked) state for buttons */
+button:active {
+  background-color: #003973;
+}
 
 /* Style for the search bar container */
 .search-container {
-    position: relative;
-  }
-  
-  /* Style for the search input */
-  .search-input {
-    width: 300px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 20px; /* Add border-radius for rounded corners */
-    font-size: 16px;
-    outline: none;
-  }
-  
-  /* Style for the search icon */
-  .search-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #888;
-    cursor: pointer;
-  }
-  
-  /* Style for the search icon on hover */
-  .search-icon:hover {
-    color: #444;
-  }
-  
-  /* Style for the search results container */
-  .search-results {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 100%;
-    max-height: 200px;
-    overflow-y: auto;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px; /* Keep the search results container slightly rounded */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-  }
-  
-  /* Style for the search result item */
-  .search-result {
-    padding: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  /* Style for the search result item on hover */
-  .search-result:hover {
-    background-color: #f0f0f0;
-  }
-  
-  
-  img {
-    width: 100%; /* Set the width of each image to 100% of its parent's width */
-    height: auto; /* This will maintain the aspect ratio of the images */
-  }
+  position: relative;
+}
 
-  
-  
-  .tag {
-    padding: 5px 10px;
-    border-radius: 20px;
-    color: white;
-    font-weight: bold;
-    font-size: 12px;
-    white-space: nowrap;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease;
-  }
-  
-  .tag:hover {
-    font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  
-  space {
-    padding-right: 10px;
-  }
+/* Style for the search input */
+.search-input {
+  width: 300px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  /* Add border-radius for rounded corners */
+  font-size: 16px;
+  outline: none;
+}
 
-  /* CSS for the search input */
-    /* CSS for the search input */
-  .coolp {
-    margin-bottom: 5px;
-  }
-  
-  input[type="text"] {
-    width: 100%;
-    max-width: 400px; /* Set a maximum width for the input */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-  }
-  
-  input[type="text"]:focus {
-    border-color: #007BFF;
-  }
+/* Style for the search icon */
+.search-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #888;
+  cursor: pointer;
+}
 
-  /* CSS for the tags */
+/* Style for the search icon on hover */
+.search-icon:hover {
+  color: #444;
+}
 
-  
-  /* Colors for the tags */
-  .tag-red {
-    background-color: rgba(255, 23, 23, 0.5);
-  }
-  
-  .tag-blue {
-    background-color: rgba(23, 209, 255, 0.5);
-  }
-  
-  .tag-green {
-    background-color: rgba(23, 46, 255, 0.5);
-  }
-  
-  .tag-pink {
-    background-color: rgba(255, 23, 236, 0.5);
-  }
-  
-  .tag-purple {
-    background-color: rgba(17, 0, 255, 0.5);
-  }
-  
-  .tag-orange {
-    background-color: rgba(255, 165, 0, 0.5);
-  }
-  
-  .tag-yellow {
-    background-color: rgba(255, 255, 23, 0.5);
-  }
-  
-  .tag-cyan {
-    background-color: rgba(0, 247, 255, 0.5);
-  }
-  
-  .tag-teal {
-    background-color: rgba(0, 128, 128, 0.5);
-  }
-  
-  
+/* Style for the search results container */
+.search-results {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* Keep the search results container slightly rounded */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+/* Style for the search result item */
+.search-result {
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Style for the search result item on hover */
+.search-result:hover {
+  background-color: #f0f0f0;
+}
+
+
+img {
+  width: 100%;
+  /* Set the width of each image to 100% of its parent's width */
+  height: auto;
+  /* This will maintain the aspect ratio of the images */
+}
+
+
+
+.tag {
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  white-space: nowrap;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+space {
+  padding-right: 10px;
+}
+
+/* CSS for the search input */
+/* CSS for the search input */
+.coolp {
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  /* Set a maximum width for the input */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #007BFF;
+}
+
+/* CSS for the tags */
+
+
+/* Colors for the tags */
+.tag-red {
+  background-color: rgba(255, 23, 23, 0.5);
+}
+
+.tag-blue {
+  background-color: rgba(23, 209, 255, 0.5);
+}
+
+.tag-green {
+  background-color: rgba(23, 255, 46, 0.5);
+}
+
+.tag-pink {
+  background-color: rgba(255, 23, 236, 0.5);
+}
+
+.tag-purple {
+  background-color: rgba(162, 0, 255, 0.5);
+}
+
+.tag-orange {
+  background-color: rgba(255, 165, 0, 0.5);
+}
+
+.tag-yellow {
+  background-color: rgba(255, 255, 23, 0.5);
+}
+
+.tag-cyan {
+  background-color: rgba(0, 247, 255, 0.5);
+}
+
+.tag-teal {
+  background-color: rgba(0, 128, 128, 0.5);
+}
+
+.tag-grey {
+  background-color: rgba(133, 133, 133, 0.5);
+}
+
+.tag-white {
+  background-color: rgba(245, 245, 245, 0.59);
+}
