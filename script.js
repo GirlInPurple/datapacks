@@ -1,11 +1,8 @@
-function openPage(evt, name) {
-    // NOTE SO SELF. make this work
-    var newLocation = "/finalrepublic/" + name + ".html";
-    // Prevents Reload of page when spamming the same button.
-    if  ( !location.href.endsWith(newLocation) ) {
-        location.href = newLocation;
-    }
-}
+// no more openPage(), i fixed the bug :D
+
+// on script load
+const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+themeStylesheet.setAttribute('href', isDarkMode ? 'dark.css' : 'light.css');
 
 function toggleElementVisibility(imageIdent) {
     var image = document.getElementById(imageIdent);
@@ -25,6 +22,7 @@ function toggleTheme() {
     // Check the current theme and toggle to the opposite
     if (currentTheme === darkTheme) {
         themeStylesheet.setAttribute('href', lightTheme);
+        console.log("i highly respect people who use light mode, especially at night, that takes some dedication to do. i do not have that dedication.")
     } else {
         themeStylesheet.setAttribute('href', darkTheme);
     }

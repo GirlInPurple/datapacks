@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dark.css">
+    <link id="themeStylesheet" rel="stylesheet" href="dark.css">
     <script src="script.js"></script>
     <title>About | The Final Republic</title>
     <link rel="icon" href="https://cdn.discordapp.com/attachments/1061516148325220455/1074527045561884722/f7bd4c45-d74b-405c-b57c-852917af9cc7.png">
@@ -15,21 +15,35 @@
     </header>
     <nav class="tab">
         <img src="assets/globoit.png" alt="emoji logo" style="max-width:4%; max-height:4%;">
-        <button onclick="openPage(event, 'index')">Home</button>
-        <button onclick="openPage(event, 'wiki')">Wiki</button>
-        <button onclick="openPage(event, 'about')">About</button>
-        <button onclick="openPage(event, 'map')">Map</button>
-        <button onclick="openPage(event, 'tools')">Tools</button>
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="wiki.html">Wiki</a>
+            <a class="active" href="about.html">About</a>
+            <a href="map.html">Map</a>
+            <a href="tools.html">Tools</a>
+          </div>
         <img onclick="toggleTheme()" src="https://cdn2.iconfinder.com/data/icons/weather-154/100/weather_cloud_clouds_nature-46-512.png" alt="Dark / Light Mode Toggle" style="max-width:4%; max-height:4%;">
     </nav>
     <main>
         <div class="center">
             <h1>About The Final Republic</h1>
-            <p>The Final Republic is a Minecraft server dedicated to creating a thriving and collaborative community of players. our server has grown into a vibrant and dynamic world where players can explore, build, and interact.</p>
-            <p>Our server is based on the principles of creativity, cooperation, and community. We believe in providing a safe and welcoming environment for players of all skill levels and playstyles. Whether you are a seasoned Minecraft veteran or a newcomer to the game, you'll find a place to call home in The Final Republic.</p>
-            <p>Throughout our server's history, we have seen the rise and fall of towns, the construction of impressive landmarks, and epic battles between players. The stories and adventures of our community members are what make The Final Republic truly unique.</p>
-            <p>We are proud to offer a variety of features and plugins that enhance the gameplay experience, including [insert some notable plugins/features here]. Our dedicated staff and active community are always working to improve the server and create new opportunities for players to connect and have fun.</p>
-            <p>Whether you're here to build, explore, engage in PvP, or simply hang out with friends, we hope you enjoy your time in The Final Republic. Welcome to our world!</p>
+            <p>The Final Republic is a Minecraft server dedicated to building, community, and progression.</p>
+            <p>Our server is based on the principles of creativity, cooperation, and community. We believe in providing a safe and welcoming environment for players of all skill levels and playstyles. Whether you are a seasoned Minecraft veteran or a newcomer to the game, you'll find a place to call home in the Final Republic.</p>
+            <p>Throughout our server's history, we have seen the rise and fall of towns, the construction of impressive landmarks, and quite a few battles between players. The stories and adventures of our community members are what make the Final Republic truly unique.</p>
+            <p>We are attempting to keep the game as close to vanilla as possible, with small tweaks, bug fixes, and performance boosts here and there. Our dedicated staff and active community are always working to improve the server and create new opportunities for players to connect and have fun.</p>
+            <p>Whether you're here to build massive structures, explore the world, or simply hang out with friends, we hope you enjoy your time in the Final Republic. Welcome to the republic, welcome to the Final Republic!</p>
+            <h1>Contact Us</h1>
+            <p>In case you would like an inquiry with anyone on the Final Republic Team, the top 3 people are listed below.</p>
+            <p style="text-align: center;">
+                <a href="https://github.com/GirlInPurple">GitHub - DJzombiehunter / GirlInPurple</a><br>
+                <a href="https://github.com/OusmBlueNinja">GitHub - OusmBlueNinja</a><br>
+                <a href="https://github.com/AnhNguyenlost13">GitHub - AnhNguyenlost13</a><br>
+            </p>
+            <h1>Donate to Us</h1>
+            <p><a href="https://github.com/OusmBlueNinja">OusmBlueNinja</a> - The main dev of this website</p>
+            <img src="https://media.discordapp.net/attachments/1061516148325220455/1147776718556364820/qrcode.png" alt="OusmBlueNinja on Paypal" style="max-width:25%; max-height:25%; align-self: center;">
+            <p><a href="https://github.com/GirlInPurple">DJzombiehunter / GirlInPurple</a> - The owner of Final Republic, donate to keep the server online</p>
+            <img src="https://media.discordapp.net/attachments/1061516148325220455/1147774690060939264/pp_my_qrcode_1693721153279.jpg" alt="DJzombiehunter on Paypal" style="max-width:25%; max-height:25%; align-self: center;">
         </div>
     </main>
     <footer id="footer">
@@ -39,7 +53,7 @@
             Not an offical Minecraft product. Not approved by or associated with Mojang.</p>
         </div>
         <div class="footer_r">
-            <p><i><a href="/finalrepublic/contact.html">Contact and Legal</a></i></p>
+            <p><i><a href="/finalrepublic/contact.html">Contact, Legal, About</a></i></p>
             <p><u><i><a onclick="document.getElementById('footer').style.display = 'none';">Click to hide</a></i></u></p>
         </div>
     </footer>

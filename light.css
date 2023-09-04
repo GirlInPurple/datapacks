@@ -2,9 +2,9 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #1f1f1f;
+  background-color: #e0e0e0;
   /* Dark background color */
-  color: #e0e0e0;
+  color: #1f1f1f;
   /* Light text color */
   padding-right: 8px;
   /* Add padding to the right to create space for the scrollbar */
@@ -19,13 +19,13 @@ header {
 nav.tab {
   display: flex;
   justify-content: center;
-  background-color: #333;
+  background-color: #cdcdcd;
   padding: 10px;
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
+  background-color: #c9c9c9;
   overflow: hidden;
   padding: 10px;
 }
@@ -33,8 +33,8 @@ nav.tab {
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
-  color: #f2f2f2;
-  background-color: #5c5c5c;
+  color: #2b2b2b;
+  background-color: #b7b7b7;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -57,7 +57,7 @@ div.center {
   max-width: 800px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #353535;
+  background-color: #c7c7c7;
   /* Darker background for the center div */
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
   /* Darker box shadow */
@@ -74,8 +74,8 @@ footer {
   bottom: 0;
   width: 99vw;
   justify-content: space-between;
-  background-color: #333;
-  color: #fff;
+  background-color: #d5d5d5;
+  color: #000000;
   padding: 5px;
   font-size: 10px;
   height: 50px;
@@ -93,7 +93,7 @@ footer .footer_r {
 }
 
 a {
-  color: #e0e0e0;
+  color: #868686;
   /* Light link color */
   text-underline-position: unset;
 }
@@ -112,24 +112,23 @@ img.center {
 }
 
 article {
-  border: 1px solid #555;
+  border: 1px solid #a8a8a8;
   border-radius: 5px;
   margin-bottom: 20px;
   padding: 15px;
-  background-color: #252525;
+  background-color: #dadada;
   /* Darker background for articles */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   /* Darker box shadow */
 }
 
 article h2 {
-  color: #e0e0e0;
-  /* Light text color */
+  color: #3b3b3b;
   margin-bottom: 10px;
 }
 
 article p {
-  color: #b0b0b0;
+  color: #202020;
   /* Slightly lighter text color */
 }
 
@@ -139,12 +138,12 @@ article ul {
 }
 
 article li {
-  color: #b0b0b0;
+  color: #5e5e5e;
   /* Slightly lighter text color */
 }
 
 article a {
-  color: #64b5f6;
+  color: #189825;
   /* Light link color */
   text-decoration: none;
 }
@@ -154,7 +153,7 @@ article a:hover {
 }
 
 article h3 {
-  color: #64b5f6;
+  color: #189825;
   /* Light link color */
   margin-top: 20px;
   margin-bottom: 10px;
@@ -210,7 +209,7 @@ u.spelling {
 
 /* Style for all default buttons */
 button {
-  background-color: #007BFF;
+  background-color: #00ff04;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -223,7 +222,7 @@ button {
 
 /* Hover effect for buttons */
 button:hover {
-  background-color: #0056b3;
+  background-color: #00b31b;
 }
 
 /* Active (clicked) state for buttons */
@@ -338,7 +337,7 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-  border-color: #007BFF;
+  border-color: #15ff00;
 }
 
 /* CSS for the tags */
