@@ -73,21 +73,26 @@
 <main>
     <div class="center">
         <h1>Public Tools</h1>
-        <p class="coolp">put a # in front of search to search for tags</p>
-        <input type="text" id="searchInput" placeholder="Search for tools and tags...">
-        <!-- Testing Tags Here -->
-        <p class="coolp">All Tags</p>
-        <p>put a # in front of search to search for tags or click a tag.</p>
-        <br>
-        <span class="tag tag-red" onclick="insertTag('#travel')">Travel</span>
-        <span class="tag tag-blue" onclick="insertTag('#items')">Items</span>
-        <span class="tag tag-green" onclick="insertTag('#blank')">blank</span>
+        <input type="text" id="searchInput" placeholder="Search for articles and tags..." autofocus>
+        <span class="tag tag-grey" onclick="const searchInput = document.getElementById('searchInput'); searchInput.value = null; searchInput.dispatchEvent(new Event('input'));">Click to Clear</span>
+        <p class="coolp">Topics</p>
+        <span class="tag tag-red" onclick="insertTag('#travel ')">Travel</span>
+        <span class="tag tag-blue" onclick="insertTag('#items ')">Items</span>
+        <span class="tag tag-green" onclick="insertTag('#blank ')">Blank</span>
+        <p class="coolp">Tool Developer (Who made the tool)</p>
+        <span class="tag tag-red" onclick="insertTag('#multiple_writers ')">3 or more Developers</span>
+        <span class="tag tag-purple" onclick="insertTag('#djzombiehunter ')">DJzombiehunter</span>
+        <span class="tag tag-grey" onclick="insertTag('#ousmblueninja ')">OusmBlueNinja</span>
+        <span class="tag tag-white" onclick="insertTag('#anhnguyenlost13 ')">AnhNguyenlost13</span>
         <div id="toolsContent">
             <h1></h1> <!-- Padding -->
 
             <article id="Route Creator">
-                <span class="tag tag-red">Travel</span>
-                <space></space>
+                <span class="tag tag-red">Travel</span><space></space>
+                <span class="tag tag-green" >Blank</span><space></space>
+                <br><br>
+                <span class="tag tag-purple">DJzombiehunter</span><space></space>
+                
                 <h2>Route Planner</h2>
                 <p>
                     A simple route creator for getting around our server. Based off of <a href="https://flashteens.azurewebsites.net/mcsubwaymap/">FlashTeen's</a> route planner and is forked off from <a href="https://github.com/Venkateeshh/Metro-Shortest-Path">this project</a>.
@@ -231,6 +236,7 @@
 
                 </script>
             </article>
+            
         </div>
     </div>
     <div style="padding: 100px;"></div>
@@ -246,68 +252,53 @@
         <p><u><i><a onclick="document.getElementById('footer').style.display = 'none';">Click to hide</a></i></u></p>
     </div>
 </footer>
-
 <script>
-    // JavaScript for the search functionality
-    document.getElementById("searchInput").addEventListener("input", function () {
-        var searchQuery = this.value.toLowerCase().trim();
-        var articles = document.getElementsByTagName("article");
-
-        var isTagSearch = false;
-        if (searchQuery.startsWith("#")) {
-            isTagSearch = true;
-            searchQuery = searchQuery.substring(1);
-        }
-
+    // original by ousmblueninja, rewrite by djzombiehunter
+    // i made the code more compact and fixed a bug where multiple tags would only register the first one
+    
+    // the event handler for the search input
+    document.getElementById("searchInput").addEventListener("input", function() {
+        var searchQueries = this.value.toLowerCase().trim().split(' ');
+        var articles = document.querySelectorAll("article");
+        
+        // repeat for how many articles there are
         for (var i = 0; i < articles.length; i++) {
+            // finds all elements you can search into
             var article = articles[i];
-            var titleElement = article.getElementsByTagName("h2")[0];
-            var contentElements = article.getElementsByTagName("p");
-            var tags = article.querySelectorAll(".tag");
-
-            var title = titleElement.innerText.toLowerCase();
-            var content = article.innerText.toLowerCase();
-            var tagTexts = Array.from(tags).map(tag => tag.innerText.toLowerCase());
-
-            // Check if the search query is present in either the title, content, or tags
-            var titleMatches = title.includes(searchQuery);
-            var contentMatches = content.includes(searchQuery);
-            var tagsMatch = tagTexts.some(tag => tag.includes(searchQuery));
-
-            // Check for residents' names
-            var residents = article.querySelectorAll('ul li a');
-            var residentsMatch = false;
-            for (var j = 0; j < residents.length; j++) {
-                if (residents[j].innerText.toLowerCase().includes(searchQuery)) {
-                    residentsMatch = true;
-                    break;
+            var titleElement = article.querySelector("h2");
+            var contentElements = article.querySelectorAll("p");
+            var tags = Array.from(article.querySelectorAll(".tag")).map(tag => tag.textContent.toLowerCase());
+            
+            // change title of page to lowercase to help with search results
+            var title = titleElement.textContent.toLowerCase();
+            var content = article.textContent.toLowerCase();
+            
+            // check if all the search queries are present in either the title, content, or tags
+            var allQueriesMatch = searchQueries.every(query => {
+                var isTagSearch = query.startsWith("#");
+                if (isTagSearch) {
+                    query = query.substring(1);
+                    return tags.includes(query);
+                } else {
+                    return title.includes(query) || content.includes(query);
                 }
-            }
-
-            // Show or hide the article based on matches
-            if ((isTagSearch && tagsMatch) || (!isTagSearch && (titleMatches || contentMatches || residentsMatch))) {
-                article.style.display = "block";
-
-                // Highlight the search query in the title
-                titleElement.innerHTML = title.replace(
-                    new RegExp(searchQuery, 'gi'),
-                    (match) => `<span style="background-color: yellow">${match}</span>`
-                );
-
-                // Highlight the search query in the content
-                for (var k = 0; k < contentElements.length; k++) {
-                    var contentElement = contentElements[k];
-                    contentElement.innerHTML = contentElement.innerText.replace(
-                        new RegExp(searchQuery, 'gi'),
-                        (match) => `<span style="background-color: yellow">${match}</span>`
-                    );
-                }
-            } else {
-                article.style.display = "none";
+            });
+            
+            // show or hide the article based on matches
+            article.style.display = allQueriesMatch ? "block" : "none";
+            
+            // highlight the search queries in the title and content
+            if (allQueriesMatch) {
+                searchQueries.forEach(query => {
+                    var regex = new RegExp(query, 'gi');
+                    titleElement.innerHTML = titleElement.textContent.replace(regex, match => `<span class="highlight">${match}</span>`);
+                    contentElements.forEach(contentElement => {
+                        contentElement.innerHTML = contentElement.textContent.replace(regex, match => `<span class="highlight">${match}</span>`);
+                    });
+                });
             }
         }
     });
-
 </script>
 
 </body>

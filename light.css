@@ -64,7 +64,7 @@ div.center {
 }
 
 h1 {
-  color: #e0e0e0;
+  color: #282828;
   /* Light text color */
 }
 
@@ -340,8 +340,9 @@ input[type="text"]:focus {
   border-color: #15ff00;
 }
 
-/* CSS for the tags */
-
+.highlight {
+  background-color: yellow;
+}
 
 /* Colors for the tags */
 .tag-red {
@@ -385,5 +386,23 @@ input[type="text"]:focus {
 }
 
 .tag-white {
-  background-color: rgba(245, 245, 245, 0.59);
+  background-color: rgba(187, 187, 187, 0.59);
+}
+
+/* custom tags for writers */
+
+.tag-lak {
+  background: -webkit-linear-gradient(left, blue, purple, red);
+  background: -moz-linear-gradient(left, blue, purple, red);
+  background: -ms-linear-gradient(left, blue, purple, red);
+  background: -o-linear-gradient(left, blue, purple, red);
+  background: linear-gradient(to right, blue, purple, red);
+}
+
+.tag-blurple {
+  background: -webkit-linear-gradient(left, rgb(66,0,125), rgb(94,1,128), rgb(128,9,133));
+  background: -moz-linear-gradient(left, rgb(66,0,125), rgb(94,1,128), rgb(128,9,133));
+  background: -ms-linear-gradient(left, rgb(66,0,125), rgb(94,1,128), rgb(128,9,133));
+  background: -o-linear-gradient(left, rgb(66,0,125), rgb(94,1,128), rgb(128,9,133));
+  background: linear-gradient(to right, rgb(66,0,125), rgb(94,1,128), rgb(128,9,133));
 }

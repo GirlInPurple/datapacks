@@ -22,9 +22,11 @@ function toggleTheme() {
     // Check the current theme and toggle to the opposite
     if (currentTheme === darkTheme) {
         themeStylesheet.setAttribute('href', lightTheme);
+        //document.getElementById("themeToggle").setAttribute("src", "https://cdn3.iconfinder.com/data/icons/camera-scene-mode-glyph-16px/16/night_mode_moon_scene_dark-512.png");
         console.log("i highly respect people who use light mode, especially at night, that takes some dedication to do. i do not have that dedication.")
     } else {
         themeStylesheet.setAttribute('href', darkTheme);
+        //document.getElementById("themeToggle").setAttribute("src", "https://cdn1.iconfinder.com/data/icons/mix-ui/24/Sun_Brightness_Day_Light_Weather_Mode-512.png");
     }
 }
 
