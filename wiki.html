@@ -4,18 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- discord embed integration -->
+    <meta content="The Final Republic" property="og:site_name">
+    <meta content="Wiki | The Final Republic" property="og:title">
+    <meta content="The wiki pages for FinalRepublic, from everything between a cult about chickens and a full scale war. Come check it out! (please)" property="og:description">
+    <meta content="https://cdn.discordapp.com/attachments/1061516148325220455/1074527045561884722/f7bd4c45-d74b-405c-b57c-852917af9cc7.png" property='og:image'>
+    <meta name="theme-color" content="#0fff0f">
+
     <link id="themeStylesheet" rel="stylesheet" href="dark.css">
     <script src="script.js"></script>
     <title>Wiki | The Final Republic</title>
-    <link rel="icon"
-        href="https://cdn.discordapp.com/attachments/1061516148325220455/1074527045561884722/f7bd4c45-d74b-405c-b57c-852917af9cc7.png">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1061516148325220455/1074527045561884722/f7bd4c45-d74b-405c-b57c-852917af9cc7.png">
 
 </head>
 <header>
 
 </header>
 <nav class="tab">
-    <img src="assets/globoit.png" alt="emoji logo" style="max-width:4%; max-height:4%;">
+    <img src="assets/FinalRepublic_GIF_logo.gif" alt="emoji logo" style="max-width:4%; max-height:4%;">
     <div class="topnav">
         <a href="index.html">Home</a>
         <a class="active" href="wiki.html">Wiki</a>
@@ -23,14 +30,12 @@
         <a href="map.html">Map</a>
         <a href="about.html">About</a>
     </div>
-    <img onclick="toggleTheme()"
-        src="https://cdn2.iconfinder.com/data/icons/weather-154/100/weather_cloud_clouds_nature-46-512.png"
-        alt="Dark / Light Mode Toggle" style="max-width:4%; max-height:4%;">
+    <img class="themeToggle" onclick="toggleTheme()" src="https://cdn2.iconfinder.com/data/icons/weather-154/100/weather_cloud_clouds_nature-46-512.png" alt="Dark / Light Mode Toggle" style="max-width:4%; max-height:4%;">
 </nav>
 
 <main>
 
-    <div class="center">
+    <div class="center" style="text-align: left;">
         <h1><i><noscript>Your browser either does not support JavaScript or you have it turned off. This site wont work without it, please enable it!</noscript></i></h1>
         <h1>The Final Republic Wiki</h1>
         <h3 id="numberOfArticles"></h3>
@@ -39,9 +44,8 @@
         <br><br>
         <p class="coolp"><a href="#wiki-guide">Wiki Guide</a></p>
         <br>
-        <input type="checkbox" id="advancedFiltersToggle" name="Advanced Filters" onclick="toggleElementVisibility('advancedFiltersDiv');"/>
-        <label for="advancedFiltersToggle">Enable Advanced Filters (use at your own risk; returns the old filters from
-            when it was on discord)</label>
+        <input type="checkbox" id="advancedFiltersToggle" name="Advanced Filters" onclick="toggleElementVisibility('advancedFiltersDiv');toggleFilterText();"/>
+        <label id="advancedFiltersText" for="advancedFiltersToggle">Enable Advanced Filters</label>
 
         <!-- Standard Filters -->
         <p class="coolp">Topics</p>
@@ -65,20 +69,25 @@
             <span class="tag tag-red" onclick="insertTag('#english ')">English</span>
             <span class="tag tag-blue" onclick="insertTag('#français ')">Français</span>
             <span class="tag tag-green" onclick="insertTag('#हिंदी ')">हिंदी</span>
-            <span class="tag tag-pink" onclick="insertTag('#tiếngViệt ')">Tiếng Việt</span>
+            <span class="tag tag-pink" onclick="insertTag('#tiếngviệt ')">TiếngViệt</span>
             <span class="tag tag-purple" onclick="insertTag('#кирилиця ')">кирилиця</span>
             <span class="tag tag-orange" onclick="insertTag('#português ')">Português</span>
             <p class="coolp">Extra topics</p>
             <span class="tag tag-red" onclick="insertTag('#abandoned ')">Abandoned</span>
-            <span class="tag tag-blue" onclick="insertTag('#ai ')">AI Enhanced</span>
             <span class="tag tag-green" onclick="insertTag('#current ')">Current</span>
-            <span class="tag tag-pink" onclick="insertTag('#recently ')">Recently Updated</span>
-            <p class="coolp">The "Page Author" section was removed, but you can still search them up manually</p>
+            <span class="tag tag-pink" onclick="insertTag('#recently-updated ')">Recently Updated</span>
+            <span class="tag tag-purple" onclick="insertTag('#unfinished-pages ')">Unfinished Pages</span>
+            <p class="coolp">Page Authors</p>
+            <span class="tag tag-blurple" onclick="insertTag('#djzombiehunter ')">DJzombiehunter</span>
+            <span class="tag tag-grey" onclick="insertTag('#ousmblueninja ')">OusmBlueNinja</span>
+            <span class="tag tag-lak" onclick="insertTag('#alakazam6898 ')">Alakazam6898</span>
+            <span class="tag tag-grey" onclick="insertTag('#toxictrapper ')">ToxicTrapper</span>
+            <span class="tag tag-grey" onclick="insertTag('#anhnguyenlost13 ')">AnhNguyenlost13</span>
         </div>
         <br><br>
         <h3 id="numberOfSuccesses"></h3>
         <div id="wikiContent">
-            <h1></h1> <!-- Padding -->
+            <h1></h1> <!-- Padding abcdefghijklmnopqrstuvwxyz -->
 
             <!-- adax josue Wiki Article -->
             <article id="adaxjosue">
@@ -89,14 +98,14 @@
                 <span class="tag tag-blue">English</span><space></space>
                 <br><br>
                 <span class="tag tag-grey">OusmBlueNinja</span><space></space>
-                <span class="tag tag-purple">DJzombiehunter</span><space></space>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
 
 
                 <h2>AdaxJosue</h2>
                 <p>
                     <a href="#adaxjosue">@AdaxJosue</a> is the owner of <a href="#southcraft">SouthCraft</a>, the
                     predacesor to FinalRepublic, and where more of the server's ideology came from.
-                    Beyond his in-game achievements, <a href="#AdaxJosue">@AdaxJosue</a> is known for his generally
+                    Beyond his in-game achievements, <a href="#adaxjosue">@AdaxJosue</a> is known for his generally
                     helpful and supportive nature, plus his ability to gather alot of people to help him.
                 </p>
                 <h3>Trivia</h3>
@@ -105,15 +114,63 @@
                 <br>
                 <li>For a while he was running an offical SouthCraft TikTok account, but it has since been deleted and
                     all videos of it have been lost to history. This event is partly why this wiki exists at all. If
-                    anyone has any of the videos left on one of their devices, please <a href="about.html">contact
-                        us</a></li>
+                    anyone has any of the videos left on one of their devices, please <a href="about.html" title="Our Contact Page&#13;Click to Visit Page">contact us</a></li>
                 <br>
                 <li>Him along with <a href="#bmbxbby">@bmbxbby</a> have the highest number of Southcraft Seasons
-                    participated, being all 5. The runner-ups are <a href="#djzombiehunter">@DJzombiehunter</a> and <a
-                        href="#GameFlame380344">@GameFlame380344</a> with a total of 4. They both missed Season 2.</li>
+                    participated, being all 5. The runner-ups are <a href="#djzombiehunter">@DJzombiehunter</a> and <a href="#GameFlame380344">@GameFlame380344</a> with a total of 4. They both missed Season 2.</li>
                 <br>
                 <li>The discord emoji ":I_KILL_U:" is a screenshot of the begining of a video that was sent over text
-                    between <a href="#bmbxbby">@bmbxbby</a> and <a href="#adaxjosue">@AdaxJosue</a>.</li>
+                    between <a href="#bmbxbby">@bmbxbby</a> and <a href="#adaxjosue">@AdaxJosue</a>. It can be viewed <a href="#southcraft-conflicts">here</a></li>
+            </article>
+
+            <!-- adax josue Wiki Article -->
+            <article id="map-triangulation">
+                <span class="tag tag-purple">Guide</span><space></space>
+                <span class="tag tag-green">2022</span><space></space>
+                <span class="tag tag-blue">English</span><space></space>
+                <br><br>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
+
+                <h2>AdaxJosue's Map Triangulation Technique</h2>
+
+                <h3>Origin</h3>
+                <p>
+                    Not entirely sure on the origin, but there are a few options on where it came from:
+                </p>
+                <ul>
+                    <li>r/Minecraft or r/MCPE on reddit, and just travelling by words from there</li>
+                    <li><a href="#bmbxbby">@bmbxbby</a> telling me about it at some point</li>
+                    <li>having a map open while exploring and finding it by accident</li>
+                </ul>
+                <p>
+                    I legitimately have no clue where this came from, all i know is that it was used heavily in SC Season 4 and 5. These are just some ideas.
+                </p>
+
+                <h3>Usage</h3>
+                <p>
+                    This technique requires multiple maps, somewhere in the 5 to 64 range, and can be used tp locate any player on Bedrock edition. 
+                    Although, there is a downside to this technique, while its accurate nearly to the block, its exponentially time and resource consuming by distance
+                </p>
+
+                <h3>Instructions</h3>
+                <ul>
+                    <li>First, open a map anywhere in the world (see image 1)</li>
+                    <li>If the player is on the side of the map, go towards them, while opening more maps as you go so they're not underground (see image 2)</li>
+                    <li>If the player icon is in the corner, go in either of the directions they are touching until step 2 is met (see image 1)</li>
+                    <li>Depending on the level of map you will get a location accurate to the block (see image 3)</li>
+                    <li>You should be able to find them nearby, just go to where they are on the map and look around, maybe go up or down if necessary (see last/unmarked image)</li>
+                </ul>
+
+                <h3>Images</h3>
+                <button onclick="toggleElementVisibility('map-triangulation_image_1')">Click to show image "map-triangulation_image_1"</button>
+                <img id="map-triangulation_image_1" src="https://media.discordapp.net/attachments/1113955279609004124/1113955280011665498/image.png" alt="Image 1" style="display:none;">
+                <button onclick="toggleElementVisibility('map-triangulation_image_2')">Click to show image "map-triangulation_image_2"</button>
+                <img id="map-triangulation_image_2" src="https://cdn.discordapp.com/attachments/1113955279609004124/1113955280380772494/image.png" alt="Image 1" style="display:none;">
+                <button onclick="toggleElementVisibility('map-triangulation_image_3')">Click to show image "map-triangulation_image_3"</button>
+                <img id="map-triangulation_image_3" src="https://cdn.discordapp.com/attachments/1113955279609004124/1113955280779214918/image.png" alt="Image 1" style="display:none;">
+                <button onclick="toggleElementVisibility('map-triangulation_image_4')">Click to show image "map-triangulation_image_4"</button>
+                <img id="map-triangulation_image_4" src="https://cdn.discordapp.com/attachments/1113955279609004124/1113955281202855977/image.png" alt="Image 1" style="display:none;">
+
             </article>
 
             <!-- Battle on Origin River Wiki Article -->
@@ -122,12 +179,11 @@
                 <span class="tag tag-pink">2023</span><space></space>
                 <span class="tag tag-blue">English</span><space></space>
                 <br><br>
-                <span class="tag tag-purple">DJzombiehunter</span><space></space>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
                 <span class="tag tag-grey">ToxicTrapper</span><space></space>
 
                 <h2>The Battle on Origin River</h2>
-                <i>This conflict is the begining of a series of conflicts and attacks during the month of June, coined
-                    <a href="#great-escalation">The Great Escalation</a></i>
+                <i>This conflict is the begining of a series of conflicts and attacks during the month of June, coined <a href="#great-escalation">The Great Escalation</a></i>
                 <h3>The Calm Before</h3>
                 <p>
                     Before the fight, <a href="#alakazam6898">@Alakazam6898</a> killed <a href="#itsamegaming">@ItSameGaming</a> for an unknown reason.
@@ -166,7 +222,7 @@
                 <span class="tag tag-blue">English</span>
                 <space></space>
                 <br><br>
-                <span class="tag tag-purple">DJzombiehunter</span>
+                <span class="tag tag-blurple">DJzombiehunter</span>
                 <space></space>
 
 
@@ -207,7 +263,7 @@
                 <br><br>
                 <span class="tag tag-grey">OusmBlueNinja</span>
                 <space></space>
-                <span class="tag tag-purple">DJzombiehunter</span>
+                <span class="tag tag-blurple">DJzombiehunter</span>
                 <space></space>
 
                 <h2>Below The Bedrock</h2>
@@ -258,7 +314,7 @@
                 <span class="tag tag-blue">English</span>
                 <space></space>
                 <br><br>
-                <span class="tag tag-purple">DJzombiehunter</span>
+                <span class="tag tag-blurple">DJzombiehunter</span>
                 <space></space>
 
 
@@ -278,6 +334,38 @@
                 </li>
             </article>
 
+            <!-- Below the Bedrock Wiki Article -->
+            <article id="borderlands">
+                <span class="tag tag-green">Location</span><space></space>
+                <span class="tag tag-pink">2023</span><space></space>
+                <span class="tag tag-blue">English</span><space></space>
+                <br><br>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
+
+                <h2>The Borderlands / Borderlands</h2>
+
+                <h3>Summary</h3>
+                <p>
+                    The Borderlands between Spawn City and Cublak View, are an almost completely unpopulated region just north of the city.
+                    It contains a few buildings and the Twin Berry Bridges, Cranberry Bridge having Roads 1 and 4 cross it, and Blueberry Bridge having only Road 4 cross it.
+                    The top of the hill near the Spawn City-Borderlands border is constantly covered with animals due to how the server optimizations effect mob pathfinding, always wanting to go up hills, not down them.
+                    The Borderlands can also be considered one of the oldest towns on the server, construction having started just before Nether Bay, the second oldest town on the server, only behind Spawn City.
+                    The only thing holding it back from the second oldest town was not having a permanent population until fairly recently.
+                </p>
+
+                <h3>Residents</h3>
+                <ul>
+                    <li><a href="#lazydaisyuwu">@lazy_daisy_uwu</a> (Founder / Position Unknown)</li>
+                    <li><a href="#lionking">@lionking234578</a> (Member / Position Unknown)</li>
+                </ul>
+
+                <h3>Images, Maps, and References</h3>
+                <button onclick="toggleElementVisibility('borderlands_13/06/23')">Click to show image "borderlands_13/06/23"</button>
+                <img id="borderlands_13/06/23" src="https://media.discordapp.net/attachments/1061516148325220455/1118033619735298148/image.png" alt="Image 1" style="display:none;">
+                <button onclick="toggleElementVisibility('borderlands_11/07/23')">Click to show image "borderlands_11/07/23 "</button>
+                <img id="borderlands_11/07/23" src="https://media.discordapp.net/attachments/1061516148325220455/1128252356706967734/image.png" alt="Image 1" style="display:none;">
+            </article>
+
             <!-- cavetown Wiki Article -->
             <article id="cavetown">
                 <span class="tag tag-green">Location</span>
@@ -287,7 +375,7 @@
                 <span class="tag tag-blue">English</span>
                 <space></space>
                 <br><br>
-                <span class="tag tag-purple">DJzombiehunter</span>
+                <span class="tag tag-blurple">DJzombiehunter</span>
                 <space></space>
 
                 <h2>CaveTown</h2>
@@ -311,7 +399,7 @@
 
                 <h3>Structures</h3>
                 <ul>
-                    <li>A stone pillar was turned into a massive tower for <a>@zacrny</a> to build a secret base inside
+                    <li>A stone pillar was turned into a massive tower for <a href="#zacrny">@zacrny</a> to build a secret base inside
                         of. It later became a storage room.</li>
                     <li>A small farming house towards the top of the cave, as it was the first house it is the most
                         built up out of all of them.</li>
@@ -325,21 +413,17 @@
                     Spawn City was blown up, a good majority of the entrance was blown up as well. Building has since
                     then ceased and has become a district in Spawn City. Instead, a new project, coined <a
                         href="second-cavetown">CaveTown Thuhai</a> has taken its place.</li>
-                <li>The story behind CaveTown is simple; <a>@DJzombiehunter</a> found a cave near spawn, made a small
+                <li>The story behind CaveTown is simple; <a href="#djzombiehunter">@DJzombiehunter</a> found a cave near spawn, made a small
                     stone building, and everyone (except 2) followed.</li>
             </article>
 
             <!-- new cavetown Wiki Article -->
             <article id="new-cavetown">
-                <span class="tag tag-green">Location</span>
-                <space></space>
-                <span class="tag tag-pink">2023</span>
-                <space></space>
-                <span class="tag tag-blue">English</span>
-                <space></space>
+                <span class="tag tag-green">Location</span><space></space>
+                <span class="tag tag-pink">2023</span><space></space>
+                <span class="tag tag-blue">English</span><space></space>
                 <br><br>
-                <span class="tag tag-purple">DJzombiehunter</span>
-                <space></space>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
 
                 <h2>New CaveTown</h2>
                 <i>Not to be confused with <a href="#cavetown">CaveTown</a> or <a href="#second-cavetown">Cavetown Thuhai</a></i>
@@ -362,7 +446,7 @@
                 <span class="tag tag-blue">English</span>
                 <space></space>
                 <br><br>
-                <span class="tag tag-purple">DJzombiehunter</span>
+                <span class="tag tag-blurple">DJzombiehunter</span>
                 <space></space>
 
                 <h2>CaveTown Thuhai</h2>
@@ -380,10 +464,12 @@
 
             <!-- chicken cult Wiki Article -->
             <article id="chicken-cult">
-                <span class="tag tag-cyan">Obscure</span>
-                <space></space>
-                <span class="tag tag-blue">Group</span>
-                <space></space>
+                <span class="tag tag-cyan">Obscure</span><space></space>
+                <span class="tag tag-blue">Group</span><space></space>
+                <span class="tag tag-pink">2023</span><space></space>
+                <span class="tag tag-red">English</span>
+                <br><br>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
                 <h2>The Chimken Cult / The Chicken Cult</h2>
                 <p>Originally created by <a href="#rainforcraft">@RainForCraft</a>, <a href="#djzombiehunter">@DJzombiehunter</a>, and <a href="#itsamegaming">@ItSameGaming</a>, the Chicken Cult was formed out of a joke where a few of us got our hands on chicken heads and made a cult out of it. 
                     It was originally formed in the city of <a href="#below-the-bedrock">Below The Bedrock</a>, but has since expanded to <a href="#spawn-city">Spawn City</a> and <a href="#rain-unnamed-town">Rain's Unnamed Town</a>. 
@@ -398,18 +484,19 @@
                 <span class="tag tag-green">Location</span><space></space>
                 <span class="tag tag-blue">English</span><space></space>
                 <br><br>
-                <span class="tag tag-purple">DJzombiehunter</span><space></space>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
                 <h2>Cublak View</h2>
                 <i>This page has been translated into the following: <a href="#cublak-view-FR">Français</a>, <a href="#cublak-view-ID">हिंदी</a></i>
                 <h3>Summary</h3>
-                <p>With connections to The Borderlands from the road to the south and Middle Spawn and Spawn City [3]
+                <p>With connections to The Borderlands from the road to the south and Middle Spawn and Spawn City
                     from the Jungle and Oak lines respectively, it could be considered one of the 3 suburbs of the main
-                    city; the other two being World Origin Road [2] and The Borderlands [1]. It contains a mountain with
+                    city; the other two being World Origin Road and The Borderlands. It contains a mountain with
                     a glowing cube on top, a small plains village to the east, and a dual railway passing straight
                     through the city; all with the theme of glowing purple crystals.
                     FRTA Road 4 passes through the town, heading to Yuri's town.
-                    As of Late July 2023, construction of Cublak is paused.</p>
-
+                    <br>
+                    As of Late July 2023, construction of Cublak is paused.
+                </p>
                 <h3>Residents</h3>
                 <ul>
                     <li><a href="#alakazam6898">@Alakazam6898</a> (Owner / Main Builder)</li>
@@ -437,8 +524,8 @@
                 <span class="tag tag-green">Location</span><space></space>
                 <span class="tag tag-red">Français</span><space></space>
                 <br><br>
-                <span class="tag tag-purple">DJzombiehunter</span><space></space>
-                <space></space>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
+                <span class="tag tag-lak">Alakazam6898</span><space></space>
                 <h2>Cublak View (FR)</h2>
                 <h3>Summary / Résumé</h3>
                 <p>Avec des connexions à The Borderlands du route de sud à Middle Spawn et Spawn City du le Jungle et
@@ -486,7 +573,7 @@
                 <span class="tag tag-blue">English</span><space></space>
                 <br><br>
                 <span class="tag tag-grey">OusmBlueNinja</span><space></space>
-                <span class="tag tag-purple">DJzombiehunter</span><space></space>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
                 <space></space>
                 <h2>DJzombiehunter</h2>
 
@@ -518,10 +605,11 @@
                 <span class="tag tag-orange">Main-Page</span><space></space>
                 <span class="tag tag-pink">2023</span><space></space>
                 <span class="tag tag-blue">English</span><space></space>
+                <span class="tag tag-purple">Unfinished-Pages</span>
                 <br><br>
-                <span class="tag tag-purple">DJzombiehunter</span><space></space>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
                 <space></space>
-                <h2>finalrepublic</h2>
+                <h2>FinalRepublic</h2>
                 <i>For finalrepublic's sister servers; look here:
                     <br>
                     <a href="#axeium">Axeium</a>
@@ -533,25 +621,26 @@
                     <a href="#tengotuspantalones">Tengo Tus Pantalones</a>
                 </i>
 
-                <h3>Consistent Players</h3>
-                <p>There are alot of players that have at least somewhat consistent since season 1, here are a few; <a
-                        href="#">@Bmbxbby</a>, <a href="#">@TipDuy3010</a>, <a
-                        href="#djzombiehunter">@DJzombiehunter</a>, <a href="#">@TrefleCrystal</a>, <a
-                        href="#">@squeezal</a>, <a href="#">@AdaxJosue</a>, and <a href="#">@zacrny</a>.<br>Since Season
-                    2 started, we have decided we will never reset the server again unless something catastrophic
-                    happens. There are too many people who have joined after and have been active since to list here,
-                    but most are fairly well known names here.</p>
-
                 <h3>Seasons</h3>
                 <p>
                     After season 2, we have collectivly chosen to stop counting or event having "seasons", the world from this point on will never reset. 
                     This section is for historical pourposes only.
                 </p>
+
                 <h4>Season 1 | CaveTown</h4>
                 <p>
                     Lasting from
                 </p>
+
                 <h4>Season 2 | Spawn City</h4>
+                <p>
+
+                </p>
+
+                <h3>Pholosphy</h3>
+                <p>
+                    Its simple,
+                </p>
 
                 <h3>Trivia</h3>
                 <ul>
@@ -574,7 +663,7 @@
                 <span class="tag tag-pink">2023</span><space></space>
                 <span class="tag tag-blue">English</span><space></space>
                 <br><br>
-                <span class="tag tag-purple">DJzombiehunter</span><space></space>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
 
                 <h2>Final Republic Transportation Authority</h2>
                 <i>for railways owned by individuals, click <a href="#railways-owned-by-individuals">here</a></i>
@@ -608,8 +697,8 @@
                 </p>
                 <h4>Road 4</h4>
                 <p>
-                    Road 4 is the most out-of-the-way out of all of them, passing through only 3 towns total and paralling Road 1, just farther north and ending on the coast of the Northwegian Sea.
-                    There is nothing to say other than Road 4 is the only road with localized road signs, being in Português.
+                    Road 4 is the most out-of-the-way out of all of them, passing through only 3 towns total and paralleling Road 1, just farther north and ending on the coast of the Northwegian Sea.
+                    There is nothing to say other than Road 4 is the only road with localized road signs, being in Portuguese.
                 </p>
                 <h4>Road 3</h4>
                 <p>
@@ -665,32 +754,28 @@
                     </li>
                     <li>The FRTA is known under 2 names; "Final Republic Transportation Authority" and "Final Republic Transportation Association". They are basically the same thing and are freely interchangeable.</li>
                 </ul>
-
-                <li><a href="#guccimanoff-line">Guccimanoff's Personal Line (dismantled after the Spawn City Bombings)</a></li>
-                <li><a href="#railway-to-rain-city">Railway to Rain City</a></li>
-                <li><a href="#railway-to-below-the-bedrock">Railway to Below The Bedrock</a></li>
             </article>
 
             <!-- GSCM Wiki Article -->
             <article id="greater-spawn-city-metro">
-                <span class="tag tag-green">Location</span>
+                <span class="tag tag-green">Location</span><space></space>
+                <span class="tag tag-pink">2023</span><space></space>
                 <span class="tag tag-blue">English</span><space></space>
                 <br><br>
-                <span class="tag tag-grey">OusmBlueNinja</span><space></space>
-                <span class="tag tag-purple">DJzombiehunter</span><space></space>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
                 <space></space>
                 <h2>Greater Spawn City Metropolitan Area</h2>
-                <h2>Towns</h2>
+                <h3>Towns</h3>
                 <p>
-                    The Greater Spawn City Metropolitan Area (called GSCM for Greater Spawn City Metro from now on on this page)contains the towns of;
+                    The Greater Spawn City Metropolitan Area (called GSCM from now on on this page) contains the towns of;
                 </p>
                 <ul>
                     <li><a href="#spawn-city">Spawn City</a> - The main and largest city of the region, also the spawn point for new players</li>
                     <li><a href="#cublak-view">Cublak View</a> - A mountain and small village just outside The Borderlands and on the border of the GSCM</li>
-                    <li><a href="#the-borderlands">The Borderlands</a> - A small neighborhood on top of Mount Colina</li>
+                    <li><a href="#borderlands">The Borderlands</a> - A small neighborhood on top of Mount Colina</li>
                     <li><a href="#humanbeinga1s-unnamed-town">HumanBeingA1's Unnamed Town</a> - The newest town in the region, a small house just south of Spawn City. The owner hasnt been on since they built the house, assumed abandoned.</li>
                     <li><a href="#world-origin-road">World Origin Road</a> - An abandoned town just south-east of downtown Spawn City</li>
-                    <li><a href="#communist-island">Communist Island</a> - An island just across the border of SCFD that was claimed and has a house built on it [Not Picutred on Maps]</li>
+                    <li><a href="#communist-island">Communist Island</a> - An island just across the border of SCFD that was claimed, a house has been built on it [Not Picutred on Maps]</li>
                 </ul>
 
                 <h2>Images, Maps, and References</h2>
@@ -708,83 +793,209 @@
                 <img id="GSCM_blank" src="https://cdn.discordapp.com/attachments/1061516148325220455/1132236893581488128/image.png" alt="Blank Map" style="display:none;">
             </article>
 
+            <!-- GSCM Wiki Article -->
+            <article id="great-escalation">
+                <span class="tag tag-red">Conflict</span><space></space>
+                <span class="tag tag-pink">2023</span><space></space>
+                <span class="tag tag-blue">English</span><space></space>
+                <br><br>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
+
+                <h2>The Great Escalation</h2>
+                <h3>Introduction</h3>
+                <p>
+                    Directly after the <a href="#spawn-city-bombings">Spawn City Bombings</a>, with a bit of overlap during June 2023, 
+                    a few of the largest towns got into some light drama, never breaking out into a war but constantly escalating, hense the name.
+                </p>
+
+                <h3>Republica</h3>
+                <p>The towns allied with the moderation team, usually containing a member of said team. The name is unoffical and only used in the wiki for record-keeping and simplicity.</p>
+                <h4><a href="#rains-town">Rain's Town</a></h4>
+                <ul>
+                    <li><a href="#rainforcraft">@RainForCraft</a></li>
+                    <li><a href="#djzombiehunter">@DJzombiehunter</a></li>
+                </ul>
+                <h4><a href="#borderlands">The Borderlands</a></h4>
+                <ul>
+                    <li><a href="#lazydaisyuwu">@lazy_daisy_uwu</a></li>
+                    <li><a href="#yuri_z">@Yuri_z759</a></li>
+                </ul>
+                <h4><a href="#below-the-bedrock">Below The Bedrock</a></h4>
+                <ul>
+                    <li><a href="#lionking234578">@lionking234578</a></li>
+                    <li><a href="#itsamegaming">@ItSameGaming</a></li>
+                </ul>
+                <h3>Greifers</h3>
+                <p>The oposition to Republica.</p>
+                <h4><a href="#kireis-town">Kirei's Town</a></h4>
+                <ul>
+                    <li><a href="#minervak">@MinervaKirei</a></li>
+                    <li><a href="#titiksha">@titiksha14</a></li>
+                </ul>
+                <h4><a href="#cublak-view">Cublak View</a></h4>
+                <ul>
+                    <li><a href="#alakazam6898">@Alakazam6898</a></li>
+                </ul>
+                <h3>History</h3>
+                <h4>The Latter end of the <a href="spawn-city-bombings">Spawn City Bombings</a></h4>
+                <p>
+                    <a href="spawn-city-bombings">This event</a> is its own separte article.
+                </p>
+                <h4>The <a href="battle-origin-river">Battle on Origin River</a></h4>
+                <p>
+                    <a href="battle-origin-river">This event</a> is its own separte article.
+                    <br><br>
+                    1 death was counted at the end of this mini-conflict, <a href="#alakazam6898">@Alakazam6898</a>
+                </p>
+                <h4>Spawn Lavacast</h4>
+                <p>
+                    2 lavacasts were made in Spawn City and discovered on 04/07/23, one was small and the other was go big we named it. Both are part of the Magmososa Mountain Range.
+                    To this day it is unknown who or why someone made the lavacast.
+                    The only buildings damaged were <a href="#tony142">@Tony142612736</a>'s bunker/house and <a href="#bmbxbby">@bmbxbby</a>'s bunker.
+                </p>
+                    <button onclick="toggleElementVisibility('great-escalation_lava-cast')">Click to show video "great-escalation_lava-cast"</button>
+                    <img id="great-escalation_lava-cast" src="https://cdn.discordapp.com/attachments/1017938268102348931/1125907125277835304/2023-07-04_17.51.57.png" alt="Image 1" style="display:none;">
+                <h4><a href="#minervak">@MinervaKirei</a> Banned</h4>
+                <p>
+                    Kirei tried to steal items out of <a href="#lazydaisyuwu">@lazy_daisy_uwu</a>'s and <a href="#rainforcraft">@RainForCraft</a>'s bases, 
+                    and as per the rules Kirei was sent to the gulag and forced to pay for his actions. 
+                    It started a server-wide drama over what the rules are and how everything is set up on the discord, mostly around the weird naming scheme of the channels at the time.
+                    It also re-kindled the conflict between <a href="#rainforcraft">@RainForCraft</a> and <a href="#minervak">@MinervaKirei</a>.
+                    The end of it <a href="#minervak">@MinervaKirei</a> was temp-banned for an unspecfied amount of time and all of the channels were renamed to reduced confusion.
+                    <br><br>
+                    2 deaths were counted at the end of this conflict. <a href="#djzombiehunter">@DJzombiehunter</a> and <a href="#minervak">@MinervaKirei</a>'s Skeleton Horse.
+                </p>
+                <h4>This Conflict's End</h4>
+                <p>
+                    Considering that <a href="#rainforcraft">@RainForCraft</a> and <a href="#itsamegaming">@ItSameGaming</a> quit the server, plus <a href="#minervak">@MinervaKirei</a> being forced to pay for thier actions, it seems like war is highly unlikley. 
+                </p>
+            </article>
+
             <!-- HumanBeingA1's Unnamed Town Wiki Article -->
             <article id="humanbeinga1's-unnamed-town">
-                <span class="tag tag-green">Location</span>
-                <space></space>
+                <span class="tag tag-green">Location</span><space></space>
+                <span class="tag tag-pink">2023</span><space></space>
+                <span class="tag tag-blue">English</span><space></space>
+                <br><br>
+                <span class="tag tag-grey">OusmBlueNinja</span><space></space>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
                 <h2>HumanBeingA1's Unnamed Town</h2>
-                <p>HumanBeingA1's Unnamed Town is an enigmatic location, the status of which is unclear. It is uncertain
-                    whether it is an independent town or part of World Origin Road or Spawn City.</p>
+                <p>
+                    HumanBeingA1's Unnamed Town is an enigmatic location, the status of which is unclear. 
+                    It is uncertain whether it is an independent town or part of World Origin Road or Spawn City. 
+                    It can be assumed it lies in an unincorporated area for the time being.
+                    <br>
+                    The owner of the town, <a href="#humanbeinga1">@HumanBeingA1</a>, has not logged on since its construction. 
+                    It is assumed abandoned.
+                </p>
 
                 <h3>Residents</h3>
                 <ul>
-                    <li>HumanBeingA1 (Founder / Position Unknown)</li>
-                    <li><a href="#TipDuy3010">@TipDuy3010</a> (Co-Founder / Position Unknown)</li>
+                    <li><a href="#humanbeinga1">@HumanBeingA1</a> (Founder / Position Unknown)</li>
+                    <li><a href="#tipduy3010">@TipDuy3010</a> (Co-Founder / Position Unknown)</li>
                 </ul>
 
                 <h3>Images, Maps, and References</h3>
-                <p>No maps are currently available for this location, as it is a private base.</p>
+                <p>No maps are currently available for this location.</p>
             </article>
 
             <!-- ItSameGaming Wiki Article -->
             <article id="itsamegaming">
 
-                <span class="tag tag-pink">Characters</span>
-                <span class="tag tag-blue">English</span>
-                <space></space>
-                <span class="tag tag-purple">DJzombiehunter</span>
+                <span class="tag tag-pink">Characters</span><space></space>
+                <span class="tag tag-pink">2023</span><space></space>
+                <span class="tag tag-blue">English</span><space></space>
+                <br><br>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
 
                 <h2>ItSameGaming</h2>
-                <p>ItSameGaming was one of many players to build a town on the server, spcifically the town of <a
-                        href="#below-the-bedrock">Below The Bedrock</a>. Now, you might wonder what about them is so
-                    importaint that they deserve their own wiki article?</p>
+                <p>
+                    ItSameGaming was one of many players to build a town on the server, spcifically the town of <a href="#below-the-bedrock">Below The Bedrock</a>. 
+                    Now, you might wonder what about them is so importaint that they deserve their own wiki article?
+                </p>
                 <h3>Building BTB</h3>
-                <p>They're a very influential player due to the fact they built one of the largest towns on the server;
+                <p>
+                    They're a very influential player due to the fact they built one of the largest towns on the server;
                     Below The Bedrock is the 3rd largest town by land area, and 6th by build count. Now that alone
                     doesnt do much, but with the fact they just... gave it away for free? to anyone who wants it? its
-                    unreal.</p>
+                    unreal.
+                </p>
                 <h3>Leaving Final Republic</h3>
-                <p>They left because they simply did not have time or peitence for playing or the server drama, and
-                    honestly, I would do it too.</p>
+                <p>
+                    They left because they simply did not have time or patience for playing or the server drama; and
+                    honestly, I would do it too.
+                </p>
 
+            </article>
+
+            <!-- kirei's town Article -->
+            <article id="kireis-town">
+
+                <span class="tag tag-green">Location</span><space></space>
+                <span class="tag tag-pink">2023</span><space></space>
+                <span class="tag tag-blue">English</span><space></space>
+                <br><br>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
+
+                <h2>MinervaKirei's Town</h2>
+                <h3>Summary</h3>
+                <p>
+                    No data is known other than it was founded sometime between 21/06/2023 and 25/06/2023.
+                    Road 1 passes through it, going between Kwazii Penninsula and Below The Bedrock.
+                </p>
+
+                <h3>Residents</h3>
+                <ul>
+                    <li><a href="#minervak">@MinervaKirei</a> (Founder / Position Unknown)</li>
+                    <li><a href="#kwazii">@Kwazii2015</a> (Acquaintance / Position Unknown)</li>
+                    <li><a href="#rainforcraft">@RainForCraft</a> (Acquaintance / Position Unknown)</li>
+                    <li><a href="#titiksha">@titiksha14</a> (Position Unknown)</li>
+                </ul>
+
+                <h3>Images, Maps, and References</h3>
+                <button onclick="toggleElementVisibility('kireis-town_25/06/23')">Click to Show Image "kireis-town_25/06/23"</button>
+                <img id="kireis-town_25/06/23" src="https://media.discordapp.net/attachments/1061516148325220455/1122585555021078578/image.png" alt="Image 7" style="display:none;">
+                <button onclick="toggleElementVisibility('kireis-town_28/06/23')">Click to Show Image "kireis-town_28/06/23"</button>
+                <img id="kireis-town_28/06/23" src="https://cdn.discordapp.com/attachments/1061516148325220455/1123656688348708874/image.png" alt="Image 7" style="display:none;">
+                <button onclick="toggleElementVisibility('kireis-town_08/07/23')">Click to Show Image "kireis-town_08/07/23"</button>
+                <img id="kireis-town_08/07/23" src="https://cdn.discordapp.com/attachments/1061516148325220455/1127431623185530900/image.png" alt="Image 7" style="display:none;">
             </article>
 
             <!-- List of Towns -->
             <article id="list-of-towns">
-                <span class="tag tag-green">Location</span>
-                <space></space>
+                <span class="tag tag-green">Location</span><space></space>
+                <span class="tag tag-pink">2023</span><space></space>
+                <span class="tag tag-blue">English</span><space></space>
+                <br><br>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
                 <h2>List of Towns</h2>
                 <h3>Active</h3>
                 <p>A town that has a lot of activity / builds in it.</p>
-                <h3>Semi-Active</h3>
-                <p>A town that has a few builds and the members log on occasionally.</p>
-                <h3>Hibernating</h3>
-                <p>The members have not quit the server but haven't logged on in a while.</p>
-                <h3>Abandoned / Defunct</h3>
-                <p>Members quit the town/server, town goes untouched.</p>
-                <h3>Active</h3>
                 <ul>
                     <li><a href="#windswept-fang">Windswept Fang</a></li>
-                    <li><a href="#yuris-unanamed-town">Yuri's Unanamed Town</a></li>
-                    <li><a href="#the-borderlands">The Borderlands</a></li>
+                    <li><a href="#yuris-town">Yuri's Unanamed Town</a></li>
+                    <li><a href="#borderlands">The Borderlands</a></li>
                 </ul>
                 <h3>Semi-Active</h3>
+                <p>A town that has a few builds and the members log on occasionally.</p>
                 <ul>
                     <li><a href="#nether-bay">Nether Bay</a></li>
                     <li><a href="#spawn-city">Spawn City</a></li>
                 </ul>
                 <h3>Hibernating</h3>
+                <p>The members have not quit the server but haven't logged on in a while.</p>
                 <ul>
-                    <li><a href="#kireis-unamed-town">Kirei's Unnamed Town</a></li>
+                    <li><a href="#kireis-town">Kirei's Unnamed Town</a></li>
                     <li><a href="#world-origin-road">World Origin Road</a></li>
-                    <li><a href="#xselites-unamed-town">XsElite's Unnamed Town</a></li>
+                    <li><a href="#xselites-town">XsElite's Unnamed Town</a></li>
                 </ul>
                 <h3>Abandoned / Defunct</h3>
+                <p>Members quit the town/server, town goes untouched.</p>
                 <ul>
                     <li><a href="#the-unclaimed-town">The Unclaimed Town</a></li>
                     <li><a href="#ocean-plains">Ocean Plains</a></li>
                     <li><a href="#below-the-bedrock">Below The Bedrock</a></li>
-                    <li><a href="#rains-unamed-town">Rain's Unnamed Town</a></li>
+                    <li><a href="#rains-town">Rain's Unnamed Town</a></li>
                     <li><a href="#cublak-view">Cublak View</a></li>
                 </ul>
             </article>
@@ -792,108 +1003,220 @@
             <!-- Nether Bay Wiki Article -->
             <article id="nether-bay">
                 <span class="tag tag-green">Location</span>
+                <span class="tag tag-pink">2023</span><space></space>
+                <span class="tag tag-blue">English</span><space></space>
+                <br><br>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
                 <space></space>
                 <h2>Nether Bay</h2>
-                <p>Summary</p>
-                <p>A town near the South-West world border corner, the west end of the Crimson line, and the farthest
-                    town from Spawn City as of writing this.</p>
-                <p>Residents</p>
+                <h3>Summary</h3>
+                <p>
+                    A town near the South-West world border corner, and has been the farthest
+                    town from Spawn City for a long time.
+                    There are no connections between Nether Bay and any transit, be nether portal or train line.
+                </p>
+                <h3>Residents</h3>
                 <ul>
-                    <li><a href="#chemikalus">chemikalus</a> - Founder / Position Unknown</li>
-                    <li><a href="#woxxyt">WoxxYT</a> - Member / Position Unknown</li>
-                    <li>JasomWasTaken (Not On Discord) - Member / Position Unknown</li>
-                    <li>KillerYak (Not On Discord) - Member / Position Unknown</li>
+                    <li><a href="#chemikalus">@chemikalus</a> (Founder / Position Unknown)</li>
+                    <li><a href="#woxxyt">@WoxxYT</a> (Member / Position Unknown)</li>
+                    <li><a href="#jasomwastaken">@JasomWasTaken</a> (Member / Position Unknown)</li>
+                    <li><a href="#killeryak">@KillerYak</a> (Member / Position Unknown)</li>
                 </ul>
-                <p>Images, Maps, and References</p>
-                <img src="https://media.discordapp.net/attachments/1061516148325220455/1118033618946756618/image.png"
-                    alt="Map 1">
-                <img src="https://media.discordapp.net/attachments/1061516148325220455/1122586827044425819/image.png"
-                    alt="Map 2">
-                <img src="https://cdn.discordapp.com/attachments/1061516148325220455/1131167774031499345/image.png"
-                    alt="Map 3 (most changes are underground)">
+                <h3>Images, Maps, and References</h3>
+                <button onclick="toggleElementVisibility('nether-bay_13/06/23')">Click to show image "nether-bay_13/06/23"</button>
+                <img id="nether-bay_13/06/23" src="https://media.discordapp.net/attachments/1061516148325220455/1118033618946756618/image.png" alt="Map 1" style="display:none;">
+                <button onclick="toggleElementVisibility('nether-bay_25/06/23')">Click to show image "nether-bay_25/06/23"</button>
+                <img id="nether-bay_25/06/23" src="https://media.discordapp.net/attachments/1061516148325220455/1122586827044425819/image.png" alt="Map 2" style="display:none;">
+                <button onclick="toggleElementVisibility('nether-bay_19/07/23')">Click to show image "nether-bay_19/07/23"</button>
+                <img id="nether-bay_19/07/23" src="https://cdn.discordapp.com/attachments/1061516148325220455/1131167774031499345/image.png" alt="Map 3 (most changes are underground)" style="display:none;">
             </article>
 
             <!-- golden bay / ocean plains Wiki Article -->
             <article id="ocean-plains">
-                <span class="tag tag-green">Location</span>
-                <space></space>
+                <span class="tag tag-green">Location</span><space></space>
+                <span class="tag tag-cyan"">Obscure</span><space></space>
+                <span class="tag tag-pink">2023</span><space></space>
+                <span class="tag tag-blue">English</span><space></space>
+                <br><br>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
                 <h2>Ocean Plains</h2>
-                <p>Names</p>
+                <h3>Names</h3>
                 <p>This town was known under 3 different names, here they are listed;</p>
                 <ul>
-                    <li><strong>Ocean Plains:</strong> This was the name of the canceled FRTA Metro Station to go to
-                        this area; it has since become the common name for this region. It was supposed to be the second
-                        station on what was then the Mushroom Line but now would be on the Spruce Line.</li>
-                    <li><strong>Golden Bay City:</strong> The original name of the city, the town being meant to be the
-                        richest and most prosperous town on the server.</li>
-                    <li><strong>Golden Knights Castle:</strong> The name of the only remaining building residing in its
-                        borders, the ruins of the old castle of the Golden Knights.</li>
+                    <li>
+                        <strong>Ocean Plains:</strong> 
+                        This was the name of the canceled FRTA Metro Station to go to this area; it has since become the common name for this region. 
+                        It was supposed to be the second station on what was then the Mushroom Line but now would be on the Spruce Line.
+                    </li>
+                    <li>
+                        <strong>Golden Bay City:</strong> 
+                        The original name of the city, the town being meant to be the richest and most prosperous town on the server.
+                    </li>
+                    <li><strong>Golden Knights Castle:</strong>
+                        The name of the only remaining building residing in its borders, the ruins of the old castle of the Golden Knights.
+                    </li>
                 </ul>
-                <p>History</p>
-                <p><strong>Construction:</strong> Sometime in Early May 2023, <a
-                        href="#djzombiehunter">@DJzombiehunter</a> and @RainForCraft started construction on the castle
-                    for a failed group called The Golden Knights.</p>
-                <p><strong>Deconstruction:</strong> Due to @RainForCraft leaving the server, possibly permanently, me
-                    and...</p>
-                <p><strong>Revival:</strong> @ToxicTrapper has expressed interest in gaining ownership of this base, and
-                    it will be granted whenever he is ready.</p>
-                <p>Images, Links, and References</p>
+                <h3>History</h3>
+                <p>
+                    <b>Construction:</b> 
+                    Sometime in Early May 2023, <a href="#djzombiehunter">@DJzombiehunter</a> and @RainForCraft started construction on the castle for a failed group called The Golden Knights.
+                </p>
+                <p>
+                    <b>Deconstruction:</b> 
+                    Due to @RainForCraft leaving the server, possibly permanently, @DJzombiehunter and @RainForCraft blew up a good portion of the base.
+                </p>
+                <p>
+                    <b>Revival:</b> 
+                    @ToxicTrapper has expressed interest in gaining ownership of this base, and it will be granted whenever he is ready.
+                </p>
+                <h3>Images, Links, and References</h3>
+                <p>No images as of now.</p>
             </article>
 
-            <!-- Squeezalton Wiki Article -->
-            <article id="squeezalton">
-                <span class="tag tag-green">Location</span>
-                <space></space>
-                <h2>Squeezalton</h2>
-                <p>Squeezalton is a location on the server designated for record-keeping purposes.</p>
+            <!-- indiviual railways article -->
+            <article id="railways-owned-by-individuals">
+                <span class="tag tag-cyan">Obscure</span><space></space>
+                <span class="tag tag-pink">2023</span><space></space>
+                <span class="tag tag-blue">English</span><space></space>
+                <br><br>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
+
+                <h2>Railways Owned By Individuals</h2>
+
+                <h4><a href="#guccimanoff">@Guccimanoff</a>'s' Personal Line</h4>
+                <i>dismantled after the <a href="spawn-city-bombings">Spawn City Bombings</a></i>
+                <p>
+                    A simple train line going from <a href="#guccimanoff">@Guccimanoff</a>'s base to Central Station, passing through Squeezaltopia and the river before ending next the Central Station.
+                    <br>
+                    There was a plan to bring this line back using the Derevo Line, that plan was morphed into the Spawn City LRT Line.
+                </p>
+                <h4><a href="#bredtalk">@BredTalk</a>'s Personal Line</h4>
+                <i>dismantled after the <a href="spawn-city-bombings">Spawn City Bombings</a></i>
+                <p>
+                    After the Bombings, <a href="#rainforcraft">@RainForCraft</a> blew up <a href="#bredtalk">@BredTalk</a>'s base, and the line was cleaned up afterwards by <a href="#djzombiehunter">@DJzombiehunter</a>.
+                    <br>
+                    You can still see the remains of the line in the North-Western corner of Spawn City, a few random redstone torches and a line going under the river.
+                    This segment of rail is slated to be turned into a section of the Spawn City LRT.
+                </p>
+                <h4>Railway to <a href="#rain-city"></a>Rain City</a></h4>
+                <p>
+                    A railway made by <a href="#lionking234578">@lionking234578</a>, <a href="#lazydaisyuwu">@lazy_daisy_uwu</a>, and <a href="#djzombiehunter">@DJzombiehunter</a>. 
+                    It was built by them so people had a slightly faster route between the two cities, as an FRTA Oak Line connection to <a href="#rain-city">Rain City</a> was denied.
+                    The line has since fallen into disrepair after the abandoning of <a href="#rain-city">Rain City</a>.
+                </p>
+                <h4>Railway to <a href="#below-the-bedrock"></a>Below The Bedrock</a></h4>
+                <p>
+
+                </p>
+            </article>
+
+            <!-- rain's town Article -->
+            <article id="rains-town">
+
+                <span class="tag tag-green">Location</span><space></space>
+                <span class="tag tag-pink">2023</span><space></space>
+                <span class="tag tag-blue">English</span><space></space>
+                <br><br>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
+
+                <h2>Rains's Town / Rain City</h2>
+                <h3>Summary</h3>
+                <p>
+                    A medium-sized town just west of Spawn City, where Roads 1, 3, and 6 converge, plus the Oak Line and Rain City LRT.
+                    It is one of the most influencital cities on the map, behind Spawn City, Nether Bay, Borderlands, and Spawn City, having alot of the signifigant events of the <a href="#great-escalation">Great Escalation</a> occur in its borders.
+                </p>
 
                 <h3>Residents</h3>
                 <ul>
-                    <li><a href="#">@squeezal</a> (Founder / Position Unknown)</li>
+                    <li><a href="#rainforcraft">@RainForCraft</a> (Founder)</li>
+                    <li><a href="#lionking234578">@lionking234578</a> (Founder / Position Unknown)</li>
+                    <li><a href="#tony142">@Tony142612736</a> (Acquaintance / Position Unknown)</li>
+                    <li><a href="#djzombeihunter">@DJzombiehunter</a> (Builder)</li>
                 </ul>
 
                 <h3>Images, Maps, and References</h3>
-                <p>No maps are available for Squeezalton at the moment, as it is a private base.</p>
+                <button onclick="toggleElementVisibility('rains-town_15/06/23')">Click to Show Image "rains-town_15/06/23"</button>
+                <img id="rains-town_15/06/23" src="https://cdn.discordapp.com/attachments/1061516148325220455/1118795852983578704/image.png" alt="Image 7" style="display:none;">
+                <button onclick="toggleElementVisibility('rains-town_25/06/23')">Click to Show Image "rains-town_25/06/23"</button>
+                <img id="rains-town_25/06/23" src="https://cdn.discordapp.com/attachments/1061516148325220455/1122588066155073616/image.png" alt="Image 7" style="display:none;">
             </article>
 
             <!-- Southcraft Season 1 Wiki Article -->
-            <article id="southcraft-season-1">
-                <span class="tag tag-red">Confict</span>
-                <space></space>
-                <h2>Southcraft Season 1</h2>
-                <h3>Members and Groups</h3>
-                <p>The main members for this season are BmBxBBy, <a href="#djzombiehunter">@DJzombiehunter</a>,
-                    AdaxJouse, Gameflame, ToastistGraph23, and several others that have stayed unknown or neutral; with
-                    the main groups being the RWA and Vietnam</p>
+            <article id="southcraft-conflicts">
+                <span class="tag tag-red">Conflict</span><space></space>
+                <span class="tag tag-blue">2021</span><space></space>
+                <span class="tag tag-green">2022</span><space></space>
+                <span class="tag tag-blue">English</span><space></space>
+                <span class="tag tag-purple">Unfinished Pages</span><space></space>
+                <br><br>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
 
-                <h3>The Withering War</h3>
-                <p>The Siege of Spike Hill<br>The first major battle between the two factions, the newly formed
+                <h2>All Southcraft Conflicts</h2>
+
+                <h3>The Withering War | SC Season 1</h3>
+                <h4>The Siege of Spike Hill</h4>
+                <p>
+                    The first major battle between the two factions, the newly formed
                     "Vietnam", and a faction soon to be called "The RWA" (stands for Realm Wide Assassins) was fought
-                    over 17 slimeballs.<br>Granted we were pretty easy targets hunkered down in a small shack in an
-                    icespikes biome, but we did not need to have our base irreparably griefed because we wanted payment.
-                    bmbxbby, who was the one who initially started the entire conflict between the two factions, just
+                    over 17 slimeballs.
+                    Granted we were pretty easy targets hunkered down in a small shack in an icespikes biome, but we did not need to have our base irreparably griefed because we wanted payment.
+                    @bmbxbby, who was the one who initially started the entire conflict between the two factions, just
                     didnt want to pay and instead said "i pay with your blood on my blade" and it caused the entire
-                    faction to flee northward to find a jungle, our new home.<br>Shifted Blame:<br>bmbxbby killed
-                    Gameflame.<br>And then shifted the blame onto us saying i paid for the assassination.<br>Gameflame
-                    saw through this and promptly kicked him out of the newly formed RWA; he then took refuge in our
-                    jungle bunker. There were pros and cons to this.<br>Pros:<br>Maxed-out diamond gear<br>Cons:<br>The
-                    RWA knows our location and has dropped 3 wither nukes on us, confirmed by video on
-                    17/06/2021.<br>That was the very tiny peak of Vietnam's reign over the jungle<br>Wars
+                    faction to flee northward to find a jungle, our new home.
+                </p>
+                <h4>Shifted Blame</h4>
+                <p>
+                    bmbxbby killed Gameflame, then shifted the blame onto us saying i paid for the assassination.
+                    Gameflame saw through this and promptly kicked him out of the newly formed RWA; he then took refuge in our jungle bunker. 
+                    There were pros and cons to this.<br>
+                </p>
+                <ul>
+                    <li>Pros</li>
+                    Maxed-out diamond gear
+                    <br>
+                    <li>Cons</li>
+                    RWA knows our location and is about to spawn 3 withers on us.
+                </ul>
+                <p>
+                    That was the very tiny peak of Vietnam's reign over the jungle<br>Wars
                     End:<br>Because the jungle was so far out from spawn, around 15km, once our beds were destroyed we
                     were doomed to respawn far away from the ruins. Thankfully i survived the raid and was able to last
                     until they left, but our base was a bomb crater at that point, so I had two options; kill myself and
                     respawn in enemy land, or stay and build from the ground up again.<br>The season ended shortly
-                    after.</p>
+                    after.
+                </p>
+                <p>
+                    Here is one of the surviving video messages sent by AdaxJouse, around the time of Wars End, sent on 17/06/2021. 
+                    Please note it will not autoplay.
+                </p>
+                <button onclick="toggleElementVisibility('southcraft_conflicts_withering_war')">Click to show video "southcraft_conflicts_withering_war"</button>
+                <video width="320" height="240" id="southcraft_conflicts_withering_war" controls poster="./assets/loading_placeholder.png" style="display: none;">
+                    <source src="https://cdn.discordapp.com/attachments/1012703386849787975/1133922223141433414/MOV_1211.mp4">
+                    <track kind="subtitles" srclang="en" src="./assets/withering_war.vtt" default>
+                    <track kind="subtitles" srclang="fr" src="./assets/withering_war_fr.vtt">
+                    Your browser does not support the video tag. Please updgrade or change your broswer.
+                </video>
 
-                <h3>Trivia</h3>
-                <p>Here is one of the surviving video messages sent by AdaxJouse, around the time of Wars End <a
-                        href="https://cdn.discordapp.com/attachments/1012703386849787975/1133922223141433414/MOV_1211.mp4">Video
-                        Link</a></p>
+                <h3>The Cat War | Season 2</h3>
+                <h4>Server Reset</h4>
+                <p>
+                    Most people from Season 1 joined again for Season 2, if only for a few minutes like I did.
+                    I built a small shack near spawn
+                </p>
+                <h4></h4>
+                <h4>Server Reset</h4>
+
             </article>
 
             <!-- Southcraft Redirect Wiki Article -->
             <article id="southcraft">
-                <span class="tag tag-red">Confict</span>
+                <span class="tag tag-orange">Main-Page</span>
+                <span class="tag tag-blue">2021</span><space></space>
+                <span class="tag tag-green">2022</span><space></space>
+                <span class="tag tag-blue">English</span><space></space>
+                <span class="tag tag-purple">Unfinished Pages</span><space></space>
+                <br><br>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
                 <space></space>
                 <h2>SouthCraft</h2>
                 <p>For this page's redirect(s); look here:</p>
@@ -919,66 +1242,160 @@
                 <p>Almost all of the hacks used on his server (Horion, Toolbox, etc) have been patched.</p>
             </article>
 
+            <!-- Squeezalton Wiki Article -->
+            <article id="spawn-city-bombings">
+                <span class="tag tag-red">Conflict</span><space></space>
+                <span class="tag tag-pink">2023</span><space></space>
+                <span class="tag tag-blue">English</span><space></space>
+                <br><br>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
+
+                <h2>The Spawn City Bombings</h2>
+
+                <h3>Description</h3>
+                <p>
+                    The main city, Spawn City, was bombed multiple times in the span of around a month.
+                    This string of events is considered the beginning of the <a href="great-escalation">The Great Escalation</a>, but is listed under another name due to its effects on Spawn City months after the events transpired.
+                    <br><br>
+                    Alot of the info on this article is either vauge due to no information, or intentioanlly left out to not provoke a second spree.
+                    Please do not bother anyone involved in this event for any reason, it has been months since this occurred and many of the greifers have appologized to me for these events.
+                    This article is for record-keeping purposes only.
+                </p>
+
+                <h3>Groups</h3>
+
+                <h4><a href="#unnamed-greifing-faction">Unanmed Greifing Faction</a></h4>
+                <ul>
+                    <li><a href="#turisro">@TURISRO</a></li>
+                    <li><a href="#9m_mro">@9M_MRO</a></li>
+                    <li><a href="#vn_191">@VN_191</a></li>
+                    <li><a href="#bredtalk">@bredtalk</a></li>
+                    <li><a href="#dedek_medvedek">@Dedek_medvedek</a></li>
+                    <li><a href="#empowergt">@Empower863GT</a></li>
+                    <li><a href="#fujiikaze">@FUJII_KAZE123</a></li>
+                </ul>
+
+                <h4>Active Moderators</h4>
+                <ul>
+                    <li><a href="#djzombiehunter">@DJzombiehunter</a></li>
+                    <li><a href="#tipduy3010">@TipDuy3010</a></li>
+                    <li><a href="#rainforcraft">@RainForCraft</a></li>
+                    <li><a href="#alakazam6898">@Alakazam6898</a></li>
+                </ul>
+
+                <h3>Locations Affected</h3>
+
+                <h4>Never Touched</h4>
+                <ul>
+                    <li>Vales Memorial Bridge</li>
+                    <li>Most of the road infrastructure</li>
+                </ul>
+
+                <h4>Disarmed</h4>
+                <ul>
+                    <li>Builders Monument</li>
+                    <li>Empower Hotel Top Floor</li>
+                </ul>
+
+                <h4>Destroyed Once</h4>
+                <ul>
+                    <li>Empower Hotel Middle Floors</li>
+                    <li>Sine Bridge</li>
+                    <li>Skeleton Farm (South-East of Squeezaltopia)</li>
+                    <li>Enchanting hall</li>
+                    <li>Mob Farm</li>
+                    <li>Iron Farm</li>
+                    <li>RainForCraft's House</li>
+                    <li>PvP Arena</li>
+                </ul>
+
+                <h4>Destroyed Twice</h4>
+                <ul>
+                    <li>Central Station</li>
+                    <li>Oak Line (near GdlO)</li>
+                    <li>Blurple's House</li>
+                    <li>Spawn City Court</li>
+                    <li>9M_MRO's House</li>
+                </ul>
+
+                <h4>Destroyed 3 or more times</h4>
+                <ul>
+                    <li>Villager Hall (villagers killed twice, blow up once)</li>
+                </ul>
+
+                <h4>Collateral Damage</h4>
+                <ul>
+                    <li>Villager Hall (hit when Blurple's house was exploded)</li>
+                    <li><a href="#new-cavetown">New Cavetown</a> (when rain's house was exploded)</li>
+                </ul>
+
+                <h3>Trivia</h3>
+                <ul>
+                    <li>A total of 6 backups were restored at this time</li>
+                    <li>The only place that had no concern of being hit was Spawn City North Station, with the closest bombing occurring at the PVP Arena, ~150 blocks away. This is partly due to the fact this was the farthest FRTA station from any major builds at the time.</li>
+                </ul>
+
+                <h3>Images, Maps, and References</h3>
+                <button onclick="toggleElementVisibility('spawn-city-bombings_19/06/23_text');toggleElementVisibility('spawn-city-bombings_19/06/23_img');">Click to show image "spawn-city-bombings_19/06/23"</button>
+                <p id="spawn-city-bombings_19/06/23_text" style="display: none;">
+                    " Dedek_medvedek, an old member from when the server first started, and was part of the spawn city bombings, griefed spawn. 
+                    Thankfully only light damage, but it revealed an issue with the tnt detection system. 
+                    I dont want to disable it cause farms can use tnt dupers, but if need be we will. " - <a href="#djzombiehunter">@DJzombiehunter</a>
+                </p>
+                <img id="spawn-city-bombings_19/06/23_img" src="https://cdn.discordapp.com/attachments/1017938268102348931/1120319128419455006/image.png" alt="Image 1" style="display:none;">
+                <button onclick="toggleElementVisibility('spawn-city-bombings_21/05/23_1');toggleElementVisibility('spawn-city-bombings_21/05/23_2');toggleElementVisibility('spawn-city-bombings_21/05/23_3');">Click to show images "spawn-city-bombings_21/05/23" (3 images)</button>
+                <img id="spawn-city-bombings_21/05/23_1" src="https://cdn.discordapp.com/attachments/1017938268102348931/1109763013852020766/2023-05-21_04.35.07.png" alt="Image 1" style="display:none;">
+                <img id="spawn-city-bombings_21/05/23_2" src="https://media.discordapp.net/attachments/1017938268102348931/1109763013088653353/2023-05-21_04.35.05.png" alt="Image 1" style="display:none;">
+                <img id="spawn-city-bombings_21/05/23_3" src="https://media.discordapp.net/attachments/1017938268102348931/1109763014535680051/2023-05-21_04.35.21.png" alt="Image 1" style="display:none;">
+            </article>
+
+            <!-- Squeezalton Wiki Article -->
+            <article id="squeezalton">
+                <span class="tag tag-green">Location</span><space></space>
+                <span class="tag tag-pink">2023</span><space></space>
+                <span class="tag tag-blue">English</span><space></space>
+                <br><br>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
+                <h2>Squeezalton</h2>
+                <i>Not to be confused with <a href="#squeezal">@squeezal (Player)</a>, <a href="#squeezaltopia">Squeezaltopia (Server)</a>, or <a href="#squeezaltopia-sc">Squeezaltopia (Spawn City)</a></i>
+
+                <h3>Residents</h3>
+                <ul>
+                    <li><a href="#squeezal">@squeezal</a> (Founder / Position Unknown)</li>
+                </ul>
+
+                <h3>Images, Maps, and References</h3>
+                <p>No maps are available for Squeezalton at the moment, as it is a private base.</p>
+            </article>
+            
             <!-- Unclaimed Wiki Article -->
             <article id="the-unclaimed-town">
                 <span class="tag tag-green">Location</span>
                 <space></space>
                 <h2>The Unclaimed Town</h2>
-                <p>Summary</p>
-                <p>A trapped village with no villagers left, some spare supplies, and redstone scattered around, all
-                    built in a giant chasm just NE of Spawn City.</p>
-                <p>Members</p>
-                <p>The thing is, no players have logged out or said to have owned this base, it is a complete mystery as
-                    to who owns this place.</p>
-                <p>Images, Maps, and References</p>
-                <img src="https://cdn.discordapp.com/attachments/1061516148325220455/1127494090607566858/image.png"
-                    alt="Image 1">
-            </article>
-
-            <!-- windswept Wiki Article -->
-            <article id="windswept-fang">
-                <span class="tag tag-green">Location</span>
-                <space></space>
-                <h2>Windswept Fang @Windswept Fang</h2>
                 <h3>Summary</h3>
-                <p>A medium-sized town on the East end of the Crimson line, near Highway A1, containing a few large
-                    buildings and a bunch of farms.</p>
-                <h3>Residents</h3>
+                <p>
+                    A trapped village with no villagers left, some spare supplies, and redstone scattered around, all
+                    built in a giant chasm just NE of Spawn City.
+                </p>
+                <h3>Members</h3>
+                <p>
+                    The thing is, no players have logged out or said to have owned this base, it is a complete mystery as to who owns this place.
+                    There was a post made on the wiki back on July 9th, 2023 asking for someone to claim the town, if not for to keep it, only for historical reasons.
+                    Nobody has claimed the town since, and a deal was made that it will go up for auction on July 9th 2024 to the highest bidder.
+                </p>
+                <h4>People who have denied acceptence of the town</h4>
                 <ul>
-                    <li><a href="#diamond-frost">DiamondFrost / Defrost</a> - Member / Position Unknown</li>
-                    <li><a href="#toxic-trapper">ToxicTrapper</a> - Founder / Position Unknown</li>
-                    <li>OctoBoiii - Ex-Member</li>
-                    <li><a href="#tip-duy-3010">TipDuy3010</a> - Member / Position Unknown</li>
+                    <li><a href="#alakazam6898">@Alakazam6898</a></li>
+                    <li><a href="#michaxl">@MICHAXL</a></li>
+                    <li><a href="#kaiserblock">@kaiserblock</a></li>
+                    <li><a href="#minervakirei">@MinervaKirei</a></li>
+                    <li><a href="#gamegrusher">@GameGrusher</a></li>
+                    <li><a href="#mrstasi">@MrStasi222</a></li>
                 </ul>
                 <h3>Images, Maps, and References</h3>
-                <button onclick="toggleImageVisibility(1)">Click to Show Image 1</button>
-                <img id="image1"
-                    src="https://media.discordapp.net/attachments/1061516148325220455/1118033618678337646/image.png"
-                    alt="Image 1" style="display:none;">
-                <button onclick="toggleImageVisibility(2)">Click to Show Image 2</button>
-                <img id="image2"
-                    src="https://cdn.discordapp.com/attachments/1061516148325220455/1121349280590991550/image.png"
-                    alt="Image 2" style="display:none;">
-                <button onclick="toggleImageVisibility(3)">Click to Show Image 3</button>
-                <img id="image3"
-                    src="https://media.discordapp.net/attachments/1061516148325220455/1122586076092043324/image.png"
-                    alt="Image 3" style="display:none;">
-                <button onclick="toggleImageVisibility(4)">Click to Show Image 4</button>
-                <img id="image4"
-                    src="https://cdn.discordapp.com/attachments/1061516148325220455/1123655424038678688/image.png"
-                    alt="Image 4" style="display:none;">
-                <button onclick="toggleImageVisibility(5)">Click to Show Image 5</button>
-                <img id="image5"
-                    src="https://cdn.discordapp.com/attachments/1061516148325220455/1125908645683667084/image.png"
-                    alt="Image 5" style="display:none;">
-                <button onclick="toggleImageVisibility(6)">Click to Show Image 6</button>
-                <img id="image6"
-                    src="https://media.discordapp.net/attachments/1061516148325220455/1128252357000573020/image.png"
-                    alt="Image 6" style="display:none;">
-                <button onclick="toggleImageVisibility(7)">Click to Show Image 7</button>
-                <img id="image7"
-                    src="https://cdn.discordapp.com/attachments/1061516148325220455/1131167773544947802/image.png"
-                    alt="Image 7" style="display:none;">
+                <button onclick="toggleElementVisibility('unclaimed-town_08/07/23')">Click to show image "unclaimed-town_08/07/23"</button>
+                <img id="unclaimed-town_08/07/23" src="https://cdn.discordapp.com/attachments/1061516148325220455/1127494090607566858/image.png" alt="Image 1" style="display:none;">
             </article>
 
             <!-- We Bare Bears Wiki Article -->
@@ -1007,12 +1424,48 @@
                     record-keeping efforts.</li>
             </article>
 
+            <!-- windswept Wiki Article -->
+            <article id="windswept-fang">
+                <span class="tag tag-green">Location</span>
+                <space></space>
+                <h2>Windswept Fang @Windswept Fang</h2>
+                <h3>Summary</h3>
+                <p>A medium-sized town on the Crimson line near Acaica State, containing a few large
+                    buildings and a bunch of farms.</p>
+                <h3>Residents</h3>
+                <ul>
+                    <li><a href="#diamondfrost">DiamondFrost / Defrost</a> (Member / Position Unknown)</li>
+                    <li><a href="#toxictrapper">ToxicTrapper</a> (Founder / Position Unknown)</li>
+                    <li><a href="#octoboi">OctoBoiii</a> (Ex-Member)</li>
+                    <li><a href="#tipduy3010">TipDuy3010</a> (Member / Position Unknown)</li>
+                </ul>
+                <h3>Images, Maps, and References</h3>
+                <button onclick="toggleElementVisibility('windswept-fang_13/06/23')">Click to Show Image "windswept-fang_13/06/23"</button>
+                <img id="windswept-fang_13/06/23" src="https://media.discordapp.net/attachments/1061516148325220455/1118033618678337646/image.png" alt="Image 1" style="display:none;">
+
+                <button onclick="toggleElementVisibility('windswept-fang_22/06/23')">Click to Show Image "windswept-fang_22/06/23"</button>
+                <img id="windswept-fang_22/06/23" src="https://cdn.discordapp.com/attachments/1061516148325220455/1121349280590991550/image.png" alt="Image 2" style="display:none;">
+
+                <button onclick="toggleElementVisibility('windswept-fang_25/06/23')">Click to Show Image "windswept-fang_25/06/23"</button>
+                <img id="windswept-fang_25/06/23" src="https://media.discordapp.net/attachments/1061516148325220455/1122586076092043324/image.png" alt="Image 3" style="display:none;">
+                
+                <button onclick="toggleElementVisibility('windswept-fang_28/06/23')">Click to Show Image "windswept-fang_28/06/23"</button>
+                <img id="windswept-fang_28/06/23" src="https://cdn.discordapp.com/attachments/1061516148325220455/1123655424038678688/image.png" alt="Image 4" style="display:none;">
+
+                <button onclick="toggleElementVisibility('windswept-fang_04/07/23')">Click to Show Image "windswept-fang_04/07/23"</button>
+                <img id="windswept-fang_04/07/23" src="https://cdn.discordapp.com/attachments/1061516148325220455/1125908645683667084/image.png" alt="Image 5" style="display:none;">
+
+                <button onclick="toggleElementVisibility('windswept-fang_11/07/23')">Click to Show Image "windswept-fang_11/07/23"</button>
+                <img id="windswept-fang_11/07/23" src="https://media.discordapp.net/attachments/1061516148325220455/1128252357000573020/image.png" alt="Image 6" style="display:none;">
+
+                <button onclick="toggleElementVisibility('windswept-fang_19/07/23')">Click to Show Image "windswept-fang_19/07/23"</button>
+                <img id="windswept-fang_19/07/23" src="https://cdn.discordapp.com/attachments/1061516148325220455/1131167773544947802/image.png" alt="Image 7" style="display:none;">
+            </article>
+
             <!-- Wiki Wiki Article -->
             <article id="wiki-guide">
-                <span class="tag tag-cyan">Obscure</span>
-                <space></space>
-                <span class="tag tag-orange">Main-Page</span>
-                <space></space>
+                <span class="tag tag-cyan">Obscure</span><space></space>
+                <span class="tag tag-orange">Main-Page</span><space></space>
                 <span class="tag tag-purple">DJzombiehunter</span>
                 <h2>The Final Republic Wiki Page</h2>
                 <h3>Summary</h3>
@@ -1023,7 +1476,7 @@
                         vote</a> was held on the discord that kept it open.
                     The wiki has had its ups and downs,
                     The wiki page on the Final Republic Website is actually quite new, and was created originally by <a
-                        href="#ousmblueninja">Ousm</a>, a developer on our team.
+                        href="#ousmblueninja">@OusmBlueNinja</a>, a developer on our team.
                 </p>
                 <h3>Usage</h3>
                 <p>
@@ -1032,19 +1485,145 @@
                 </p>
                 <h3>Editing Guidlines</h3>
                 <p>
-                    There arent many, just write how you like, add the needed tags, and keep with with either Markdown
-                    or HTML 5 formats.
+                    There arent really any major rules, these are just suggestions to make everything consistent across the wiki. 
+                    Doesnt really matter if you follow them to the letter, but these rules are flexible as it is so it doesnt really matter.
                 </p>
-                <h3>Images, Links, and References</h3>
                 <ul>
-                    <li><a href="#rain-unnamed-town">Rain's Unnamed Town</a></li>
+                    <li>Pages are to be writen in HTML, and any JS needed is to use only Vanilla JS</li>
+                    <li>If you're going to write an JS in an article, please let us know so we dont completely break it</li>
+                    <li>To add onto the above, if you want you can write the page in Markdown and put it through a <a href="https://markdowntohtml.com/">Markdown to HTML Converter</a> and giving that to us is perfectly fine.</li>
+                    <li>If you cant/down know how to write in Markdown, just let someone on the Discord know and they should be able to help you.
+                        Considering Discord uses Markdown as its main formatting, you should learn it asap</li>
+                    <li>Please, <b>do not</b>, use any AI for any articles. 
+                        I have attemped to use it before and it either gets facts wrong, is filled with jargon (that i had to look up lol), or sounds like a advert from Apple with how condecending it sounds. 
+                        Plus the legal aspect of using it for this; just dont please.</li>
+                    <li>If you use AI for any JS or HTML formatting, just doublecheck it before you commit it so we dont kill Github Pages.</li>
+                    <li>Please hide all images and videos inside buttons with this format. 
+                        The Internal ID should be on the button, the function that runs to make it visible, and the id of the image/video. 
+                        Please keep the Internal ID visible on the button so debugging mis-matched ids will be faster</li>
+                    <button onclick="toggleElementVisibility('wiki-guide_withering_war')">Click to show video "wiki-guide_withering_war"</button>
+                    <video width="320" height="240" id="wiki-guide_withering_war" controls poster="./assets/loading_placeholder.png" style="display: none;">
+                        <source src="https://cdn.discordapp.com/attachments/1012703386849787975/1133922223141433414/MOV_1211.mp4">
+                        <track kind="subtitles" srclang="en" src="./assets/withering_war.vtt" default>
+                        <track kind="subtitles" srclang="fr" src="./assets/withering_war_fr.vtt">
+                        Your browser does not support the video tag. Please updgrade or change your broswer.
+                    </video>
+                    <li>Tags are to be added/updated when the current/conected article(s) are updated.</li>
+                    <li>Bottom line; this page is supposed to be easily understandable by everyone, even people with a very limited grasp of English, 
+                        so dont write like a lawyer, just write how you're talking to a freind or parents. (swearing i guess is ok? whats the rule on that?)</li>
                 </ul>
+            </article>
+
+            <!-- world origin road -->
+            <article id="world-origin-road">
+                <span class="tag tag-green">Location</span><space></space>
+                <span class="tag tag-pink">2023</span><space></space>
+                <span class="tag tag-blue">English</span><space></space>
+                <br><br>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
+
+                <h2>World Origin Road</h2>
+                <h3>Summary</h3>
+                <p>
+                    A single road heading to the world origin, or <code>0, ~, 0,</code> with 3 builds on it; a small unfinished Inn owned by <a href="#gamegrusher">@GameGrusher</a>, an FRTA station, and a horse breeding stable.
+                    It also has a direct road and rail connection to Squeezaltopia and Gare de l'origine respectively.
+                </p>
+                <h3>Residents</h3>
+                <ul>
+                    <li><a href="#gamegrusher">@GameGrusher</a> (Position Unknown)</li>
+                </ul>
+                <h3>Images, Maps, and References</h3>
+                <button onclick="toggleElementVisibility('world-origin-road_13/06/23')">Click to show image "world-origin-road_13/06/23"</button>
+                <img id="world-origin-road_13/06/23" src="https://media.discordapp.net/attachments/1061516148325220455/1118033619504599100/image.png" alt="Image 1" style="display:none;">
+            </article>
+
+            <!-- xselite's town -->
+            <article id="xselites-town">
+                <span class="tag tag-green">Location</span><space></space>
+                <span class="tag tag-pink">2023</span><space></space>
+                <span class="tag tag-blue">English</span><space></space>
+                <br><br>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
+
+                <h2>XsElite's Town</h2>
+                <h3>Summary</h3>
+                <p>
+                    A small town on the north end of the Jungle Line, with an iron farm and some other buildings.
+                </p>
+                <h3>Residents</h3>
+                <ul>
+                    <li><a href="#xselite">@XsElite</a> (Owner / Position Unknown)</li>
+                </ul>
+                <h3>Images, Maps, and References</h3>
+                <button onclick="toggleElementVisibility('xselites-town_13/06/23')">Click to show image "xselites-town_13/06/23"</button>
+                <img id="xselites-town_13/06/23" src="https://media.discordapp.net/attachments/1061516148325220455/1118033618376343672/image.png" alt="Image 1" style="display:none;">
+                <button onclick="toggleElementVisibility('xselites-town_25/06/23')">Click to show image "xselites-town_25/06/23"</button>
+                <img id="xselites-town_25/06/23" src="https://media.discordapp.net/attachments/1061516148325220455/1122587122558304438/image.png" alt="Image 1" style="display:none;">
+            </article>
+
+            <!-- Yuri's Unnamed Town -->
+            <article id="yuris-town">
+                <span class="tag tag-green">Location</span><space></space>
+                <span class="tag tag-pink">2023</span><space></space>
+                <span class="tag tag-blue">English</span><space></space>
+                <br><br>
+                <span class="tag tag-blurple">DJzombiehunter</span><space></space>
+
+                <h2>Yuri's Unanamed Town</h2>
+                <h3>Summary</h3>
+                <p>
+                    A few buildings and a chest-monster just north-west of Spawn City, with a road connection to Cublak View. 
+                    A Road 4 connection was planned far in advance to go to that location before the location was claimed by <a href="#yuri_z">@Yuri_z759</a>, the date of which that happened is unknown. 
+                    It is also located near Ocean Plains, an abandoned castle on the coast of the main ocean. Ocean Plains has no historical or physical conections to this town.
+                </p>
+                <h3>Residents</h3>
+                <ul>
+                    <li><a href="#yuri_z">@Yuri_z759</a> (Owner / Position Unknown)</li>
+                </ul>
+                <h3>Images, Maps, and References</h3>
+                <button onclick="toggleElementVisibility('yuris-town_04/07/2023')">Click to show image "yuris-town_04/07/2023"</button>
+                <img id="yuris-town_04/07/2023" src="https://cdn.discordapp.com/attachments/1061516148325220455/1125914764929937488/image.png" alt="Image 1" style="display:none;">
+                <button onclick="toggleElementVisibility('yuris-town_19/07/2023')">Click to show image "yuris-town_19/07/2023 "</button>
+                <img id="yuris-town_19/07/2023" src="https://cdn.discordapp.com/attachments/1061516148325220455/1131167773037449367/image.png" alt="Image 1" style="display:none;">
+                <button onclick="toggleElementVisibility('yuris-town_01/08/2023')">Click to show image "yuris-town_01/08/2023"</button>
+                <img id="yuris-town_01/08/2023" src="https://cdn.discordapp.com/attachments/1061516148325220455/1136063239495614494/image.png" alt="Image 1" style="display:none;">
             </article>
 
         </div>
     </div>
     <div style="padding: 100px;"></div>
 </main>
+<button id="scrollToTopButton" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Scroll to Top</button>
+<div id="hideInTheCorner"> <!-- Unfinished and not In the base site, do not give this a display value -->
+    <form>
+        <label id="first">
+            First Name
+            <input type="text" name="first_name" required />
+        </label>
+        <br>
+        <label>
+            Last Name
+            <input type="text" name="last_name"/>
+        </label>
+        <br>
+        <label>
+            Username
+            <input type="text" name="username" required />
+        </label>
+        <br>
+        <label>
+            Birthdate
+            <input type="date"/>
+        </label>
+        <br>
+        <label>
+            Email
+            <input type="email" name="email" required />
+        </label>
+        <br>
+        <input type="submit" class="validateDontSubmit" name="save" value="Save" />
+    </form>
+</div>
 <footer id="footer">
     <div class="footer_l">
         <h3>Made By OusmBlueNinja / DJzombiehunter / AnhNguyenlost13</h1>
@@ -1053,96 +1632,152 @@
     </div>
     <div class="footer_r">
         <p><i><a href="/finalrepublic/contact.html">Contact, Legal, About</a></i></p>
-        <p><u><i><a onclick="document.getElementById('footer').style.display = 'none';">Click to hide</a></i></u></p>
+        <p onclick="document.getElementById('footer').style.display = 'none';"><u><i>Click to hide</i></u></p>
     </div>
 </footer>
 <script>
+
+    // This code uses only pure javascript. Please do not use Jquery of any other library (yet) - blurple
+    
+    // link validity on the wiki page
+    var links = document.querySelectorAll('a');
+    for(var i = 0; i < links.length; i++) {
+        let href = links[i].getAttribute('href')
+        if (href.includes("#")) {
+            // get href of the link minus the #
+            var articleId = links[i].getAttribute('href').substring(1);
+            // check if the article exists
+            var articleExists = document.getElementById(articleId) !== null;
+            // update tooltip
+            if (articleExists) {
+                links[i].title = links[i].innerText + "\nClick to Visit Article";
+            } else {
+                links[i].title = links[i].innerText + "\nArticle Does Not Exist";
+                links[i].style.color = "rgb(256, 64, 64)";
+            }
+        }
+    }
+
     // number of articles now updates automatically
     document.getElementById("numberOfArticles").innerHTML = "Number Of Articles : " + document.querySelectorAll("article").length;
     // to fix a graphical bug on page load
     document.getElementById("numberOfSuccesses").innerHTML = "Number Of Results for \"\" : " + document.querySelectorAll("article").length;
 
+    const filterTextId = document.getElementById("advancedFiltersText");
+    function toggleFilterText() {
+        if (filterTextId.innerHTML == "Enable Advanced Filters") {
+            filterTextId.innerHTML = "Disable Advanced Filters"
+        } else if (filterTextId.innerHTML == "Disable Advanced Filters") {
+            filterTextId.innerHTML = "Enable Advanced Filters"
+        } else {
+            console.error("couldnt change text of filterTextId")
+        }
+    }
+
+    window.addEventListener('scroll', function() {
+        // get the threshold, scrol pos, and id of button
+        var threshold = 0.05 * document.documentElement.scrollHeight;
+        var scrollPosition = window.scrollY || window.pageYOffset;
+        const scrollToTopButton = document.getElementById('scrollToTopButton');
+
+        // magic the button into existence
+        if (scrollPosition > threshold) {
+            scrollToTopButton.style.display = 'block';
+        } else {
+            scrollToTopButton.style.display = 'none';
+        }
+    });
+
     // original by ousmblueninja, rewrite by djzombiehunter
-    // i made the code more compact a fixed a bug where multiple tags would only register the first one
-    // the event handler for the search input
+    // i made the code more compact and fixed a bug where multiple tags would only register the first one
     document.getElementById("searchInput").addEventListener("input", function () {
-        var searchQueries = this.value.toLowerCase().trim().split(' ');
-        var articles = document.querySelectorAll("article");
 
-        // repeat for how many articles there are
-        for (let i = 0; i < articles.length; i++) {
-            // finds all elements you can search into
-            var article = articles[i];
-            var titleElement = article.querySelector("h2");
-            var contentElements = article.querySelectorAll("p");
-            var tags = Array.from(article.querySelectorAll(".tag")).map(tag => tag.textContent.toLowerCase());
+        // artifical loading time, also fixes a graphical issue with highlighting
+        let tempCooldown = Math.floor(Math.random()*500)
+        clearTimeout(this.searchTimeout);
+        this.searchTimeout = setTimeout(() => {
 
-            // change title of page to lowercase to help with search results
-            var title = titleElement.textContent.toLowerCase();
-            var content = article.textContent.toLowerCase();
+            var searchQueries = this.value.toLowerCase().trim().split(' ');
+            var articles = document.querySelectorAll("article");
 
-            // check if all the search queries are present in either the title, content, or tags
-            var allQueriesMatch = searchQueries.every(query => {
-                var isTagSearch = query.startsWith("#");
-                if (isTagSearch) {
-                    query = query.substring(1);
-                    return tags.includes(query);
-                } else {
-                    return title.includes(query) || content.includes(query);
-                }
-            });
+            // repeat for how many articles there are
+            for (let i = 0; i < articles.length; i++) {
+                // finds all elements you can search into
+                var article = articles[i];
+                var titleElement = article.querySelector("h2");
+                var contentElements = article.querySelectorAll("p");
+                var tags = Array.from(article.querySelectorAll(".tag")).map(tag => tag.textContent.toLowerCase());
 
-            // show or hide the article based on matches
-            article.style.display = allQueriesMatch ? "block" : "none";
+                // change title of page to lowercase to help with search results
+                var title = titleElement.textContent.toLowerCase();
+                var content = article.textContent.toLowerCase();
 
-            // highlight the search queries in the title and content
-            if (allQueriesMatch) {
-                searchQueries.forEach(query => {
-                    var regex = new RegExp(query, 'gi');
-                    titleElement.innerHTML = titleElement.textContent.replace(regex, match => `<span class="highlight">${match}</span>`);
-                    contentElements.forEach(contentElement => {
-                        contentElement.innerHTML = contentElement.textContent.replace(regex, match => `<span class="highlight">${match}</span>`);
-                    });
+                // check if all the search queries are present in either the title, content, or tags
+                var allQueriesMatch = searchQueries.every(query => {
+                    var isTagSearch = query.startsWith("#");
+                    if (isTagSearch) {
+                        query = query.substring(1);
+                        return tags.includes(query);
+                    } else {
+                        return title.includes(query) || content.includes(query);
+                    }
                 });
+
+                // show or hide the article based on matches
+                article.style.display = allQueriesMatch ? "block" : "none";
+
+                // highlight the search queries in the title and content
+                // this code is broken and makes <a> elements stop working due to how it handles classes
+                // please change this.
+                /*
+                if (allQueriesMatch) {
+                    searchQueries.forEach(query => {
+                        var regex = new RegExp(query, 'gi');
+                        titleElement.innerHTML = titleElement.textContent.replace(regex, match => `<span class="highlight">${match}</span>`);
+                        contentElements.forEach(contentElement => {
+                            contentElement.innerHTML = contentElement.textContent.replace(regex, match => `<span class="highlight">${match}</span>`);
+                        });
+                    });
+                }
+                */
             }
-        }
-        // finds all visible article elements
-        var visibleCount = 0;
-        for (let i = 0; i < articles.length; i++) {
-            if (articles[i].offsetWidth > 0 && articles[i].offsetHeight > 0) {
-                visibleCount++;
+            // finds all visible article elements
+            var visibleCount = 0;
+            for (let i = 0; i < articles.length; i++) {
+                if (articles[i].offsetWidth > 0 && articles[i].offsetHeight > 0) {
+                    visibleCount++;
+                }
             }
-        }
-        // the this.value in this case is pointing at line 1068, im used to python but this is a breath of fresh air
-        document.getElementById("numberOfSuccesses").innerHTML = "Number Of Results for \""+this.value+"\" : " + visibleCount;
+            document.getElementById("numberOfSuccesses").innerHTML = "Number Of Results for \""+this.value+"\" : " + visibleCount;
+        }, tempCooldown ); // Delay in milliseconds
     });
 
     // sets the language on page reload to whatever language is in that region and is compatable with the wiki
-    //
-    // disabled while im working on the pages caues it keeps messing with the visiblity of them
-    //
-    // const compatibleLanguages = ["english","français","हिंदी","Tiếng Việt","кирилиця","Português"]
-    // const languageMap = {
-    //     'en-US': 'english',
-    //     'fr': 'français',
-    //     'hi': 'हिंदी',
-    //     'vi': 'Tiếng Việt',
-    //     'ru': 'кирилиця',
-    //     'pt': 'Português'
-    // };
-    // const userLanguage = window.navigator.userLanguage || window.navigator.language;
-    //     const userLanguageTag = languageMap[userLanguage];
+    /*
+    disabled while im working on the pages caues it keeps messing with the visiblity of them
 
-    //     try {
-    //         if (compatibleLanguages.includes(userLanguageTag)) {
-    //             insertTag('#' + userLanguageTag + ' ');
-    //         }
-    //     }
-    //     catch {
-    //         console.error("error with adding language to search bar, defaulting to english")
-    //         insertTag('#english ');
-    //     }
+    const compatibleLanguages = ["english","français","हिंदी","Tiếng Việt","кирилиця","Português"]
+    const languageMap = {
+        'en-US': 'english',
+        'fr': 'français',
+        'hi': 'हिंदी',
+        'vi': 'Tiếng Việt',
+        'ru': 'кирилиця',
+        'pt': 'Português'
+    };
+    const userLanguage = window.navigator.userLanguage || window.navigator.language;
+        const userLanguageTag = languageMap[userLanguage];
 
+        try {
+            if (compatibleLanguages.includes(userLanguageTag)) {
+                insertTag('#' + userLanguageTag + ' ');
+            }
+        }
+        catch {
+            console.error("error with adding language to search bar, defaulting to english")
+            insertTag('#english ');
+        }
+    */
 </script>
 
 </body>

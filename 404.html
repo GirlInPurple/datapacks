@@ -14,16 +14,15 @@
         
     </header>
     <nav class="tab">
-        <img src="assets/globoit.png" alt="emoji logo" style="max-width:4%; max-height:4%;">
+        <img src="assets/FinalRepublic_GIF_logo.gif" alt="emoji logo" style="max-width:4%; max-height:4%;">
         <div class="topnav">
             <a href="index.html">Home</a>
             <a href="wiki.html">Wiki</a>
-            <a href="about.html">About</a>
-            <a href="map.html">Map</a>
             <a href="tools.html">Tools</a>
-            <a class="active" href="404.html">Error Page</a>
+            <a href="map.html">Map</a>
+            <a href="about.html">About</a>
           </div>
-        <img id="themeToggle" onclick="toggleTheme()" src="https://cdn2.iconfinder.com/data/icons/weather-154/100/weather_cloud_clouds_nature-46-512.png" alt="Dark / Light Mode Toggle" style="max-width:4%; max-height:4%;">
+        <img class="themeToggle" id="themeToggle" onclick="toggleTheme()" src="https://cdn2.iconfinder.com/data/icons/weather-154/100/weather_cloud_clouds_nature-46-512.png" alt="Dark / Light Mode Toggle" style="max-width:4%; max-height:4%;">
     </nav>
     <main>
         <div class="center">
@@ -34,19 +33,19 @@
                 const randomGen = Math.floor(Math.random() * 10);
                 console.log(randomGen)
                 if (randomGen <= 2) {
-                    document.getElementById('randomTitle').innerHTML = "YOU!! SHALL NOT!!! PASS!!!!  | The Final Republic";
+                    document.getElementById('randomTitle').innerHTML = "YOU!! SHALL NOT!!! PASS!!!! | The Final Republic";
                     document.getElementById('randomHeader').innerHTML = "YOU!! SHALL NOT!!! PASS!!!!";
                 } else if (randomGen <= 4) {
-                    document.getElementById('randomTitle').innerHTML = "The game was rigged from the start...  | The Final Republic";
+                    document.getElementById('randomTitle').innerHTML = "The game was rigged from the start... | The Final Republic";
                     document.getElementById('randomHeader').innerHTML = "The game was rigged from the start...";
                 } else if (randomGen <= 6) {
-                    document.getElementById('randomTitle').innerHTML = "bro what is blud doin he broke the site :skull:  | The Final Republic";
+                    document.getElementById('randomTitle').innerHTML = "bro what is blud doin he broke the site :skull: | The Final Republic";
                     document.getElementById('randomHeader').innerHTML = "bro what is blud doin he broke the site :skull:";
                 } else if (randomGen <= 8) {
-                    document.getElementById('randomTitle').innerHTML = "Yaha! You Found Me! A Broken Page!  | The Final Republic";
-                    document.getElementById('randomHeader').innerHTML = "Yaha! You Found Me! A Broken Page!";
+                    document.getElementById('randomTitle').innerHTML = "Yahaha! You Found Me! A Broken Page!  | The Final Republic";
+                    document.getElementById('randomHeader').innerHTML = "Yahaha! You Found Me! A Broken Page!";
                 } else {
-                    document.getElementById('randomTitle').innerHTML = "404 Existence Found  | The Final Republic";
+                    document.getElementById('randomTitle').innerHTML = "404 Existence Found | The Final Republic";
                     document.getElementById('randomHeader').innerHTML = "404 Existence Found";
                 }
             </script>

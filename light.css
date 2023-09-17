@@ -3,29 +3,26 @@ body {
   margin: 0;
   padding: 0;
   background-color: #e0e0e0;
-  /* Dark background color */
   color: #1f1f1f;
-  /* Light text color */
-  padding-right: 8px;
-  /* Add padding to the right to create space for the scrollbar */
   overflow: scroll;
-  /* Show scrollbars */
-}
-
-header {
-  /* Add styles for the header if needed */
+  overflow-x: hidden;
 }
 
 nav.tab {
   display: flex;
   justify-content: center;
-  background-color: #cdcdcd;
+  background-color: #d5d5d5;
   padding: 10px;
+  background-image: url('./assets/background.png'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  width: 100%;
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #c9c9c9;
+  background-color: #d5d5d5;
   overflow: hidden;
   padding: 10px;
 }
@@ -53,6 +50,13 @@ nav.tab {
   color: white;
 }
 
+img.themeToggle {
+  max-width:4%; 
+  max-height: 4%;
+  background-color: #d5d5d5;
+  padding-right: 10px;
+}
+
 div.center {
   max-width: 800px;
   margin: 50px auto;
@@ -61,6 +65,7 @@ div.center {
   /* Darker background for the center div */
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
   /* Darker box shadow */
+  text-align: center;
 }
 
 h1 {
@@ -72,7 +77,7 @@ footer {
   display: flex;
   position: fixed;
   bottom: 0;
-  width: 99vw;
+  width: 100%;
   justify-content: space-between;
   background-color: #d5d5d5;
   color: #000000;
@@ -159,15 +164,12 @@ article h3 {
   margin-bottom: 10px;
 }
 
-u.spelling {
-  text-decoration: red wavy underline;
-}
-
 /* Styles for the scrollbar in dark mode */
 ::-webkit-scrollbar {
   width: 8px;
   opacity: 0;
   transition: opacity 0.3s ease;
+  background-color: #d5d5d5;
 }
 
 ::-webkit-scrollbar-thumb:hover::-webkit-scrollbar {
@@ -296,8 +298,6 @@ img {
   /* This will maintain the aspect ratio of the images */
 }
 
-
-
 .tag {
   padding: 5px 10px;
   border-radius: 20px;
@@ -314,12 +314,11 @@ img {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-
 space {
-  padding-right: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
-/* CSS for the search input */
 /* CSS for the search input */
 .coolp {
   margin-bottom: 5px;
@@ -343,6 +342,42 @@ input[type="text"]:focus {
 .highlight {
   background-color: yellow;
 }
+
+u.spelling {
+  text-decoration: red wavy underline;
+}
+
+#scrollToTopButton { /* Used by the "scroll up" button */
+  display: none;
+  position: fixed;
+  bottom: 7%;
+  right: 2%;
+  padding: 10px 20px;
+  font-size: 18px;
+  background: #d5d5d5;
+  color: #000;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+/* used by the settings menu on the wiki page.*/
+#hideInTheCorner {
+  display: none; /* currently a disabled feature */
+  position: fixed;
+  bottom: 12%;
+  right: 2.5%;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #d5d5d5;
+  color: #000;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
 
 /* Colors for the tags */
 .tag-red {
@@ -392,17 +427,25 @@ input[type="text"]:focus {
 /* custom tags for writers */
 
 .tag-lak {
-  background: -webkit-linear-gradient(left, blue, purple, red);
-  background: -moz-linear-gradient(left, blue, purple, red);
-  background: -ms-linear-gradient(left, blue, purple, red);
-  background: -o-linear-gradient(left, blue, purple, red);
-  background: linear-gradient(to right, blue, purple, red);
+  /* please use this format when creating your custom tag, if not for easier tweaking and backwards compat */
+  --lak-left: blue;
+  --lak-middle: rgb(161, 116, 151);
+  --lak-right: red;
+  background: -webkit-linear-gradient(left, var(--lak-left), var(--lak-middle), var(--lak-right));
+  background: -moz-linear-gradient(left, var(--lak-left), var(--lak-middle), var(--lak-right));
+  background: -ms-linear-gradient(left, var(--lak-left), var(--lak-middle), var(--lak-right));
+  background: -o-linear-gradient(left, var(--lak-left), var(--lak-middle), var(--lak-right));
+  background: linear-gradient(to right, var(--lak-left), var(--lak-middle), var(--lak-right));
 }
 
 .tag-blurple {
-  background: -webkit-linear-gradient(left, rgb(66,0,125), rgb(94,1,128), rgb(128,9,133));
-  background: -moz-linear-gradient(left, rgb(66,0,125), rgb(94,1,128), rgb(128,9,133));
-  background: -ms-linear-gradient(left, rgb(66,0,125), rgb(94,1,128), rgb(128,9,133));
-  background: -o-linear-gradient(left, rgb(66,0,125), rgb(94,1,128), rgb(128,9,133));
-  background: linear-gradient(to right, rgb(66,0,125), rgb(94,1,128), rgb(128,9,133));
+  /* please use this format when creating your custom tag, if not for easier tweaking and backwards compat */
+  --blurple-left: rgb(66,0,125);
+  --blurple-middle: rgb(94,1,128);
+  --blurple-right: rgb(128,9,133);
+  background: -webkit-linear-gradient(left, var(--blurple-left), var(--blurple-middle), var(--blurple-right));
+  background: -moz-linear-gradient(left, var(--blurple-left), var(--blurple-middle), var(--blurple-right));
+  background: -ms-linear-gradient(left, var(--blurple-left), var(--blurple-middle), var(--blurple-right));
+  background: -o-linear-gradient(left, var(--blurple-left), var(--blurple-middle), var(--blurple-right));
+  background: linear-gradient(to right, var(--blurple-left), var(--blurple-middle), var(--blurple-right));
 }

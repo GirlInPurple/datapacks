@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="themeStylesheet" rel="stylesheet" href="dark.css">
+    <script src="script.js"></script>
+    <title id="randomTitle"></title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1061516148325220455/1074527045561884722/f7bd4c45-d74b-405c-b57c-852917af9cc7.png">
+</head>
+<body>
+    <header>
+
+        
+    </header>
+    <nav class="tab">
+        <img src="assets/FinalRepublic_GIF_logo.gif" alt="emoji logo" style="max-width:4%; max-height:4%;">
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="wiki.html">Wiki</a>
+            <a href="about.html">About</a>
+            <a href="map.html">Map</a>
+            <a href="tools.html">Tools</a>
+          </div>
+        <img class="themeToggle" id="themeToggle" onclick="toggleTheme()" src="https://cdn2.iconfinder.com/data/icons/weather-154/100/weather_cloud_clouds_nature-46-512.png" alt="Dark / Light Mode Toggle" style="max-width:4%; max-height:4%;">
+    </nav>
+    <main>
+        <div class="center">
+            <h1>Settings</h1>
+            <p class="coolp">Clearing your cookies will wipe these settings.</p>
+            <h2>Wiki Specific</h2>
+            <input type="checkbox" id="autoLang" name="autoLang" checked="true" onclick="" />
+            <label for="autoLang">Autodetect Language on page load</label>
+            <br><br>
+            <input type="checkbox" id="advancedFiltersSetting" name="advancedFiltersSetting" checked="true" onclick="" />
+            <label for="advancedFiltersSetting">Advanced Filters are enabled by deafult on page load</label>
+            <br><br>
+            <h2>Sitewide</h2>
+            <input type="checkbox" id="systemTheme" name="systemTheme" onclick="toggleTheme('system');checkCheckboxes(true, false, false);"/>
+            <label for="systemTheme">Use System Theme</label>
+            <input type="checkbox" id="darkTheme" name="darkTheme" onclick="toggleTheme('dark');checkCheckboxes(false, true, false);"/>
+            <label for="darkTheme">Use Dark Theme</label>
+            <input type="checkbox" id="lightTheme" name="lightTheme" onclick="toggleTheme('light');checkCheckboxes(false, false, true);"/>
+            <label for="lightTheme">Use Light Theme</label>
+            <script>
+                
+            </script>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="footer_l">
+            <h3>Made By OusmBlueNinja / DJzombiehunter / AnhNguyenlost13</h1>
+            <p>&copy; 2023-2023 The Final Republic, FinalRepublic | OusmBlueNinja |
+            Not an offical Minecraft product. Not approved by or associated with Mojang.</p>
+        </div>
+        <div class="footer_r">
+            <p><i><a href="/finalrepublic/contact.html">Contact, Legal, About</a></i></p>
+            <p><u><i><a onclick="document.getElementById('footer').style.display = 'none';">Click to hide</a></i></u></p>
+        </div>
+    </footer>
+</body>
+</html>
