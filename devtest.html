@@ -17,7 +17,7 @@
         <img src="assets/FinalRepublic_GIF_logo.gif" alt="emoji logo" style="max-width:5%;">
         <div class="topnav">
             <div style="display: flex; align-items: center;">
-              <h3><span style="padding-right: 10px;">Final Republic</span></h3>
+              <h3><span id="mobileHeaderTitle" style="padding-right: 10px;">Final Republic</span></h3>
               <nav>
                 <a href="index.html">Home</a>
                 <a href="wiki.html">Wiki</a>
@@ -81,7 +81,7 @@
             </p>
         </div>
     </main>
-    <div id="serverSidebar" style="display: block; position: fixed; top: 12.8%; left: 1%; padding: 10px 20px; font-size: 16px; background: #404040; color: #fff; cursor: pointer; border: none; z-index: 1000;">
+    <div id="serverSidebar" style="display: none; position: fixed; top: 12.8%; left: 1%; padding: 10px 20px; font-size: 16px; background: #404040; color: #fff; cursor: pointer; border: none; z-index: 1000;">
         <p style="text-align: center;">
             <a onclick="document.getElementById('serverSidebar').style.display = 'none';">Click here to hide Server Status Bar</a><br>
         </p>
@@ -178,6 +178,7 @@
             <div class="rest">
                 <p id="replaceWithMOTD">Pinging...</p>
                 <p id="replaceWithPlayers"></p>
+                <!--
                 <script>
                     const address = document.getElementById('serverAddress').innerText;
                     const outputMOTD = document.getElementById('replaceWithMOTD');
@@ -201,6 +202,7 @@
                             console.error('An error occurred:', err);
                         });
                 </script>
+                -->
             </div>
         </div>
         <br>
@@ -210,13 +212,21 @@
     <footer id="footer">
         <div class="footer_l">
             <h3>Made By OusmBlueNinja / DJzombiehunter / AnhNguyenlost13</h1>
-            <p>&copy; 2023-2023 The Final Republic, FinalRepublic | OusmBlueNinja |
-            Not an offical Minecraft product. Not approved by or associated with Mojang.</p>
+            <p id="mobileSupportFooter_1">&copy; 2023-2023 The Final Republic, FinalRepublic | OusmBlueNinja | Not an offical Minecraft product. Not approved by or associated with Mojang.</p>
         </div>
         <div class="footer_r">
             <p><i><a href="/finalrepublic/contact.html">Contact, Legal, About</a></i></p>
             <p><u><i><a onclick="document.getElementById('footer').style.display = 'none';">Click to hide</a></i></u></p>
         </div>
     </footer>
+    <script>
+        // mobile support
+        const width = window.innerWidth;
+        console.log(width)
+        if (width <= 750) {
+            document.getElementById('mobileSupportFooter_1').innerText = "&copy; 2023-2023 FinalRepublic | OusmBlueNinja | Not approved by or associated with Mojang.";
+            document.getElementById('mobileHeaderTitle').style.display = "none";
+        }
+    </script>
 </body>
 </html>

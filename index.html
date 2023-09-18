@@ -3,41 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- discord embed integration -->
+    <meta content="The Final Republic" property="og:site_name">
+    <meta content="Home | The Final Republic" property="og:title">
+    <meta content="The homepage for the FinalRepublic website." property="og:description">
+    <meta content="https://cdn.discordapp.com/attachments/1061516148325220455/1074527045561884722/f7bd4c45-d74b-405c-b57c-852917af9cc7.png" property='og:image'>
+    <meta name="theme-color" content="#0fff0f">
+
     <link id="themeStylesheet" rel="stylesheet" href="dark.css">
     <script src="script.js"></script>
     <title>Home | The Final Republic</title>
     <link rel="icon" href="https://cdn.discordapp.com/attachments/1061516148325220455/1074527045561884722/f7bd4c45-d74b-405c-b57c-852917af9cc7.png">
 </head>
-<body>
-    <img class="center" src="assets/text-logo.png" alt="text Logo" style="width: 100%;">
+<body id="bodyTag" style="background-image: url(./assets/background.png); position: absolute; top: -20%; width: 100%; background-repeat: no-repeat;">
     <header>
 
     </header>
 
-    <nav class="tab">
-        <img src="assets/FinalRepublic_GIF_logo.gif" alt="emoji logo" style="max-width:4%; max-height:4%;">
-        <div class="topnav">
-            <a class="active" href="index.html">Home</a>
-            <a href="wiki.html">Wiki</a>
-            <a href="tools.html">Tools</a>
-            <a href="map.html">Map</a>
-            <a href="about.html">About</a>
-          </div>
-        <img class="themeToggle" onclick="toggleTheme()" src="https://cdn2.iconfinder.com/data/icons/weather-154/100/weather_cloud_clouds_nature-46-512.png" alt="Dark / Light Mode Toggle" style="max-width:4%; max-height:4%;">
-    </nav>
-
-    
     <main>
-        <div style="padding: 12%;"></div>
+        <div style="padding: 12%;"><!-- breaks site if removed --></div>
         <div class="center">
-            <h1>The Final Republic</h1>
-            <p>Welcome to the FinalRepublic website. Here is the wiki, world map, and a few extra tools for players of the server. This site is currently in public beta, please report any bugs to the devs.</p>
+            <nav class="tab" style="background-image: none;">
+                <img id="mobileSupportGif" src="assets/FinalRepublic_GIF_logo.gif" alt="emoji logo" style="max-width:8%;">
+                <div class="topnav">
+                    <a class="active" href="index.html">Home</a>
+                    <a href="wiki.html">Wiki</a>
+                    <a href="tools.html">Tools</a>
+                    <a href="map.html">Map</a>
+                    <a href="about.html">About</a>
+                  </div>
+                <img class="themeToggle" onclick="toggleTheme()" src="https://cdn2.iconfinder.com/data/icons/weather-154/100/weather_cloud_clouds_nature-46-512.png" alt="Dark / Light Mode Toggle" style="max-width:8%; max-height: 8%;">
+            </nav>
+            <h1>The Final <s>Republic</s> Website</h1>
+            <p>
+                Welcome to the offical Final Republic Website.<br>
+                Here is the wiki, world map, and a few extra tools for players of the server. 
+                This site is currently in public beta, so please report any bugs to the devs.
+            </p>
+            <h2>Some Quick History</h2>
+            <p>
+                Final Republic was made out of a want for a relatively peaceful, survival, building server; and over around 2 years of uptime, it was achieved with great success.
+                And while this server is based around building towns and small drama between them, overall it has grown to have over 50 unique players join.
+                I'm not going to go on about the history of the server here, why dont you go ahead and look at <a href="wiki.html">the Wiki</a> for more info.
+            </p>
         </div>
     </main>
     <footer id="footer">
         <div class="footer_l">
             <h3>Made By OusmBlueNinja / DJzombiehunter / AnhNguyenlost13</h1>
-            <p>&copy; 2023-2023 The Final Republic, FinalRepublic | OusmBlueNinja |
+            <p id="mobileSupportFooter_1">&copy; 2023-2023 The Final Republic, FinalRepublic | OusmBlueNinja |
             Not an offical Minecraft product. Not approved by or associated with Mojang.</p>
         </div>
         <div class="footer_r">
@@ -46,4 +61,12 @@
         </div>
     </footer>
 </body>
+<script>
+    // mobile support
+    const width = window.innerWidth;
+    console.log(width)
+    if (width <= 850) {
+        document.getElementById('mobileSupportFooter_1').innerText = "&copy; 2023-2023 FinalRepublic | OusmBlueNinja | Not approved by or associated with Mojang.";
+    }
+</script>
 </html>
