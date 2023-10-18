@@ -31,7 +31,7 @@ And if you don't play on the server, some links are below.
 ### [Contributors](/../../graphs/contributors)
 
 - [OusmBlueNinja](https://github.com/OusmBlueNinja): Lead WebDeveloper
-- [AnhNguyenlost13](https://github.com/AnhNguyenlost13): \<Placeholder\>
+- [AnhNguyenlost13](https://github.com/AnhNguyenlost13): README, documentation, recipes
 - [GirlInPurple](https://github.com/GirlInPurple): \<Placeholder\>
 - [DuyTip3011a](https://github.com/DuyTip3011a): New recipes and formatting fixes
 - ToxicTrapper: thank you for the original Craftful datapack
