@@ -21,27 +21,29 @@ To help keep consistency across files, use 4 tab spaces, as shown in the example
 
 - The `group` option is now required as of commit `placeholder`
   - Do not add `nc_` or `craftless` to the group, they are from older versions of the pack
-- Keys are case-sensitive, meaning you can use g for gold ingot and G for gold block.
 
 ```json
 {
-    "type": "crafting_shaped",
-    "group": "mob drops",
+    "type": "crafting_shaped", # refer to "https://minecraft.wiki/w/Recipe#List_of_recipe_types" for recipe types.
+    "group": "mob drops", # see "Groups" below.
     "pattern": [
-        "BMG",
-        "MMB",
-        "GGG"
+        "BM ",
+        "MMB", # Spaces in recipe represent "air".
+        "G g"  # Keys are case sensitive, meaning you can use G for gold block and g for gold ingot.
     ],
     "key": {
         "B": {
             "item": "minecraft:blaze_powder"
         },
         "M": {
-            "tag": "craftful:mushrooms" # this is a common error, 'tag' != 'item'
+            "tag": "craftful:mushrooms" # tag is NOT item, as well refer to "Tags" below
         },
         "G": {
-            "item": "minecraft:barrier" # use 'minecraft:barrier' as a placeholder when necessary
-        }
+            "item": "minecraft:gold_block"
+        },
+        "g": {
+            "item": "minecraft:gold_ingot"
+        } # Be careful with JSON formatting, there isn't a comma here.
     },
     "result": {
         "item": "minecraft:milk_bucket",
@@ -110,7 +112,7 @@ Here is a list of existing groups and tags:
 - Drop the world file onto the app from your file explorer (only tested on Prism)
 - Load the game
 
-### Offical Launcher
+### Official Launcher
 
 - Make sure you have the `Hidden Items` option checked in your File Explorer, if you prefer navigating yourself or have different game folder.
 - Find your way to `%userprofile%\AppData\Roaming\.minecraft\saves` folder (You can paste this into the run dialog/explorer address bar)
