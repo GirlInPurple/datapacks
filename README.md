@@ -16,7 +16,6 @@ And if you don't play on the server, some links are below.
 
 ### Resources
 
-<a href="https://discord.com/channels/969376256640569474/1104113680083337237"><img src="https://img.shields.io/badge/our-wiki_(discord)-blue" alt="wiki"></a>
 <a href="https://girlinpurple.github.io/finalrepublic"><img src="https://img.shields.io/badge/our-website-green" alt="website"></a>
 <img src="https://img.shields.io/badge/self_hosting-not_an_option-red" alt="server status">
 
