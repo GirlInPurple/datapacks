@@ -8,7 +8,7 @@
     ],
     "key": {
         "#": {
-            "item": "craftful:sands_only"
+            "tag": "craftful:sands_only"
         },
         "B": {
             "item": "minecraft:blaze_powder"
