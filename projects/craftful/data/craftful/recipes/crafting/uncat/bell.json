@@ -1,9 +1,9 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "/i/",
-        "/G/",
-        "/g/"
+        " i ",
+        " G ",
+        " g "
     ],
     "key": {
         "i": {
@@ -14,8 +14,7 @@
         },
         "G": {
             "item": "minecraft:gold_block"
-        },
-        "/": {}
+        }
     },
     "result": {
         "item": "minecraft:bell",
